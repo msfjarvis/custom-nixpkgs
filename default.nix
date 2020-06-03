@@ -7,4 +7,5 @@
 
   jetbrains-mono-nerdfonts =
     pkgs.callPackage ./pkgs/jetbrains-mono-nerdfonts { };
+  pass-clip = pkgs.callPackage ./pkgs/pass-clip { };
 }
