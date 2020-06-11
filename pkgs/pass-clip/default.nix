@@ -1,4 +1,4 @@
-{ stdenv, fetchFromGitHub }:
+{ stdenv, fetchFromGitHub, gnused }:
 
 stdenv.mkDerivation rec {
   name = "pass-clip";
@@ -11,9 +11,14 @@ stdenv.mkDerivation rec {
     sha256 = "1s7vv61rg15h1n9bdhignnkywdvxrq3v059sr3miaxwkhaki0d7d";
   };
 
-  dontBuild = true;
+  patchPhase = ''
+    substituteInPlace clip.bash \
+      --replace sed ${gnused}/bin/sed
+  '';
 
-  installFlags = [ "PREFIX=$(out)" ];
+  installPhase = ''
+    install -D -m755 clip.bash $out/lib/password-store/extensions/clip.bash
+  '';
 
   meta = with stdenv.lib; {
     description =
