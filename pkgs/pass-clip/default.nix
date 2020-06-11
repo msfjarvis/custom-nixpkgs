@@ -1,4 +1,4 @@
-{ stdenv, fetchFromGitHub, gnused }:
+{ stdenv, fetchFromGitHub, busybox, gnused }:
 
 stdenv.mkDerivation rec {
   name = "pass-clip";
@@ -13,7 +13,8 @@ stdenv.mkDerivation rec {
 
   patchPhase = ''
     substituteInPlace clip.bash \
-      --replace sed ${gnused}/bin/sed
+      --replace sed ${gnused}/bin/sed \
+      --replace sort ${busybox}/bin/sort
   '';
 
   installPhase = ''
