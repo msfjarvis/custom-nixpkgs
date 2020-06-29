@@ -5,6 +5,7 @@
   modules = import ./modules; # NixOS modules
   overlays = import ./overlays; # nixpkgs overlays
 
+  adx = pkgs.callPackage ./pkgs/adx { };
   jetbrains-mono-nerdfonts =
     pkgs.callPackage ./pkgs/jetbrains-mono-nerdfonts { };
 }
