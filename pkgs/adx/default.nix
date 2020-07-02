@@ -7,7 +7,7 @@ rustPlatform.buildRustPackage rec {
   src = fetchFromGitHub {
     owner = "msfjarvis";
     repo = "androidx-release-watcher";
-    rev = "v2.1.1";
+    rev = "v${version}";
     sha256 = "0dvm14np9x7y415jj0xgfmajp6gzq3i43wvdyzf51s9cr2wxmgw1";
   };
 
