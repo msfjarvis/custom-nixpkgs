@@ -8,4 +8,5 @@
   adx = pkgs.callPackage ./pkgs/adx { };
   jetbrains-mono-nerdfonts =
     pkgs.callPackage ./pkgs/jetbrains-mono-nerdfonts { };
+  pidcat = pkgs.callPackage ./pkgs/pidcat { };
 }
