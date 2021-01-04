@@ -1,4 +1,4 @@
-{ lib, fetchzip }:
+with import <nixpkgs> {};
 
 let version = "2.1.0";
 in fetchzip rec {
