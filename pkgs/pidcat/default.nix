@@ -3,11 +3,13 @@ with import <nixpkgs> {};
 stdenv.mkDerivation rec {
   name = "pidcat";
   version = "2.1.1";
+  # I already fixed it in the source
+  dontPatchShebangs = 1;
 
-  src = fetchFromGithub {
+  src = fetchFromGitHub {
     owner = "msfjarvis";
     repo = "pidcat";
-    rev = "2.1.1";
+    rev = "${version}";
     sha256 = "0hbya1ksbp7vdsxa8290gw5sbr7si42hyhikahpd8qi1xmk446y8";
   };
 
