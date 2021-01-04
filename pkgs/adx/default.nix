@@ -2,16 +2,16 @@ with import <nixpkgs> {};
 
 rustPlatform.buildRustPackage rec {
   pname = "adx";
-  version = "2.1.1";
+  version = "3.0.0";
 
   src = fetchFromGitHub {
     owner = "msfjarvis";
     repo = "androidx-release-watcher";
     rev = "v${version}";
-    sha256 = "0dvm14np9x7y415jj0xgfmajp6gzq3i43wvdyzf51s9cr2wxmgw1";
+    sha256 = "0fac83wzqakr61yis2yrs6sahvjx3p4sfalibg6jkbcldzy7mpd6";
   };
 
-  cargoSha256 = "1q7lywhxchc0sqsw6w39jkvpm959gvqlklizwmq53z986z69rncm";
+  cargoSha256 = "0ni6xm24920m35pf23c8aw4adcl0lcab1zyamizib6wh75400xvl";
 
   meta = with stdenv.lib; {
     description =
