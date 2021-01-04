@@ -1,4 +1,4 @@
-with import <nixpkgs> {};
+{ stdenv, fetchFromGitHub, rustPlatform }:
 
 rustPlatform.buildRustPackage rec {
   pname = "adx";

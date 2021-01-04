@@ -1,4 +1,4 @@
-with import <nixpkgs> {};
+{ stdenv, fetchFromGitHub, nativeBuildInputs, rustPlatform, buildInputs, }:
 
 rustPlatform.buildRustPackage rec {
   pname = "lychee";
