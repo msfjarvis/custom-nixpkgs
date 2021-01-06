@@ -1,4 +1,4 @@
-{ stdenv, fetchFromGithub }:
+{ stdenv, fetchFromGitHub }:
 
 stdenv.mkDerivation rec {
   name = "pidcat";
