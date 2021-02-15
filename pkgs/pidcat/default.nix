@@ -17,7 +17,7 @@ stdenv.mkDerivation rec {
     install -m755 -D pidcat.py $out/bin/pidcat
   '';
 
-  meta = with stdenv.lib; {
+  meta = with pkgs.lib; {
     homepage = "https://github.com/JakeWharton/pidcat";
     description = "pidcat - colored logcat script";
     platforms = platforms.linux;

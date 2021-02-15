@@ -13,7 +13,7 @@ rustPlatform.buildRustPackage rec {
 
   cargoSha256 = "0ni6xm24920m35pf23c8aw4adcl0lcab1zyamizib6wh75400xvl";
 
-  meta = with stdenv.lib; {
+  meta = with pkgs.lib; {
     description =
       "Rust binary that polls Google's Maven repository and extracts the latest version of all dependencies, with as few network calls as possible.";
     homepage = "https://github.com/msfjarvis/androidx-release-watcher";

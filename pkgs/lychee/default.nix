@@ -18,7 +18,7 @@ rustPlatform.buildRustPackage rec {
 
   cargoSha256 = "01m5zvcrc3yc8kwnbp59lgc9nj06pxsxx6i3gaqmh9ah587m7rm6";
 
-  meta = with stdenv.lib; {
+  meta = with pkgs.lib; {
     description = "A glorious link checker";
     homepage = "https://github.com/lycheeverse/lychee";
     license = licenses.mit;
