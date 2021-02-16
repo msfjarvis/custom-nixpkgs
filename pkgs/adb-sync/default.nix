@@ -10,7 +10,7 @@ stdenv.mkDerivation rec {
     owner = "msfjarvis";
     repo = "adb-sync";
     rev = "7cae4d11878a80b0d6d4d0072611cb5ea95be331";
-    sha256 = "1m25mxihalzg94d7jjgc68xrffx7q9rv2cc6lj82b53n3wv63pqx";
+    sha256 = "1qvgzqgvr2c4ywwwckg5y9w5mmwg9ml1awg9n3wnjh1n27m3w09x";
   };
 
   installPhase = ''
