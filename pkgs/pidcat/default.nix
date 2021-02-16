@@ -1,4 +1,8 @@
-{ stdenv, fetchFromGitHub, pkgs ? import <nixpkgs> { } }:
+{ stdenv
+, fetchFromGitHub
+, pkgs ? import <nixpkgs> { }
+, installShellFiles
+}:
 
 stdenv.mkDerivation rec {
   name = "pidcat";
@@ -12,6 +16,12 @@ stdenv.mkDerivation rec {
     rev = "${version}";
     sha256 = "0hbya1ksbp7vdsxa8290gw5sbr7si42hyhikahpd8qi1xmk446y8";
   };
+
+  nativeBuildInputs = [ installShellFiles ];
+
+  postInstall = ''
+    installShellCompletion --bash bash_completion.d/pidcat
+  '';
 
   installPhase = ''
     install -m755 -D pidcat.py $out/bin/pidcat
