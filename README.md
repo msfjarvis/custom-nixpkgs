@@ -6,6 +6,7 @@ Included packages:
 
 - [adb-sync] : Fork of [Google's adb-sync] with bugfixes for busybox users and the pull times feature
 - [adx] : Rust tool to poll Google Maven for AndroidX packages and their latest versions
+- [fclones] : Finds duplicate, unique, under- or over-replicated files
 - [jetbrains-mono-nerdfonts] : Packaging of the [nerd-fonts] variant of [JetBrains' JetBrains Mono] typeface
 - [lychee] : Packaging of [lychee], may be slightly out of date as I don't use it actively
 - [pidcat] : Fork of [JakeWharton's pidcat] with Python3 support and some other fixes
@@ -19,3 +20,4 @@ Included packages:
 [nerd-fonts]: https://github.com/ryanoasis/nerd-fonts
 [Jetbrains' JetBrains Mono]: https://github.com/JetBrains/JetBrainsMono
 [lychee]: https://github.com/lycheeverse/lychee
+[fclones]: https://github.com/pkolaczk/fclones
