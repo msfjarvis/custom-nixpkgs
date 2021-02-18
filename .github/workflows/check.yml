@@ -18,5 +18,20 @@ jobs:
       with:
         nix_path: nixpkgs=channel:nixos-unstable
 
+    - name: Enable cachix
+      uses: cachix/cachix-action@6e4751ed42b22f60165d3f266cfa4cce66ae406d
+      if: "${{ github.event_name == 'push' }}"
+      with:
+        name: msfjarvis
+        authToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
+
+    - name: Enable cachix binary cache
+      run: cachix use msfjarvis
+
     - name: Build Nix packages
+      if: "${{ github.event_name == 'pull_request' }}"
       run: nix-build
+
+    - name: Stream to cachix
+      if: "${{ github.event_name == 'push' }}"
+      run: nix-build | cachix push msfjarvis
