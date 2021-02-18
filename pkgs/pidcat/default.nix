@@ -1,8 +1,4 @@
-{ stdenv
-, fetchFromGitHub
-, pkgs ? import <nixpkgs> { }
-, installShellFiles
-}:
+{ stdenv, fetchFromGitHub, pkgs ? import <nixpkgs> { }, installShellFiles }:
 
 stdenv.mkDerivation rec {
   name = "pidcat";

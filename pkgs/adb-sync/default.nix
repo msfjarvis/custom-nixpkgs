@@ -19,7 +19,8 @@ stdenv.mkDerivation rec {
 
   meta = with pkgs.lib; {
     homepage = "https://github.com/google/adb-sync";
-    description = "adb-sync is a tool to synchronize files between a PC and an Android device using the ADB (Android Debug Bridge)";
+    description =
+      "adb-sync is a tool to synchronize files between a PC and an Android device using the ADB (Android Debug Bridge)";
     platforms = platforms.linux;
   };
 }
