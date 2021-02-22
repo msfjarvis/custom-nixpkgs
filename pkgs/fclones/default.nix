@@ -23,6 +23,5 @@ rustPlatform.buildRustPackage rec {
     description = "Finds duplicate, unique, under- or over-replicated files";
     homepage = "https://github.com/pkolaczk/fclones";
     license = licenses.mit;
-    platforms = platforms.unix;
   };
 }

@@ -26,6 +26,5 @@ stdenv.mkDerivation rec {
   meta = with pkgs.lib; {
     homepage = "https://github.com/JakeWharton/pidcat";
     description = "pidcat - colored logcat script";
-    platforms = platforms.linux;
   };
 }
