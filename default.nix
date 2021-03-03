@@ -9,6 +9,7 @@
   adx = pkgs.callPackage ./pkgs/adx { };
   diffuse = pkgs.callPackage ./pkgs/diffuse { };
   fclones = pkgs.callPackage ./pkgs/fclones { };
+  gdrive = pkgs.callPackage ./pkgs/gdrive { };
   git-quickfix = pkgs.callPackage ./pkgs/git-quickfix { };
   jetbrains-mono-nerdfonts =
     pkgs.callPackage ./pkgs/jetbrains-mono-nerdfonts { };
