@@ -8,7 +8,7 @@ buildGoModule rec {
     owner = "msfjarvis";
     repo = "gdrive";
     rev = "v${version}";
-    sha256 = "179440v3kkw4akg3713k5ijdvllb67334m26glxq0jb2q3claiks";
+    sha256 = "1qcjhd5s2djn6f89nagi5bj5z1l2fnd3h5dpwvlxm8d5f0qlp3y0";
   };
 
   vendorSha256 = "0hgrzsxwx0r0kggm1wcpjmc3mj9bydbyzq0l06gllr606kfhva8b";
