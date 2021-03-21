@@ -15,4 +15,5 @@
     pkgs.callPackage ./pkgs/jetbrains-mono-nerdfonts { };
   lychee = pkgs.callPackage ./pkgs/lychee { };
   pidcat = pkgs.callPackage ./pkgs/pidcat { };
+  prs = pkgs.callPackage ./pkgs/prs { };
 }
