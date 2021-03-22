@@ -7,7 +7,7 @@ in fetchzip rec {
   url =
     "https://github.com/JakeWharton/diffuse/releases/download/${version}/diffuse-${version}-binary.jar";
 
-  sha256 = "1srpxkgj6rx9d76zyiqbd9mb9qy6vjai04qj8s8j1qc2gx6s5a3w";
+  sha256 = "0lnmgphjbsbrb4pg1pfvnnb19ngmj3dzj0wxgn84n4phjdhy4h2b";
 
   postFetch = ''
     mkdir -p $out/bin
