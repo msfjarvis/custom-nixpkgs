@@ -6,10 +6,14 @@ Included packages:
 
 - [adb-sync] : Fork of [Google's adb-sync] with bugfixes for busybox users and the pull times feature
 - [adx] : Rust tool to poll Google Maven for AndroidX packages and their latest versions
+- [diffuse] : Java tool to diff between APKs, AARs and JARs
 - [fclones] : Finds duplicate, unique, under- or over-replicated files
+- [gdrive] : Golang CLI to interact with Google Drive
+- [git-quickfix] : Small Git add-on to commit changes to a new branch without leaving the current one
 - [jetbrains-mono-nerdfonts] : Packaging of the [nerd-fonts] variant of [JetBrains' JetBrains Mono] typeface
 - [lychee] : Packaging of [lychee], may be slightly out of date as I don't use it actively
 - [pidcat] : Fork of [JakeWharton's pidcat] with Python3 support and some other fixes
+- [prs] : Alternative `pass` client written in Rust
 
 [pidcat]: https://msfjarvis.dev/g/pidcat
 [JakeWharton's pidcat]: https://github.com/JakeWharton/pidcat
@@ -21,3 +25,7 @@ Included packages:
 [Jetbrains' JetBrains Mono]: https://github.com/JetBrains/JetBrainsMono
 [lychee]: https://github.com/lycheeverse/lychee
 [fclones]: https://github.com/pkolaczk/fclones
+[prs]: https://github.com/timvisee/prs
+[diffuse]: https://github.com/JakeWharton/diffuse
+[gdrive]: https://msfjarvis.dev/g/gdrive
+[git-quickfix]: https://github.com/siedentop/git-quickfix
