@@ -28,6 +28,12 @@ rustPlatform.buildRustPackage rec {
     cargo build -p prs-cli
   '';
 
+  installPhase = ''
+    mkdir -p $out/bin
+    find . -type f -name prs | xargs -I {} cp -v {} $out/bin/
+    chmod +x $out/bin/prs
+  '';
+
   cargoSha256 = "0mdmf5v86cmgqvm2440vjflngy6imbdw3wiiixn1dg2kwgm2c5mk";
 
   meta = with pkgs.lib; {
