@@ -10,6 +10,7 @@ Included packages:
 - [fclones] : Finds duplicate, unique, under- or over-replicated files
 - [gdrive] : Golang CLI to interact with Google Drive
 - [git-quickfix] : Small Git add-on to commit changes to a new branch without leaving the current one
+- [grit]: A multitree-based personal task manager
 - [jetbrains-mono-nerdfonts] : Packaging of the [nerd-fonts] variant of [JetBrains' JetBrains Mono] typeface
 - [lychee] : Packaging of [lychee], may be slightly out of date as I don't use it actively
 - [pidcat] : Fork of [JakeWharton's pidcat] with Python3 support and some other fixes
@@ -29,3 +30,4 @@ Included packages:
 [diffuse]: https://github.com/JakeWharton/diffuse
 [gdrive]: https://msfjarvis.dev/g/gdrive
 [git-quickfix]: https://github.com/siedentop/git-quickfix
+[grit]: https://github.com/climech/grit

@@ -11,6 +11,7 @@
   fclones = pkgs.callPackage ./pkgs/fclones { };
   gdrive = pkgs.callPackage ./pkgs/gdrive { };
   git-quickfix = pkgs.callPackage ./pkgs/git-quickfix { };
+  grit = pkgs.callPackage ./pkgs/grit { };
   jetbrains-mono-nerdfonts =
     pkgs.callPackage ./pkgs/jetbrains-mono-nerdfonts { };
   lychee = pkgs.callPackage ./pkgs/lychee { };
