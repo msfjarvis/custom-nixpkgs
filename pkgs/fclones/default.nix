@@ -2,22 +2,26 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "fclones";
-  version = "0.8.0";
+  version = "0.9.1";
   # Tests are broken
   doCheck = false;
 
   src = fetchFromGitHub {
-    owner = "msfjarvis";
+    owner = "pkolaczk";
     repo = "fclones";
-    rev = "7c30e1fc9be382f54f06140608b6416c9b7eb6d1";
-    sha256 = "1nrx41js515zixnbpfbgw3r9a6wk66ipamwlqv64v6yr1czz0zxq";
+    rev = "${version}";
+    sha256 = "0lin6wl8bfh2rpjf3hqyz3kd85w2hrdfb5c8sim2zz2cg9q3a238";
   };
 
   nativeBuildInputs = [ pkgs.pkgconfig ];
 
-  buildInputs = [ ] ++ pkgs.lib.optionals pkgs.stdenv.isLinux [ pkgs.libudev ];
+  buildInputs = [ ] ++ pkgs.lib.optionals pkgs.stdenv.isLinux [ pkgs.libudev ]
+    ++ pkgs.lib.optionals pkgs.stdenv.isDarwin [
+      pkgs.darwin.apple_sdk.frameworks.AppKit
+      pkgs.libiconv
+    ];
 
-  cargoSha256 = "09yf0cqf9qg46nr3wcz4kz9lk7m5vdbrkhi75qq8bscfgcvgx0q6";
+  cargoSha256 = "1c2j0assq72wmksqavwzdwdny0m7dwrjj27p9q7f7lp4w7x8ppfz";
 
   meta = with pkgs.lib; {
     description = "Finds duplicate, unique, under- or over-replicated files";
