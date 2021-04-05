@@ -2,13 +2,13 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "prs";
-  version = "0.2.4";
+  version = "0.2.7";
 
   src = fetchFromGitHub {
     owner = "timvisee";
     repo = "prs";
     rev = "v${version}";
-    sha256 = "1z0f84ayb2i8aj9ziqghmx24qyyzk0wf772kcslnmi3ijz4i5cpj";
+    sha256 = "1vsjp5axpznsaga4k75820xaifa3ga04195fvqqlvshnjmzy16nl";
   };
 
   nativeBuildInputs = [ pkgs.python3Full pkgs.pkgconfig ];
@@ -34,7 +34,7 @@ rustPlatform.buildRustPackage rec {
     chmod +x $out/bin/prs
   '';
 
-  cargoSha256 = "0mdmf5v86cmgqvm2440vjflngy6imbdw3wiiixn1dg2kwgm2c5mk";
+  cargoSha256 = "1fd72ypdf4fj66afq0hf65dznx37vgbw29g0jzmylyl6yddlnyip";
 
   meta = with pkgs.lib; {
     description =
