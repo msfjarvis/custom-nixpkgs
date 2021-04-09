@@ -18,5 +18,4 @@
   lychee = pkgs.callPackage ./pkgs/lychee { };
   natls = pkgs.callPackage ./pkgs/natls { };
   pidcat = pkgs.callPackage ./pkgs/pidcat { };
-  prs = pkgs.callPackage ./pkgs/prs { };
 }
