@@ -2,15 +2,13 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "fclones";
-  version = "0.9.1";
-  # Tests are broken
-  doCheck = false;
+  version = "0.10.1";
 
   src = fetchFromGitHub {
     owner = "pkolaczk";
     repo = "fclones";
-    rev = "${version}";
-    sha256 = "0lin6wl8bfh2rpjf3hqyz3kd85w2hrdfb5c8sim2zz2cg9q3a238";
+    rev = "v${version}";
+    sha256 = "0y5i617j88v3s0bjdaqdgix3zap3l34bkj3186aiv1gs2v0j10qg";
   };
 
   nativeBuildInputs = [ pkgs.pkgconfig ];
@@ -21,7 +19,7 @@ rustPlatform.buildRustPackage rec {
       pkgs.libiconv
     ];
 
-  cargoSha256 = "1c2j0assq72wmksqavwzdwdny0m7dwrjj27p9q7f7lp4w7x8ppfz";
+  cargoSha256 = "17m4q72sqyml4x4gf8h4nm7z54s3jabx8kab7qfzfwli5wgqhcgf";
 
   meta = with pkgs.lib; {
     description = "Finds duplicate, unique, under- or over-replicated files";
