@@ -19,7 +19,7 @@ rustPlatform.buildRustPackage rec {
       pkgs.libiconv
     ];
 
-  cargoSha256 = "17m4q72sqyml4x4gf8h4nm7z54s3jabx8kab7qfzfwli5wgqhcgf";
+  cargoSha256 = "17r9iay5yd3vvdc2wvn91z2z7nblk723gl8gzw66mkk4zw84adcz";
 
   meta = with pkgs.lib; {
     description = "Finds duplicate, unique, under- or over-replicated files";
