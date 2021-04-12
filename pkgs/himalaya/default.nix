@@ -3,14 +3,13 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "himalaya";
-  version = "0.2.4";
+  version = "0.2.5";
 
   src = fetchFromGitHub {
     owner = "soywod";
     repo = "himalaya";
-    # The lockfile is broken on the 0.2.4 tag so we pin to the commit with the fix
-    rev = "e260823581758fa9b1f60639f23c0051e493ee5b"; # "v${version}"
-    sha256 = "0lxi4hqjssb8h58sqr9b8hkdgz0n73wyphh5jx2xlnbl5b64g8l6";
+    rev = "v${version}";
+    sha256 = "0xps82kypryigj44rvij1hg51zn83514cnl6hnxxxfb36ywkd5pc";
   };
 
   nativeBuildInputs = [ pkg-config ];
@@ -19,7 +18,7 @@ rustPlatform.buildRustPackage rec {
     pkgs.libiconv
   ];
 
-  cargoSha256 = "0cay36apjz8snmnf58815ricmsh1f9kw29aadq9yid7vjqmjh270";
+  cargoSha256 = "1ywl1im963cmav645l9x0w2ikdzxr87cwyb5rr9cy9crq09w6fyv";
 
   meta = with pkgs.lib; {
     description = "Minimalist CLI email client, written in Rust.";
