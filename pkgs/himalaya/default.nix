@@ -1,5 +1,10 @@
-{ stdenv, fetchFromGitHub, rustPlatform, pkg-config, openssl
-, pkgs ? import <nixpkgs> { } }:
+{ stdenv
+, fetchFromGitHub
+, rustPlatform
+, pkg-config
+, openssl
+, pkgs ? import <nixpkgs> { }
+}:
 
 rustPlatform.buildRustPackage rec {
   pname = "himalaya";

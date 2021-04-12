@@ -1,7 +1,8 @@
 { lib, fetchzip }:
 
 let version = "0.1.0";
-in fetchzip rec {
+in
+fetchzip rec {
   name = "diffuse-${version}";
 
   url =

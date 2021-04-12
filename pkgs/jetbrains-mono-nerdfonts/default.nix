@@ -1,7 +1,8 @@
 { lib, fetchzip }:
 
 let version = "2.1.0";
-in fetchzip rec {
+in
+fetchzip rec {
   name = "JetBrainsMono_NerdFonts-${version}";
 
   url =
