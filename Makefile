@@ -1,2 +1,2 @@
 format:
-	fd -tf \\.nix -X nixfmt
+	fd -tf \\.nix -X nixpkgs-fmt
