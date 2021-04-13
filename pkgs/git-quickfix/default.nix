@@ -23,7 +23,7 @@ rustPlatform.buildRustPackage rec {
     pkgs.libiconv
   ];
 
-  cargoSha256 = "10ciiqmyvamqzj1jvj565vpsprc9cv0vy5ffm8gaqxzs1jmy4wi7";
+  cargoSha256 = "1m2bj1b3ysij9di97lhf1vai5ck6j1g7lybj5xyj97h124z8gmqh";
 
   meta = with pkgs.lib; {
     description =
