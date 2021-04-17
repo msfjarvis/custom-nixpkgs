@@ -2,7 +2,7 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "lychee";
-  version = "0.5.1-alpha";
+  version = "0.6.0";
   # Tests use network and are impure in nature
   doCheck = false;
 
@@ -10,14 +10,14 @@ rustPlatform.buildRustPackage rec {
     owner = "lycheeverse";
     repo = "lychee";
     rev = "v${version}";
-    sha256 = "1k9fyrzqnbqcik6yvy4rl0jbci3db3b8nxc16ap79181bq79n87v";
+    sha256 = "05wrmy1p9ycn57jsj7p3x1w9cbf310s9cck49zxdmkahksbs13aq";
   };
 
   nativeBuildInputs = [ pkgs.pkgconfig ];
   buildInputs = [ pkgs.openssl ] ++ pkgs.lib.optionals stdenv.isDarwin
     [ pkgs.darwin.apple_sdk.frameworks.Security ];
 
-  cargoSha256 = "1jy49rn0108qa4xq90sbp61jzf4k6jh2b54pnwhmliz849w3qgvc";
+  cargoSha256 = "072k4wnsxpvakb56wwzx54zc1irii8pkg9bvsy76w4xi6kydrjw8";
 
   meta = with pkgs.lib; {
     description = "A glorious link checker";
