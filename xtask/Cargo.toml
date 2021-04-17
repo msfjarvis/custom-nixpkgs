@@ -8,4 +8,3 @@ edition = "2018"
 
 [dependencies]
 walkdir = "2.3.2"
-xshell = "0.1.9"
