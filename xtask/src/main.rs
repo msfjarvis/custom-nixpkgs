@@ -30,6 +30,16 @@ fn main() -> Result<(), Box<dyn Error + 'static>> {
                     .output()?;
                 println!("{}", std::str::from_utf8(&output.stdout).unwrap());
             }
+            "format" | "fmt" => {
+                let mut cmd = Command::new("nixpkgs-fmt");
+                for entry in WalkDir::new(".").into_iter().filter_map(|e| e.ok()) {
+                    if entry.path().to_str().unwrap().contains(".nix") {
+                        cmd.arg(entry.path().to_str().unwrap());
+                    }
+                }
+                let output = cmd.output()?;
+                println!("{}", std::str::from_utf8(&output.stderr).unwrap());
+            }
             _ => {}
         },
     };
