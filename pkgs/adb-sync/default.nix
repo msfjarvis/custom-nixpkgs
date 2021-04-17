@@ -8,7 +8,7 @@ stdenv.mkDerivation rec {
 
   src = fetchFromGitHub {
     owner = "msfjarvis";
-    repo = "adb-sync";
+    repo = name;
     rev = "2afb0aac3f973a905917fe9e0cf4cb144772e08f";
     sha256 = "0di7n6npziq37jz18k7kkiwhv1v3yphyhj0a3sjmx6p14rwjx0ms";
   };

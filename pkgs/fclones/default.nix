@@ -9,7 +9,7 @@ rustPlatform.buildRustPackage rec {
 
   src = fetchFromGitHub {
     owner = "pkolaczk";
-    repo = "fclones";
+    repo = pname;
     # Cargo.lock is out of sync on the tagged version
     # rev = "v${version}";
     rev = "7a98c6486ed997f928b4438b7449b0e01984ca63";

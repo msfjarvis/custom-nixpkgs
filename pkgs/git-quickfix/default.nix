@@ -12,7 +12,7 @@ rustPlatform.buildRustPackage rec {
 
   src = fetchFromGitHub {
     owner = "siedentop";
-    repo = "git-quickfix";
+    repo = pname;
     rev = "v${version}";
     sha256 = "05p4yw9m601agminyjpffv3n4m0xmnibqm3dr2vz8c6nvjn6bm15";
   };

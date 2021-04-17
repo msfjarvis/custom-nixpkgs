@@ -12,7 +12,7 @@ rustPlatform.buildRustPackage rec {
 
   src = fetchFromGitHub {
     owner = "soywod";
-    repo = "himalaya";
+    repo = pname;
     rev = "v${version}";
     sha256 = "1fl3lingb4wdh6bz4calzbibixg44wnnwi1qh0js1ijp8b6ll560";
   };

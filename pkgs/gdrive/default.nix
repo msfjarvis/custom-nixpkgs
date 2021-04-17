@@ -6,7 +6,7 @@ buildGoModule rec {
 
   src = fetchFromGitHub {
     owner = "msfjarvis";
-    repo = "gdrive";
+    repo = pname;
     rev = "v${version}";
     sha256 = "1450lgzaj8gmzc6zim912cjkf16v1hi8p6xwj0dvvl91jc0mgv26";
   };

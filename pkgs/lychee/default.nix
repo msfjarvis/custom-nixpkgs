@@ -8,7 +8,7 @@ rustPlatform.buildRustPackage rec {
 
   src = fetchFromGitHub {
     owner = "lycheeverse";
-    repo = "lychee";
+    repo = pname;
     rev = "v${version}";
     sha256 = "05wrmy1p9ycn57jsj7p3x1w9cbf310s9cck49zxdmkahksbs13aq";
   };

@@ -8,7 +8,7 @@ stdenv.mkDerivation rec {
 
   src = fetchFromGitHub {
     owner = "msfjarvis";
-    repo = "pidcat";
+    repo = name;
     rev = "${version}";
     sha256 = "0hbya1ksbp7vdsxa8290gw5sbr7si42hyhikahpd8qi1xmk446y8";
   };
