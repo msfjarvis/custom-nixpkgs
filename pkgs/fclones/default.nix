@@ -2,7 +2,7 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "fclones";
-  version = "0.10.2";
+  version = "0.11.0";
 
   # Tests don't work on Darwin
   doCheck = !stdenv.isDarwin;
@@ -10,10 +10,8 @@ rustPlatform.buildRustPackage rec {
   src = fetchFromGitHub {
     owner = "pkolaczk";
     repo = pname;
-    # Cargo.lock is out of sync on the tagged version
-    # rev = "v${version}";
-    rev = "7a98c6486ed997f928b4438b7449b0e01984ca63";
-    sha256 = "0fh9wbf7v53fgmlyp5wxw4mr2j2zrb9gdzg0zi4bal8dd88mqc5g";
+    rev = "v${version}";
+    sha256 = "0008xqb47cmiyxng7yidzfgl6frd0dqa1nj9gk20770x8hwf1shk";
   };
 
   nativeBuildInputs = [ pkgs.pkgconfig ];
@@ -24,10 +22,10 @@ rustPlatform.buildRustPackage rec {
     pkgs.libiconv
   ];
 
-  cargoSha256 = "059705vl7f20kg771j7jr3igl96hgpid7v2hqihnnn7icl5gw8x7";
+  cargoSha256 = "1icz7xg7zn5v0l0f7cy4h2zxzpl872pnfjda1m1zp3p0v478slli";
 
   meta = with pkgs.lib; {
-    description = "Finds duplicate, unique, under- or over-replicated files";
+    description = "Efficient Duplicate File Finder";
     homepage = "https://github.com/pkolaczk/fclones";
     license = licenses.mit;
   };
