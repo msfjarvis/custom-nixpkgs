@@ -20,7 +20,7 @@ rustPlatform.buildRustPackage rec {
   buildInputs = [ ] ++ pkgs.lib.optionals pkgs.stdenv.isLinux [ pkgs.libudev ]
     ++ pkgs.lib.optionals pkgs.stdenv.isDarwin [
       pkgs.darwin.apple_sdk.frameworks.AppKit
-      pkgs.libiconv
+      pkgs.libiconvReal
     ];
 
   cargoSha256 = "1icz7xg7zn5v0l0f7cy4h2zxzpl872pnfjda1m1zp3p0v478slli";
