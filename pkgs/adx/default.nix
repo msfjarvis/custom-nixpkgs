@@ -1,20 +1,24 @@
-{ stdenv, fetchFromGitHub, rustPlatform, pkgs ? import <nixpkgs> { } }:
+{ stdenv, fetchFromGitHub, rustPlatform, pkgs ? import <nixpkgs> { }, pkg-config }:
 
 rustPlatform.buildRustPackage rec {
   pname = "adx";
-  version = "3.0.0";
+  version = "4.0.0-alpha01";
 
   src = fetchFromGitHub {
     owner = "msfjarvis";
     repo = "androidx-release-watcher";
     rev = "v${version}";
-    sha256 = "0fac83wzqakr61yis2yrs6sahvjx3p4sfalibg6jkbcldzy7mpd6";
+    sha256 = "1g52pwl9z71m1n20ddpjjddax0jmd0n8piwg49pi9f1bmx9062hn";
   };
 
-  buildInputs = [ ] ++ pkgs.lib.optionals stdenv.isDarwin
-    [ pkgs.darwin.apple_sdk.frameworks.Security ];
+  nativeBuildInputs = [ pkg-config ];
 
-  cargoSha256 = "0dm971y81zn79n39kac8jgn9sd9wkknhcjsy97dlfl4ds757729w";
+  buildInputs = [ ] ++ pkgs.lib.optionals stdenv.isDarwin
+    [ pkgs.darwin.apple_sdk.frameworks.Security ]
+    ++ pkgs.lib.optionals stdenv.isLinux
+    [ pkgs.openssl ];
+
+  cargoSha256 = "1c2gh5gn3qd7wqf7bf6m0ba0i3aayssxfmk31dcsz8rpnz5dv365";
 
   meta = with pkgs.lib; {
     description =
