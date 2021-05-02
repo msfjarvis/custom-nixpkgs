@@ -21,6 +21,7 @@ struct Opts {
 enum SubCommand {
     Clean(Clean),
     Format(Format),
+    Fmt(Format),
     Hash(Hash),
 }
 
@@ -29,10 +30,15 @@ enum SubCommand {
 #[clap(setting = AppSettings::ColoredHelp)]
 struct Clean {}
 
-/// Run nixpkgs-format on the entire directory
+/// Run nixfmt on the entire directory
 #[derive(Clap)]
 #[clap(setting = AppSettings::ColoredHelp)]
 struct Format {}
+
+/// Run nixfmt on the entire directory
+#[derive(Clap)]
+#[clap(setting = AppSettings::ColoredHelp)]
+struct Fmt {}
 
 /// Use nix-prefetch-url to compute the hash for a given GitHub repository at the given revision
 #[derive(Clap)]
@@ -50,7 +56,7 @@ fn main() -> Result<()> {
     let opts = Opts::parse();
     match opts.subcommand {
         SubCommand::Clean(_) => cmds::clean_derivations(),
-        SubCommand::Format(_) => cmds::run_nixpkgs_fmt(),
+        SubCommand::Format(_) | SubCommand::Fmt(_) => cmds::run_nixfmt(),
         SubCommand::Hash(hash) => cmds::get_prefetch_hash(hash.repository, hash.revision),
     }
 }

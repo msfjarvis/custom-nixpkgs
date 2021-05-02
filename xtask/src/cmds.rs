@@ -21,8 +21,8 @@ pub(crate) fn get_prefetch_hash(repo: String, tag: String) -> Result<()> {
     Ok(())
 }
 
-pub(crate) fn run_nixpkgs_fmt() -> Result<()> {
-    let mut cmd = Command::new("nixpkgs-fmt");
+pub(crate) fn run_nixfmt() -> Result<()> {
+    let mut cmd = Command::new("nixfmt");
     for entry in WalkDir::new(".").into_iter().filter_map(|e| e.ok()) {
         if entry.path().to_str().unwrap().contains(".nix") {
             cmd.arg(entry.path().to_str().unwrap());
