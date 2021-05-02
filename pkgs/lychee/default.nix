@@ -1,4 +1,5 @@
-{ stdenv, fetchFromGitHub, rustPlatform, pkgs ? import <nixpkgs> { } }:
+{ stdenv, fetchFromGitHub, rustPlatform, pkgs ? import <nixpkgs> { }, pkg-config
+}:
 
 rustPlatform.buildRustPackage rec {
   pname = "lychee";
@@ -13,9 +14,12 @@ rustPlatform.buildRustPackage rec {
     sha256 = "0kpwpbv0dqb0p4bxjlcjas6x1n91rdsvy2psrc1nyr1sh6gb1q5j";
   };
 
-  nativeBuildInputs = [ pkgs.pkgconfig ];
-  buildInputs = [ pkgs.openssl ] ++ pkgs.lib.optionals stdenv.isDarwin
-    [ pkgs.darwin.apple_sdk.frameworks.Security pkgs.libiconvReal ];
+  nativeBuildInputs = [ pkg-config ];
+
+  buildInputs = [ pkgs.openssl ] ++ pkgs.lib.optionals stdenv.isDarwin [
+    pkgs.darwin.apple_sdk.frameworks.Security
+    pkgs.libiconvReal
+  ];
 
   cargoSha256 = "1b915zkg41n3azk4hhg6fgc83n7iq8p7drvdyil2m2a4qdjvp9r3";
 
