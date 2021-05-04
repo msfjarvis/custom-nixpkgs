@@ -4,6 +4,8 @@
 rustPlatform.buildRustPackage rec {
   pname = "himalaya";
   version = "0.3.1";
+  # Tests interact with the environment
+  doCheck = false;
 
   src = fetchFromGitHub {
     owner = "soywod";
