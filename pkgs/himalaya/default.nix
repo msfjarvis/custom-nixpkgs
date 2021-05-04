@@ -3,13 +3,13 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "himalaya";
-  version = "0.3.0";
+  version = "0.3.1";
 
   src = fetchFromGitHub {
     owner = "soywod";
     repo = pname;
     rev = "v${version}";
-    sha256 = "1rhxbwzwplxg2wcdykkaf5cjl9npkqzllawab0wflb89xd51jr5k";
+    sha256 = "0m95gjdzh94vsbs7cdxlczk29m536acwlg4y55j7rz9cdcjfvzkj";
   };
 
   nativeBuildInputs = [ pkg-config ];
@@ -18,7 +18,7 @@ rustPlatform.buildRustPackage rec {
     pkgs.libiconvReal
   ];
 
-  cargoSha256 = "0rgr1kpprnipz6wjlfkbd9d18dypdrpqk01mi0cbi7j2psm4pmxv";
+  cargoSha256 = "0bz91vs5i3qb8rd9yfajavb4lyp24cxmxalzkg2chii4ckr8d3ph";
 
   meta = with pkgs.lib; {
     description = "Minimalist CLI email client, written in Rust.";
