@@ -15,6 +15,7 @@ Included packages:
 - [jetbrains-mono-nerdfonts] : Packaging of the [nerd-fonts] variant of [JetBrains' JetBrains Mono] typeface
 - [lychee] : Packaging of [lychee], may be slightly out of date as I don't use it actively
 - [pidcat] : Fork of [JakeWharton's pidcat] with Python3 support and some other fixes
+- [rust-script]: Command-line tool to run Rust "scripts" which can make use of crates.
 
 [pidcat]: https://msfjarvis.dev/g/pidcat
 [JakeWharton's pidcat]: https://github.com/JakeWharton/pidcat
@@ -31,3 +32,4 @@ Included packages:
 [git-quickfix]: https://github.com/siedentop/git-quickfix
 [grit]: https://github.com/climech/grit
 [himalaya]: https://github.com/soywod/himalaya
+[rust-script]: https://rust-script.org/

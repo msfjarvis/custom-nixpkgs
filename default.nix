@@ -18,4 +18,5 @@
   lychee = pkgs.callPackage ./pkgs/lychee { };
   natls = pkgs.callPackage ./pkgs/natls { };
   pidcat = pkgs.callPackage ./pkgs/pidcat { };
+  rust-script = pkgs.callPackage ./pkgs/rust-script { };
 }
