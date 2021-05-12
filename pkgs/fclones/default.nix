@@ -29,5 +29,6 @@ rustPlatform.buildRustPackage rec {
     description = "Efficient Duplicate File Finder";
     homepage = "https://github.com/pkolaczk/fclones";
     license = licenses.mit;
+    platform = platforms.all;
   };
 }

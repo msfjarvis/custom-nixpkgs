@@ -26,5 +26,6 @@ rustPlatform.buildRustPackage rec {
     description = "Minimalist CLI email client, written in Rust.";
     homepage = "https://github.com/soywod/himalaya";
     license = licenses.bsd3;
+    platform = platforms.all;
   };
 }

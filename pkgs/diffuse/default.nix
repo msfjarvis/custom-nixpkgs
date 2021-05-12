@@ -19,5 +19,6 @@ in fetchzip rec {
     description = "A typeface made for developers; NerdFonts patched edition";
     homepage = "https://jetbrains.com/mono/";
     license = licenses.asl20;
+    platform = platforms.all;
   };
 }

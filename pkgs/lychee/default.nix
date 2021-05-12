@@ -27,5 +27,6 @@ rustPlatform.buildRustPackage rec {
     description = "A glorious link checker";
     homepage = "https://github.com/lycheeverse/lychee";
     license = licenses.mit;
+    platform = platforms.all;
   };
 }

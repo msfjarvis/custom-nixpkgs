@@ -21,5 +21,7 @@ stdenv.mkDerivation rec {
     homepage = "https://github.com/google/adb-sync";
     description =
       "adb-sync is a tool to synchronize files between a PC and an Android device using the ADB (Android Debug Bridge)";
+    license = licenses.asl20;
+    platform = platforms.all;
   };
 }

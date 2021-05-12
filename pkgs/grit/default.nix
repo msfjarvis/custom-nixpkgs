@@ -26,5 +26,6 @@ buildGoModule rec {
     description = "A multitree-based personal task manager";
     homepage = "https://github.com/climech/grit";
     license = licenses.mit;
+    platform = platforms.all;
   };
 }
