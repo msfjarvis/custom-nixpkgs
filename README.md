@@ -11,9 +11,11 @@ Included packages:
 - [gdrive] : Golang CLI to interact with Google Drive
 - [git-quickfix] : Small Git add-on to commit changes to a new branch without leaving the current one
 - [grit]: A multitree-based personal task manager
+- [helix]: A post-modern modal text editor
 - [himalaya]: :mailbox: Minimalist CLI email client, written in Rust.
 - [jetbrains-mono-nerdfonts] : Packaging of the [nerd-fonts] variant of [JetBrains' JetBrains Mono] typeface
 - [lychee] : Packaging of [lychee], may be slightly out of date as I don't use it actively
+- [natls]: `ls` alternative with useful info and a splash of color art
 - [pidcat] : Fork of [JakeWharton's pidcat] with Python3 support and some other fixes
 - [rust-script]: Command-line tool to run Rust "scripts" which can make use of crates.
 
@@ -33,3 +35,5 @@ Included packages:
 [grit]: https://github.com/climech/grit
 [himalaya]: https://github.com/soywod/himalaya
 [rust-script]: https://rust-script.org/
+[helix]: https://github.com/helix-editor/helix
+[natls]: https://github.com/willdoescode/nat
