@@ -3,7 +3,7 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "fclones";
-  version = "0.11.0";
+  version = "0.12.0";
 
   # Tests don't work on Darwin
   doCheck = !stdenv.isDarwin;
@@ -12,7 +12,7 @@ rustPlatform.buildRustPackage rec {
     owner = "pkolaczk";
     repo = pname;
     rev = "v${version}";
-    sha256 = "0008xqb47cmiyxng7yidzfgl6frd0dqa1nj9gk20770x8hwf1shk";
+    sha256 = "1x09jh4dsmpqc0hlh7pp0gdr4hclv2nza7pda9a5h2cbs5dkc7xn";
   };
 
   nativeBuildInputs = [ pkg-config ];
@@ -23,7 +23,7 @@ rustPlatform.buildRustPackage rec {
       pkgs.libiconvReal
     ];
 
-  cargoSha256 = "1icz7xg7zn5v0l0f7cy4h2zxzpl872pnfjda1m1zp3p0v478slli";
+  cargoSha256 = "0gzdjs3kn22dzc2b8y74i2vjxwx3n4870j1bm2h7zxkkv9phl4iz";
 
   meta = with pkgs.lib; {
     description = "Efficient Duplicate File Finder";
