@@ -57,7 +57,13 @@ fn main() -> Result<()> {
     match opts.subcommand {
         SubCommand::Clean(_) => cmds::clean_derivations(),
         SubCommand::Format(_) | SubCommand::Fmt(_) => cmds::run_nixfmt(),
-        SubCommand::Hash(hash) => cmds::get_prefetch_hash(hash.repository, hash.revision),
+        SubCommand::Hash(hash) => {
+            println!(
+                "{}",
+                cmds::get_prefetch_hash(hash.repository, hash.revision)?
+            );
+            Ok(())
+        }
     }
 }
 

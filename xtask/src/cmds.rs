@@ -12,13 +12,15 @@ pub(crate) fn clean_derivations() -> Result<()> {
     Ok(())
 }
 
-pub(crate) fn get_prefetch_hash(repo: String, tag: String) -> Result<()> {
+pub(crate) fn get_prefetch_hash(repo: String, tag: String) -> Result<String> {
     let url = format!("https://github.com/{}/archive/{}.tar.gz", repo, tag,);
     let output = Command::new("nix-prefetch-url")
         .args(&["--type", "sha256", "--unpack", url.as_str()])
         .output()?;
-    println!("{}", std::str::from_utf8(&output.stdout).unwrap());
-    Ok(())
+    Ok(std::str::from_utf8(&output.stdout)?
+        .strip_suffix('\n')
+        .unwrap()
+        .to_string())
 }
 
 pub(crate) fn run_nixfmt() -> Result<()> {
