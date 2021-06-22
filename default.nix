@@ -10,6 +10,7 @@
   diffuse = pkgs.callPackage ./pkgs/diffuse { };
   fclones = pkgs.callPackage ./pkgs/fclones { };
   gdrive = pkgs.callPackage ./pkgs/gdrive { };
+  git-branchless = pkgs.callPackage ./pkgs/git-branchless { };
   git-quickfix = pkgs.callPackage ./pkgs/git-quickfix { };
   grit = pkgs.callPackage ./pkgs/grit { };
   helix = pkgs.callPackage ./pkgs/helix { };

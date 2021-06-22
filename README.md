@@ -9,6 +9,7 @@ Included packages:
 - [diffuse] : Java tool to diff between APKs, AARs and JARs
 - [fclones] : Finds duplicate, unique, under- or over-replicated files
 - [gdrive] : Golang CLI to interact with Google Drive
+- [git-branchless]: Branchless workflow for Git
 - [git-quickfix] : Small Git add-on to commit changes to a new branch without leaving the current one
 - [grit]: A multitree-based personal task manager
 - [helix]: A post-modern modal text editor
@@ -37,3 +38,4 @@ Included packages:
 [rust-script]: https://rust-script.org/
 [helix]: https://github.com/helix-editor/helix
 [natls]: https://github.com/willdoescode/nat
+[git-branchless]: https://github.com/arxanas/git-branchless
