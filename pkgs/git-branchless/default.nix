@@ -16,6 +16,13 @@ rustPlatform.buildRustPackage rec {
 
   cargoSha256 = "1dq5abxwa59f0blyx80mfnxz2bkvynyp3d3c32bcamiljqvbc0jp";
 
+  nativeBuildInputs = [ pkg-config ];
+
+  buildInputs = [ pkgs.openssl ] ++ pkgs.lib.optionals stdenv.isDarwin [
+    pkgs.darwin.apple_sdk.frameworks.Security
+    pkgs.libiconvReal
+  ];
+
   meta = with pkgs.lib; {
     description =
       "Quickfix allows you to commit changes in your git repository to a new branch without leaving the current branch";
