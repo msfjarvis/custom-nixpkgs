@@ -14,7 +14,6 @@
   git-quickfix = pkgs.callPackage ./pkgs/git-quickfix { };
   grit = pkgs.callPackage ./pkgs/grit { };
   helix = pkgs.callPackage ./pkgs/helix { };
-  himalaya = pkgs.callPackage ./pkgs/himalaya { };
   jetbrains-mono-nerdfonts =
     pkgs.callPackage ./pkgs/jetbrains-mono-nerdfonts { };
   lychee = pkgs.callPackage ./pkgs/lychee { };
