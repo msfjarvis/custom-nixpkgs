@@ -15,7 +15,7 @@ on:
       - Cargo.toml
       - README.md
 
-name: Check nix packages
+name: Build nix packages
 jobs:
   check:
     strategy:
