@@ -6,6 +6,7 @@ Included packages:
 
 - [adb-sync] : Fork of [Google's adb-sync] with bugfixes for busybox users and the pull times feature
 - [adx] : Rust tool to poll Google Maven for AndroidX packages and their latest versions
+- [bundletool] : Command-line tool to manipulate Android App Bundles
 - [diffuse] : Java tool to diff between APKs, AARs and JARs
 - [fclones] : Finds duplicate, unique, under- or over-replicated files
 - [gdrive] : Golang CLI to interact with Google Drive

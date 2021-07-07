@@ -7,8 +7,8 @@
 
   adb-sync = pkgs.callPackage ./pkgs/adb-sync { };
   adx = pkgs.callPackage ./pkgs/adx { };
-  bundletool = pkgs.callPackage ./pkgs/bundletool { };
-  diffuse = pkgs.callPackage ./pkgs/diffuse { };
+  bundletool-bin = pkgs.callPackage ./pkgs/bundletool-bin { };
+  diffuse-bin = pkgs.callPackage ./pkgs/diffuse-bin { };
   fclones = pkgs.callPackage ./pkgs/fclones { };
   gdrive = pkgs.callPackage ./pkgs/gdrive { };
   git-branchless = pkgs.callPackage ./pkgs/git-branchless { };

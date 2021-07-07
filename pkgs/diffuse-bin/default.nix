@@ -16,8 +16,8 @@ in fetchzip rec {
   '';
 
   meta = with lib; {
-    description = "A typeface made for developers; NerdFonts patched edition";
-    homepage = "https://jetbrains.com/mono/";
+    description = "Diffuse is a tool for diffing APKs, AABs, AARs, and JARs";
+    homepage = "https://github.com/jakewharton/diffuse";
     license = licenses.asl20;
     platform = platforms.all;
   };
