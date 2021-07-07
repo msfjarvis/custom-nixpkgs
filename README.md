@@ -20,21 +20,22 @@ Included packages:
 - [pidcat] : Fork of [JakeWharton's pidcat] with Python3 support and some other fixes
 - [rust-script]: Command-line tool to run Rust "scripts" which can make use of crates.
 
-[pidcat]: https://msfjarvis.dev/g/pidcat
-[JakeWharton's pidcat]: https://github.com/JakeWharton/pidcat
 [adb-sync]: https://msfjarvis.dev/g/adb-sync
 [Google's adb-sync]: https://github.com/google/adb-sync
 [adx]: https://msfjarvis.dev/g/androidx-release-watcher
+[bundletool]: https://developer.android.com/studio/command-line/bundletool
+[diffuse]: https://github.com/JakeWharton/diffuse
+[fclones]: https://github.com/pkolaczk/fclones
+[gdrive]: https://msfjarvis.dev/g/gdrive
+[git-branchless]: https://github.com/arxanas/git-branchless
+[git-quickfix]: https://github.com/siedentop/git-quickfix
+[grit]: https://github.com/climech/grit
+[helix]: https://github.com/helix-editor/helix
 [jetbrains-mono-nerdfonts]: https://github.com/ryanoasis/nerd-fonts
 [nerd-fonts]: https://github.com/ryanoasis/nerd-fonts
 [Jetbrains' JetBrains Mono]: https://github.com/JetBrains/JetBrainsMono
 [lychee]: https://github.com/lycheeverse/lychee
-[fclones]: https://github.com/pkolaczk/fclones
-[diffuse]: https://github.com/JakeWharton/diffuse
-[gdrive]: https://msfjarvis.dev/g/gdrive
-[git-quickfix]: https://github.com/siedentop/git-quickfix
-[grit]: https://github.com/climech/grit
-[rust-script]: https://rust-script.org/
-[helix]: https://github.com/helix-editor/helix
 [natls]: https://github.com/willdoescode/nat
-[git-branchless]: https://github.com/arxanas/git-branchless
+[pidcat]: https://msfjarvis.dev/g/pidcat
+[JakeWharton's pidcat]: https://github.com/JakeWharton/pidcat
+[rust-script]: https://rust-script.org/
