@@ -17,6 +17,12 @@ pub(crate) fn get_prefetch_hash(repo: String, tag: String) -> Result<String> {
     let output = Command::new("nix-prefetch-url")
         .args(&["--type", "sha256", "--unpack", url.as_str()])
         .output()?;
+    let sha256 = std::str::from_utf8(&output.stdout)?
+        .strip_suffix('\n')
+        .unwrap();
+    let output = Command::new("nix")
+        .args(&["to-sri", "--type", "sha256", sha256])
+        .output()?;
     Ok(std::str::from_utf8(&output.stdout)?
         .strip_suffix('\n')
         .unwrap()
