@@ -10,3 +10,4 @@ edition = "2018"
 clap = "3.0.0-beta.2"
 color-eyre = { version = "0.5.11", default-features = false }
 walkdir = "2.3.2"
+xshell = "0.1.14"

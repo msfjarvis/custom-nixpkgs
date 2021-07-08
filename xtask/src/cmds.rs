@@ -2,6 +2,7 @@ use color_eyre::eyre::Result;
 use std::process::Command;
 
 use walkdir::WalkDir;
+use xshell::cmd;
 
 pub(crate) fn clean_derivations() -> Result<()> {
     for entry in WalkDir::new(".").into_iter().filter_map(|e| e.ok()) {
@@ -14,19 +15,9 @@ pub(crate) fn clean_derivations() -> Result<()> {
 
 pub(crate) fn get_prefetch_hash(repo: String, tag: String) -> Result<String> {
     let url = format!("https://github.com/{}/archive/{}.tar.gz", repo, tag,);
-    let output = Command::new("nix-prefetch-url")
-        .args(&["--type", "sha256", "--unpack", url.as_str()])
-        .output()?;
-    let sha256 = std::str::from_utf8(&output.stdout)?
-        .strip_suffix('\n')
-        .unwrap();
-    let output = Command::new("nix")
-        .args(&["to-sri", "--type", "sha256", sha256])
-        .output()?;
-    Ok(std::str::from_utf8(&output.stdout)?
-        .strip_suffix('\n')
-        .unwrap()
-        .to_string())
+    let sha256 = cmd!("nix-prefetch-url --type sha256 --unpack {url}").read()?;
+    let output = cmd!("nix to-sri --type sha256 {sha256}").read()?;
+    Ok(output)
 }
 
 pub(crate) fn run_nixfmt() -> Result<()> {
