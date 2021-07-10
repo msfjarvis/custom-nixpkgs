@@ -3,7 +3,7 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "rust-script";
-  version = "0.14.0";
+  version = "0.15.0";
   # Tests don't work
   doCheck = false;
 
@@ -11,12 +11,12 @@ rustPlatform.buildRustPackage rec {
     owner = "fornwall";
     repo = pname;
     rev = "v${version}";
-    sha256 = "03yam0lmwa11nr46jrhlfgvf63zr3wvlh79lzc9ar6425v0spk3l";
+    sha256 = "sha256-4j7BtN4hGUV/VICbjAdV9McUQo0hZwyIQYB2Ez1O9h0=";
   };
 
   nativeBuildInputs = [ pkg-config ];
 
-  cargoSha256 = "1rbal1sjplb3lj3yn0kfnx7alpwfj8c4hib63azq2s656g02i6vr";
+  cargoSha256 = "sha256-BPj/FndpAc+nSmqodN7XOl8YU/OUIfKQY6UPqZT1baw=";
 
   buildInputs = [ ] ++ pkgs.lib.optionals stdenv.isDarwin [
     pkgs.darwin.apple_sdk.frameworks.Security
