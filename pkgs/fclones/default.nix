@@ -5,8 +5,8 @@ rustPlatform.buildRustPackage rec {
   pname = "fclones";
   version = "0.12.3";
 
-  # Tests don't work on Darwin
-  doCheck = !stdenv.isDarwin;
+  # Tests don't work inside Nix
+  doCheck = false;
 
   src = fetchFromGitHub {
     owner = "pkolaczk";
