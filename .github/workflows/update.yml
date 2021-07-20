@@ -1,0 +1,46 @@
+name: Update Publix Suffix List data
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  update-publicsuffix-data:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f
+
+    - name: Install Nix
+      uses: cachix/install-nix-action@07da2520eebede906fbeefa9dd0a2b635323909d
+      with:
+        nix_path: nixpkgs=channel:nixos-unstable
+
+    - name: Enable cachix
+      uses: cachix/cachix-action@6e4751ed42b22f60165d3f266cfa4cce66ae406d
+      with:
+        name: msfjarvis
+        authToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
+
+    - name: Enable cachix binary cache
+      run: cachix use msfjarvis
+
+    - name: Watch store with cachix
+      run: cachix watch-store -c9 msfjarvis &
+
+    - name: Check for updates
+      run: ./update.sh
+
+    - name: Compare list changes
+      run: if [[ $(git diff --binary --stat) != '' ]]; then echo "UPDATED=true" >> $GITHUB_ENV; fi
+
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@01f7dd1d28f5131231ba3ede0f1c8cb413584a1d
+      if: env.UPDATED == 'true'
+      with:
+        assignees: msfjarvis
+        author: GitHub Actions <noreply@github.com>
+        base: develop
+        body: This is an automated pull request to update Nix packages in this repository
+        branch: bot/update-psl
+        title: Update packages
+        token: ${{ secrets.GITHUB_TOKEN }}
