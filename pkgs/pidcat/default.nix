@@ -2,15 +2,13 @@
 
 stdenv.mkDerivation rec {
   name = "pidcat";
-  version = "2.1.1";
-  # I already fixed it in the source
-  dontPatchShebangs = 1;
+  version = "2.2.0";
 
   src = fetchFromGitHub {
     owner = "msfjarvis";
     repo = name;
     rev = "${version}";
-    sha256 = "0hbya1ksbp7vdsxa8290gw5sbr7si42hyhikahpd8qi1xmk446y8";
+    sha256 = "sha256-VOIND2CzWo+LV84C+FbTC0r3FqY7VpBaWn95IKTYFT8=";
   };
 
   nativeBuildInputs = [ installShellFiles ];

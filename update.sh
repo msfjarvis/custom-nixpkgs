@@ -11,6 +11,7 @@ declare -a ITEMS=(
 	helix
 	lychee
 	natls
+	pidcat
 	rust-script
 )
 
