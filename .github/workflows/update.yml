@@ -1,10 +1,10 @@
-name: Update Publix Suffix List data
+name: Check for package updates
 on:
   schedule:
     - cron: '0 0 * * *'
 
 jobs:
-  update-publicsuffix-data:
+  check-nix-update:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
@@ -28,9 +28,9 @@ jobs:
       run: cachix watch-store -c9 msfjarvis &
 
     - name: Check for updates
-      run: ./update.sh
+      run: nix-shell -p nix-update git --run ./update.sh
 
-    - name: Compare list changes
+    - name: Check diff
       run: if [[ $(git diff --binary --stat) != '' ]]; then echo "UPDATED=true" >> $GITHUB_ENV; fi
 
     - name: Create Pull Request
