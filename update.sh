@@ -3,6 +3,7 @@
 set -euxo pipefail
 
 declare -a ITEMS=(
+  adb-sync
   adx
   fclones
   git-branchless
