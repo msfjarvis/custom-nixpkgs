@@ -3,6 +3,8 @@
 stdenv.mkDerivation rec {
   name = "pidcat";
   version = "2.2.0";
+  # I already fixed it in the source
+  dontPatchShebangs = 1;
 
   src = fetchFromGitHub {
     owner = "msfjarvis";
