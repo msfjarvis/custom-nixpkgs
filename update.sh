@@ -3,18 +3,22 @@
 set -euxo pipefail
 
 declare -a ITEMS=(
-	adx
-	fclones
-	git-branchless
-	git-quickfix
-	grit
-	helix
-	lychee
-	natls
-	pidcat
-	rust-script
+  adx
+  fclones
+  git-branchless
+  git-quickfix
+  grit
+  helix
+  lychee
+  natls
+  pidcat
+  rust-script
 )
 
-for item in "${ITEMS[@]}"; do
-  nix-update --commit --build "${item}"
-done
+if [ -z "${1}" ]; then
+  for item in "${ITEMS[@]}"; do
+    nix-update --commit --build "${item}"
+  done
+else
+  nix-update --commit --build "${1}"
+fi
