@@ -19,6 +19,7 @@ name: Build nix packages
 jobs:
   check:
     strategy:
+      fail-fast: false
       matrix:
         os:
           - ubuntu-latest
