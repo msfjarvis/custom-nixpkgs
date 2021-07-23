@@ -1,15 +1,15 @@
 { stdenv, fetchFromGitHub, pkgs ? import <nixpkgs> { }, installShellFiles }:
 
 stdenv.mkDerivation rec {
-  name = "pidcat";
+  pname = "pidcat";
   version = "2.2.0";
   # I already fixed it in the source
   dontPatchShebangs = 1;
 
   src = fetchFromGitHub {
     owner = "msfjarvis";
-    repo = name;
-    rev = "${version}";
+    repo = pname;
+    rev = "v${version}";
     sha256 = "sha256-VOIND2CzWo+LV84C+FbTC0r3FqY7VpBaWn95IKTYFT8=";
   };
 
