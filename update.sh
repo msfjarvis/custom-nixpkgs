@@ -15,7 +15,9 @@ declare -a ITEMS=(
   rust-script
 )
 
-if [ -z "${1}" ]; then
+PKG="${1:-}"
+
+if [ -z "${PKG}" ]; then
   for item in "${ITEMS[@]}"; do
     nix-update --commit --build "${item}"
   done
