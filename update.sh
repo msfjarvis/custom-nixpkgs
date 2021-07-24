@@ -6,6 +6,7 @@ declare -a ITEMS=(
   adb-sync
   adx
   fclones
+  gdrive
   git-branchless
   git-quickfix
   grit
