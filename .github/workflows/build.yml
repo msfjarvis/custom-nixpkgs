@@ -6,13 +6,13 @@ on:
       - 'xtask/**'
       - Cargo.toml
       - README.md
+      - update.sh
+      - .github/workflows/update.yml
 
   pull_request:
     branches:
       - develop
     paths-ignore:
-      - 'xtask/**'
-      - Cargo.toml
       - README.md
 
 name: Build nix packages
