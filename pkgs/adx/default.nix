@@ -3,13 +3,13 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "adx";
-  version = "4.0.0-alpha.2";
+  version = "4.0.0";
 
   src = fetchFromGitHub {
     owner = "msfjarvis";
     repo = "androidx-release-watcher";
     rev = "v${version}";
-    sha256 = "030j60lcnd34fnk9g1b7a5j20d6698i135a4jp54xgbd0bvqickn";
+    sha256 = "sha256-ov/0GjIMl/eQW4GMx4mCjjOpnefxL2U8vrEqXD62iHk=";
   };
 
   nativeBuildInputs = [ pkg-config ];
@@ -20,7 +20,7 @@ rustPlatform.buildRustPackage rec {
     pkgs.libiconvReal
   ] ++ pkgs.lib.optionals stdenv.isLinux [ pkgs.openssl ];
 
-  cargoSha256 = "0f3xvr1n3skg6j45f3bnmfsmxj0y8sncxdqi9572h91qwpg88a8p";
+  cargoSha256 = "sha256-3moSyjjqmMl6J8TvPRWG0XDvoYmM16jJml+15l2daag=";
 
   meta = with pkgs.lib; {
     description =
