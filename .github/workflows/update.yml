@@ -21,6 +21,10 @@ jobs:
         git config user.name "GitHub Actions"
         git config user.email noreply@github.com
 
+    - name: Check pre-update Git ref
+      run: |
+        echo "OLD_REF=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+
     - name: Enable cachix
       uses: cachix/cachix-action@6e4751ed42b22f60165d3f266cfa4cce66ae406d
       with:
@@ -36,12 +40,13 @@ jobs:
     - name: Check for updates
       run: nix-shell -p nix-update git --run ./update.sh
 
-    - name: Check diff
-      run: if [[ $(git diff --binary --stat) != '' ]]; then echo "UPDATED=true" >> $GITHUB_ENV; fi
+    - name: Check post-update Git ref
+      run: |
+        echo "NEW_REF=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
 
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@01f7dd1d28f5131231ba3ede0f1c8cb413584a1d
-      if: env.UPDATED == 'true'
+      if: env.OLD_REF != env.NEW_REF
       with:
         assignees: msfjarvis
         author: GitHub Actions <noreply@github.com>
