@@ -2,13 +2,13 @@
 
 buildGoModule rec {
   pname = "gdrive";
-  version = "3.0.4";
+  version = "3.0.5";
 
   src = fetchFromGitHub {
     owner = "msfjarvis";
     repo = pname;
     rev = "v${version}";
-    sha256 = "sha256-S1/x+Cmz1hkahfzGRyvM9Lkb09/llYXiiytcM4oPDkU=";
+    sha256 = "sha256-2XLPVOaeUlxtDapQ8f68r+KQEOLqeUk4mPSu8n0s6iQ=";
   };
 
   vendorSha256 = "sha256-YrsylvcbUSqNFfcoidagNX2UqO9NjpIcvP/yiyetZe0=";
