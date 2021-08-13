@@ -3,7 +3,7 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "git-branchless";
-  version = "0.3.3";
+  version = "0.3.4";
   # Tests require the git executable
   doCheck = false;
 
@@ -14,7 +14,7 @@ rustPlatform.buildRustPackage rec {
     sha256 = "1d7rl3iavba453v6z5lvdrjp24wwx65h0ywm1scr9yrvwx96m44h";
   };
 
-  cargoSha256 = "sha256-czsxPKqvEpemXquDcJfKuX6GNhs4V89PCGZjVarLrt8=";
+  cargoSha256 = "sha256-ep7heiMVXpvo0jB9Ie49AlrE1t2Kfh9jqD/iPawUfPQ=";
 
   nativeBuildInputs = [ pkg-config ];
 
