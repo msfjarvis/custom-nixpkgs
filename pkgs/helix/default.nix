@@ -2,18 +2,18 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "helix";
-  version = "0.3.0";
+  version = "0.4.0";
   doCheck = false;
 
   src = fetchFromGitHub {
     owner = "helix-editor";
     repo = "helix";
     rev = "v${version}";
-    sha256 = "sha256-dI5yIP5uUmM9pyMpvvdrk8/0jE/REkU/m9BF081LwMU=";
+    sha256 = "sha256-iCNA+gZer6BycWnhosDFRuxfS6QAb06XTix/vFsaey0=";
     fetchSubmodules = true;
   };
 
-  cargoSha256 = "sha256-l3Ikr4IyUsHItJIC4BaIZZb6vio3bchumbbPI+nxIjQ=";
+  cargoSha256 = "sha256-sqXPgtLMXa3kMQlnw2xDBEsVfjeRXO6Zp6NEFS/0h20=";
 
   meta = with pkgs.lib; {
     description = "A post-modern modal text editor.";
