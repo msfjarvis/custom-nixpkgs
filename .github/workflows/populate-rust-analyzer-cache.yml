@@ -1,0 +1,42 @@
+name: Cache rust-analyzer build
+on:
+  schedule:
+    - cron: '15 2 * * *'
+  workflow_dispatch:
+
+jobs:
+  build-cache-ra:
+    runs-on: ubuntu-latest
+    steps:
+     - name: Checkout repository
+       uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f
+       with:
+         repository: nix-community/fenix
+
+     - name: Install Nix
+       uses: cachix/install-nix-action@07da2520eebede906fbeefa9dd0a2b635323909d
+       with:
+         nix_path: nixpkgs=channel:nixos-unstable
+         install_url: https://github.com/numtide/nix-unstable-installer/releases/latest/download/install
+         extra_nix_config: |
+           experimental-features = flakes nix-command
+           access-tokens = github.com=${{ github.token }}
+
+     - name: Enable cachix
+       uses: cachix/cachix-action@6e4751ed42b22f60165d3f266cfa4cce66ae406d
+       with:
+         name: msfjarvis
+         authToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
+
+     - name: Enable cachix binary cache
+       run: cachix use msfjarvis
+
+     - name: Watch store with cachix
+       run: cachix watch-store -c9 msfjarvis &
+
+     - name: Build rust-analyzer
+       run: |
+         pkgs=(.#{{minimal,default,complete,latest}.toolchain,rust-analyzer{,-vscode-extension}})
+         nix build "${pkgs[@]}"
+         nix build --override-input \
+           nixpkgs github:nixos/nixpkgs/nixpkgs-unstable "${pkgs[@]}"
