@@ -31,12 +31,13 @@ jobs:
      - name: Enable cachix binary cache
        run: cachix use msfjarvis
 
-     - name: Watch store with cachix
-       run: cachix watch-store -c9 msfjarvis &
-
      - name: Build rust-analyzer
        run: |
          pkgs=(.#{{minimal,default,complete,latest}.toolchain,rust-analyzer{,-vscode-extension}})
          nix build "${pkgs[@]}"
          nix build --override-input \
            nixpkgs github:nixos/nixpkgs/nixpkgs-unstable "${pkgs[@]}"
+
+     - name: Push rust-analyzer derivation to Cachix
+       run: |
+         find /nix/store -maxdepth 1 -type f -name '*rust-analyzer*.drv' -exec cachix push msfjarvis {} \;
