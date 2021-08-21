@@ -8,12 +8,20 @@ on:
       - README.md
       - update.sh
       - .github/workflows/update.yml
+      - .github/workflows/populate-rust-analyzer-cache.yml
 
   pull_request:
     branches:
       - develop
     paths-ignore:
+      - 'xtask/**'
+      - Cargo.toml
       - README.md
+      - update.sh
+      - .github/workflows/update.yml
+      - .github/workflows/populate-rust-analyzer-cache.yml
+
+  workflow_dispatch:
 
 name: Build nix packages
 jobs:
