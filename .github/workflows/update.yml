@@ -3,6 +3,10 @@ on:
   schedule:
     - cron: '0 0 * * *'
   workflow_dispatch:
+    inputs:
+      package:
+        description: 'Package to check updates for'
+        required: false
 
 jobs:
   check-nix-update:
@@ -37,7 +41,12 @@ jobs:
     - name: Watch store with cachix
       run: cachix watch-store -c9 msfjarvis &
 
+    - name: Check for updates of given package
+      if: "github.event.inputs.package != null"
+      run: nix-shell -p nix-update git --run ./update.sh "${{ github.event.inputs.package }}"
+
     - name: Check for updates
+      if: "github.event.inputs.package == null"
       run: nix-shell -p nix-update git --run ./update.sh
 
     - name: Check post-update Git ref
