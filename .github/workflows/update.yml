@@ -7,6 +7,9 @@ on:
       package:
         description: 'Package to check updates for'
         required: false
+      version:
+        description: 'Version to pin package to'
+        required: false
 
 jobs:
   check-nix-update:
@@ -43,7 +46,7 @@ jobs:
 
     - name: Check for updates of given package
       if: "github.event.inputs.package != null"
-      run: nix-shell -p nix-update git --run ./update.sh "${{ github.event.inputs.package }}"
+      run: nix-shell -p nix-update git --run ./update.sh "${{ github.event.inputs.package }}" "${{ github.event.inputs.version ?? '' }}"
 
     - name: Check for updates
       if: "github.event.inputs.package == null"
