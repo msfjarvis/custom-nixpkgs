@@ -41,9 +41,6 @@ jobs:
     - name: Enable cachix binary cache
       run: cachix use msfjarvis
 
-    - name: Watch store with cachix
-      run: cachix watch-store -c9 msfjarvis &
-
     - name: Check for updates of given package
       if: "github.event.inputs.package != null"
       run: nix-shell -p nix-update git --run ./update.sh "${{ github.event.inputs.package }}" "${{ github.event.inputs.version ?? '' }}"
@@ -64,6 +61,6 @@ jobs:
         author: GitHub Actions <noreply@github.com>
         base: develop
         body: This is an automated pull request to update Nix packages in this repository
-        branch: bot/update-psl
+        branch: bot/update-packages
         title: Update packages
         token: ${{ secrets.GITHUB_TOKEN }}

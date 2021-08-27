@@ -51,9 +51,10 @@ jobs:
     - name: Enable cachix binary cache
       run: cachix use msfjarvis
 
-    - name: Watch store with cachix
-      if: "${{ github.event_name == 'push' }}"
-      run: cachix watch-store -c9 msfjarvis &
-
     - name: Build Nix packages
-      run: nix-build
+      run: |
+        # Compile all packages
+        nix-build
+        # Compile again, but since it's already cached we simply get a list of store paths
+        # that can be pushed to cachix.
+        nix-build | cachix push msfjarvis -c9
