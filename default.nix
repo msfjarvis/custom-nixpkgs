@@ -14,6 +14,7 @@
   git-branchless = pkgs.callPackage ./pkgs/git-branchless { };
   git-quickfix = pkgs.callPackage ./pkgs/git-quickfix { };
   grit = pkgs.callPackage ./pkgs/grit { };
+  healthchecks-monitor = pkgs.callPackage ./pkgs/healthchecks-monitor { };
   helix = pkgs.callPackage ./pkgs/helix { };
   jetbrains-mono-nerdfonts =
     pkgs.callPackage ./pkgs/jetbrains-mono-nerdfonts { };
