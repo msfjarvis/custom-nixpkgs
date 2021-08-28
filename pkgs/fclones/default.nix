@@ -5,9 +5,6 @@ rustPlatform.buildRustPackage rec {
   pname = "fclones";
   version = "0.13.0";
 
-  # Tests don't work inside Nix
-  doCheck = false;
-
   src = fetchFromGitHub {
     owner = "pkolaczk";
     repo = pname;
