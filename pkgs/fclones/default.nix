@@ -3,7 +3,7 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "fclones";
-  version = "0.12.3";
+  version = "0.13.0";
 
   # Tests don't work inside Nix
   doCheck = false;
@@ -12,7 +12,7 @@ rustPlatform.buildRustPackage rec {
     owner = "pkolaczk";
     repo = pname;
     rev = "v${version}";
-    sha256 = "sha256-Gy9+rg9wxrQEWvn6LZOL1g3Nc61lLGHprW4YuvEcZwI=";
+    sha256 = "sha256-bZQnC3ZaUVaSgOE9YEldzVfpP6Ynvqm1vh21gw6v8nY=";
   };
 
   nativeBuildInputs = [ pkg-config ];
@@ -23,7 +23,7 @@ rustPlatform.buildRustPackage rec {
       pkgs.libiconvReal
     ];
 
-  cargoSha256 = "sha256-5QvKNxpY/8uKGJRD0hBNQPWlEwFBQoC/Xs4CUqactAM=";
+  cargoSha256 = "sha256-XjYPOheZ560hXyXQzP6yZMj5zuDeyfG88iLRRr1UZiU=";
 
   meta = with pkgs.lib; {
     description = "Efficient Duplicate File Finder";
