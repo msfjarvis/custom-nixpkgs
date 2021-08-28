@@ -3,7 +3,6 @@
 rustPlatform.buildRustPackage rec {
   pname = "helix";
   version = "0.4.1";
-  doCheck = false;
 
   src = fetchFromGitHub {
     owner = "helix-editor";
