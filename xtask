@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+set -e
+set -u
+set -o pipefail
+
+case "${1:-nothing}" in
+  clean)
+    fd -Itl -X rm -fv
+    ;;
+  hash)
+    shift
+    declare -a FIELDS=()
+    FULL_SLUG="${1}"
+    REV="${2}"
+    IFS='/' read -r -a FIELDS <<<"${FULL_SLUG:?}"
+    if [[ ${#FIELDS[@]} -eq 2 ]]; then
+      CHECKSUM="$(nix-prefetch-url --type sha256 --unpack "https://github.com/${FULL_SLUG}/archive/${REV:?}.tar.gz" 2>/dev/null)"
+      nix to-sri --type sha256 "${CHECKSUM:?}"
+    else
+      echo -e "${CL_RED}Repo slug should be in OWNER/REPO format${CL_RST}"
+    fi
+    ;;
+  fmt)
+    fd -tf \.nix$ -X nixfmt
+    ;;
+  nothing)
+    echo -e "${CL_RED}USAGE:${CL_RST}\n${CL_YLW}${0} '<action>'\n\t[possible values: 'clean' 'hash' 'fmt']${CL_RST}"
+    ;;
+esac
