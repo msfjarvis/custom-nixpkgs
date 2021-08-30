@@ -43,7 +43,7 @@ jobs:
 
     - name: Check for updates of given package
       if: "github.event.inputs.package != null"
-      run: nix-shell -p nix-update git --run ./update.sh "${{ github.event.inputs.package }}" "${{ github.event.inputs.version ?? '' }}"
+      run: nix-shell -p nix-update git --run './update.sh ${{ github.event.inputs.package }} ${{ github.event.inputs.version }}'
 
     - name: Check for updates
       if: "github.event.inputs.package == null"
