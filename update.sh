@@ -8,7 +8,6 @@ declare -a ITEMS=(
   fclones
   gdrive
   git-quickfix
-  helix
   lychee
   natls
   pidcat

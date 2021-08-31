@@ -13,7 +13,6 @@
   gdrive = pkgs.callPackage ./pkgs/gdrive { };
   git-quickfix = pkgs.callPackage ./pkgs/git-quickfix { };
   healthchecks-monitor = pkgs.callPackage ./pkgs/healthchecks-monitor { };
-  helix = pkgs.callPackage ./pkgs/helix { };
   jetbrains-mono-nerdfonts =
     pkgs.callPackage ./pkgs/jetbrains-mono-nerdfonts { };
   lychee = pkgs.callPackage ./pkgs/lychee { };
