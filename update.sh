@@ -7,7 +7,6 @@ declare -a ITEMS=(
   adx
   fclones
   gdrive
-  git-branchless
   git-quickfix
   grit
   helix
