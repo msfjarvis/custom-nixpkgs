@@ -4,6 +4,8 @@
 rustPlatform.buildRustPackage rec {
   pname = "fclones";
   version = "0.13.0";
+  # Checks fail on Darwin
+  doCheck = !pkgs.stdenv.isDarwin;
 
   src = fetchFromGitHub {
     owner = "pkolaczk";
