@@ -3,15 +3,15 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "lychee";
-  version = "0.7.0";
+  version = "0.7.1";
   # Tests use network and are impure in nature
   doCheck = false;
 
   src = fetchFromGitHub {
     owner = "lycheeverse";
     repo = pname;
-    rev = version;
-    sha256 = "0kpwpbv0dqb0p4bxjlcjas6x1n91rdsvy2psrc1nyr1sh6gb1q5j";
+    rev = "v${version}";
+    sha256 = "sha256-+cyz6ORwsSQTzNiL9hDVz9CuyHIklkJ8LvH2/hbFt4E=";
   };
 
   nativeBuildInputs = [ pkg-config ];
@@ -22,7 +22,7 @@ rustPlatform.buildRustPackage rec {
     pkgs.libiconvReal
   ];
 
-  cargoSha256 = "1b915zkg41n3azk4hhg6fgc83n7iq8p7drvdyil2m2a4qdjvp9r3";
+  cargoSha256 = "sha256-KdqjYXS7kB+T8bS3gMhgfwhaaScsGF1gHHvg53knpU8=";
 
   meta = with pkgs.lib; {
     description = "A glorious link checker";
