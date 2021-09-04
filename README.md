@@ -11,6 +11,8 @@ Included packages:
 - [fclones] : Finds duplicate, unique, under- or over-replicated files
 - [gdrive] : Golang CLI to interact with Google Drive
 - [git-quickfix] : Small Git add-on to commit changes to a new branch without leaving the current one
+- [hcctl]: CLI to look up the status of checks on https://healthchecks.io
+- [healthchecks-monitor]: CLI tool to run commands and report its result to https://healthchecks.io
 - [jetbrains-mono-nerdfonts] : Packaging of the [nerd-fonts] variant of [JetBrains' JetBrains Mono] typeface
 - [lychee] : Packaging of [lychee], may be slightly out of date as I don't use it actively
 - [natls]: `ls` alternative with useful info and a splash of color art
@@ -33,3 +35,5 @@ Included packages:
 [pidcat]: https://msfjarvis.dev/g/pidcat
 [JakeWharton's pidcat]: https://github.com/JakeWharton/pidcat
 [rust-script]: https://rust-script.org/
+[hcctl]: https://msfjarvis.dev/g/healthchecks-rs
+[healthchecks-monitor]: https://msfjarvis.dev/g/healthchecks-rs

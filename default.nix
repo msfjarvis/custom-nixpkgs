@@ -12,6 +12,7 @@
   fclones = pkgs.callPackage ./pkgs/fclones { };
   gdrive = pkgs.callPackage ./pkgs/gdrive { };
   git-quickfix = pkgs.callPackage ./pkgs/git-quickfix { };
+  hcctl = pkgs.callPackage ./pkgs/hcctl { };
   healthchecks-monitor = pkgs.callPackage ./pkgs/healthchecks-monitor { };
   jetbrains-mono-nerdfonts =
     pkgs.callPackage ./pkgs/jetbrains-mono-nerdfonts { };
