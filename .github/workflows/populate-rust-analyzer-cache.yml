@@ -1,9 +1,9 @@
-name: Cache rust-analyzer build
 on:
   schedule:
     - cron: '0 3 * * *'
   workflow_dispatch:
 
+name: Cache rust-analyzer build
 jobs:
   build-cache-ra:
     runs-on: ubuntu-latest
@@ -22,14 +22,13 @@ jobs:
            experimental-features = flakes nix-command
            access-tokens = github.com=${{ github.token }}
 
-     - name: Enable cachix
-       uses: cachix/cachix-action@6e4751ed42b22f60165d3f266cfa4cce66ae406d
-       with:
-         name: msfjarvis
-         authToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
-
-     - name: Enable cachix binary cache
-       run: cachix use msfjarvis
+     - name: Install and enable cachix
+       run: |
+         nix-env --quiet -j8 -iA cachix -f https://cachix.org/api/v1/install
+         cachix use msfjarvis
+         cachix authtoken ${CACHIX_AUTH_TOKEN}
+       env:
+         CACHIX_AUTH_TOKEN: ${{ secrets.CACHIX_AUTH_TOKEN }}
 
      - name: Build rust-analyzer
        run: |
@@ -40,4 +39,4 @@ jobs:
 
      - name: Push rust-analyzer derivation to Cachix
        run: |
-         find /nix/store -maxdepth 1 -type f -name '*rust-analyzer*.drv' -exec cachix push msfjarvis {} \;
+         find /nix/store -maxdepth 1 -type f -name '*rust-analyzer*.drv' -exec cachix push msfjarvis --omit-deriver -c9 {} \;
