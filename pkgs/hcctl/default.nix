@@ -32,7 +32,8 @@ in rustPlatform.buildRustPackage rec {
   cargoSha256 = "sha256-8h1jFB9hAlJjk4pQZrc3LbmKdCziSUAwDtHGN4tTAQw=";
 
   meta = with pkgs.lib; {
-    description = "Simple CLI tool to keep a track of your https://healthchecks.io account";
+    description =
+      "Simple CLI tool to keep a track of your https://healthchecks.io account";
     homepage = "https://msfjarvis.dev/g/healthchecks-rs";
     license = licenses.mit;
     platform = platforms.all;
