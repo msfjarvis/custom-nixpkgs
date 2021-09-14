@@ -8,7 +8,6 @@ Included packages:
 - [adx] : Rust tool to poll Google Maven for AndroidX packages and their latest versions
 - [bundletool] : Command-line tool to manipulate Android App Bundles
 - [diffuse] : Java tool to diff between APKs, AARs and JARs
-- [fclones] : Finds duplicate, unique, under- or over-replicated files
 - [gdrive] : Golang CLI to interact with Google Drive
 - [git-quickfix] : Small Git add-on to commit changes to a new branch without leaving the current one
 - [hcctl]: CLI to look up the status of checks on https://healthchecks.io

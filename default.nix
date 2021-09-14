@@ -9,7 +9,6 @@ with pkgs; {
   adx = callPackage ./pkgs/adx { };
   bundletool-bin = callPackage ./pkgs/bundletool-bin { };
   diffuse-bin = callPackage ./pkgs/diffuse-bin { };
-  fclones = callPackage ./pkgs/fclones { };
   gdrive = callPackage ./pkgs/gdrive { };
   git-quickfix = callPackage ./pkgs/git-quickfix { };
   hcctl = callPackage ./pkgs/hcctl { };
