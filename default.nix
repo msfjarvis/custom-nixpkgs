@@ -1,23 +1,23 @@
 { pkgs ? import <nixpkgs> { } }:
 
-{
+with pkgs; {
   lib = import ./lib { inherit pkgs; }; # functions
   modules = import ./modules; # NixOS modules
   overlays = import ./overlays; # nixpkgs overlays
 
-  adb-sync = pkgs.callPackage ./pkgs/adb-sync { };
-  adx = pkgs.callPackage ./pkgs/adx { };
-  bundletool-bin = pkgs.callPackage ./pkgs/bundletool-bin { };
-  diffuse-bin = pkgs.callPackage ./pkgs/diffuse-bin { };
-  fclones = pkgs.callPackage ./pkgs/fclones { };
-  gdrive = pkgs.callPackage ./pkgs/gdrive { };
-  git-quickfix = pkgs.callPackage ./pkgs/git-quickfix { };
-  hcctl = pkgs.callPackage ./pkgs/hcctl { };
-  healthchecks-monitor = pkgs.callPackage ./pkgs/healthchecks-monitor { };
+  adb-sync = callPackage ./pkgs/adb-sync { };
+  adx = callPackage ./pkgs/adx { };
+  bundletool-bin = callPackage ./pkgs/bundletool-bin { };
+  diffuse-bin = callPackage ./pkgs/diffuse-bin { };
+  fclones = callPackage ./pkgs/fclones { };
+  gdrive = callPackage ./pkgs/gdrive { };
+  git-quickfix = callPackage ./pkgs/git-quickfix { };
+  hcctl = callPackage ./pkgs/hcctl { };
+  healthchecks-monitor = callPackage ./pkgs/healthchecks-monitor { };
   jetbrains-mono-nerdfonts =
-    pkgs.callPackage ./pkgs/jetbrains-mono-nerdfonts { };
-  lychee = pkgs.callPackage ./pkgs/lychee { };
-  natls = pkgs.callPackage ./pkgs/natls { };
-  pidcat = pkgs.callPackage ./pkgs/pidcat { };
-  rust-script = pkgs.callPackage ./pkgs/rust-script { };
+    callPackage ./pkgs/jetbrains-mono-nerdfonts { };
+  lychee = callPackage ./pkgs/lychee { };
+  natls = callPackage ./pkgs/natls { };
+  pidcat = callPackage ./pkgs/pidcat { };
+  rust-script = callPackage ./pkgs/rust-script { };
 }
