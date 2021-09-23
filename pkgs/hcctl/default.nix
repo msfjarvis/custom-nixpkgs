@@ -11,13 +11,13 @@ let
 
 in rustPlatform.buildRustPackage rec {
   pname = "hcctl";
-  version = "2.0.0";
+  version = "2.0.1-alpha.1";
 
   src = fetchFromGitHub {
     owner = "msfjarvis";
     repo = "healthchecks-rs";
     rev = "hcctl-${version}";
-    sha256 = "sha256-2bK4ACGH/rOr8bDNP+jGXWw8JfkSa1oMwhD81U7D5uQ=";
+    sha256 = "sha256-9BDAnGKHcSa2LXREaS5/UnK7g5AsAcshpxswJmBDebc=";
   };
 
   nativeBuildInputs = [ pkg-config ];
@@ -29,7 +29,7 @@ in rustPlatform.buildRustPackage rec {
 
   buildAndTestSubdir = "hcctl";
 
-  cargoSha256 = "sha256-8h1jFB9hAlJjk4pQZrc3LbmKdCziSUAwDtHGN4tTAQw=";
+  cargoSha256 = "sha256-fHnk4Ui1HLK+UBOOtrl1+Yu6BioSqHxdcFuds/Ujpm4=";
 
   meta = with pkgs.lib; {
     description =
