@@ -5,7 +5,6 @@ set -euxo pipefail
 declare -a ITEMS=(
   adb-sync
   adx
-  fclones
   gdrive
   git-quickfix
   lychee
