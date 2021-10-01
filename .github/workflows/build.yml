@@ -7,7 +7,6 @@ on:
       - README.md
       - update.sh
       - .github/workflows/update.yml
-      - .github/workflows/populate-rust-analyzer-cache.yml
 
   pull_request:
     branches:
@@ -17,7 +16,6 @@ on:
       - README.md
       - update.sh
       - .github/workflows/update.yml
-      - .github/workflows/populate-rust-analyzer-cache.yml
 
   workflow_dispatch:
 
@@ -55,3 +53,5 @@ jobs:
         # Compile again, but since it's already cached we simply get a list of store paths
         # that can be pushed to cachix.
         nix-build | cachix push msfjarvis --omit-deriver -c9
+env:
+  NIXPKGS_ALLOW_UNSUPPORTED_SYSTEM: 1
