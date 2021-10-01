@@ -36,6 +36,6 @@ in rustPlatform.buildRustPackage rec {
       "Simple CLI tool to keep a track of your https://healthchecks.io account";
     homepage = "https://msfjarvis.dev/g/healthchecks-rs";
     license = licenses.mit;
-    platform = platforms.all;
+    platforms = platforms.all;
   };
 }

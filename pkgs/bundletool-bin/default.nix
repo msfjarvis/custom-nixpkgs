@@ -21,6 +21,6 @@ in fetchzip rec {
       "Bundletool is a command-line tool to manipulate Android App Bundles";
     homepage = "https://g.co/androidappbundle";
     license = licenses.asl20;
-    platform = platforms.all;
+    platforms = platforms.all;
   };
 }

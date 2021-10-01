@@ -37,6 +37,6 @@ in rustPlatform.buildRustPackage rec {
       ''Command-line tool to run Rust "scripts" which can make use of crates.'';
     homepage = "https://rust-script.org/";
     license = licenses.mit;
-    platform = platforms.all;
+    platforms = platforms.all;
   };
 }

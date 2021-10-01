@@ -19,6 +19,6 @@ in fetchzip rec {
     description = "Diffuse is a tool for diffing APKs, AABs, AARs, and JARs";
     homepage = "https://github.com/jakewharton/diffuse";
     license = licenses.asl20;
-    platform = platforms.all;
+    platforms = platforms.all;
   };
 }

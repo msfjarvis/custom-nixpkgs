@@ -30,6 +30,6 @@ buildGoModule rec {
     description = "GDrive CLI tool";
     homepage = "https://github.com/msfjarvis/gdrive";
     license = licenses.mit;
-    platform = platforms.all;
+    platforms = platforms.all;
   };
 }

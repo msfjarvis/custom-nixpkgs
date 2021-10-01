@@ -36,6 +36,6 @@ in rustPlatform.buildRustPackage rec {
       "CLI tool to run shell jobs and report status to https://healthchecks.io";
     homepage = "https://msfjarvis.dev/g/healthchecks-rs";
     license = licenses.mit;
-    platform = platforms.all;
+    platforms = platforms.all;
   };
 }

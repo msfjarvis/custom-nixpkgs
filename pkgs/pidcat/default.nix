@@ -27,6 +27,6 @@ stdenv.mkDerivation rec {
     homepage = "https://github.com/JakeWharton/pidcat";
     description = "pidcat - colored logcat script";
     license = licenses.asl20;
-    platform = platforms.all;
+    platforms = platforms.all;
   };
 }

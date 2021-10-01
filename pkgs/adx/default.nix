@@ -35,6 +35,6 @@ in rustPlatform.buildRustPackage rec {
       "Rust binary that polls Google's Maven repository and extracts the latest version of all dependencies, with as few network calls as possible.";
     homepage = "https://github.com/msfjarvis/androidx-release-watcher";
     license = licenses.mit;
-    platform = platforms.all;
+    platforms = platforms.all;
   };
 }
