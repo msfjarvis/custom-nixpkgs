@@ -9,7 +9,6 @@ Included packages:
 - [bundletool] : Command-line tool to manipulate Android App Bundles
 - [diffuse] : Java tool to diff between APKs, AARs and JARs
 - [gdrive] : Golang CLI to interact with Google Drive
-- [git-quickfix] : Small Git add-on to commit changes to a new branch without leaving the current one
 - [hcctl]: CLI to look up the status of checks on https://healthchecks.io
 - [healthchecks-monitor]: CLI tool to run commands and report its result to https://healthchecks.io
 - [jetbrains-mono-nerdfonts] : Packaging of the [nerd-fonts] variant of [JetBrains' JetBrains Mono] typeface
@@ -23,7 +22,6 @@ Included packages:
 [diffuse]: https://github.com/JakeWharton/diffuse
 [fclones]: https://github.com/pkolaczk/fclones
 [gdrive]: https://msfjarvis.dev/g/gdrive
-[git-quickfix]: https://github.com/siedentop/git-quickfix
 [jetbrains-mono-nerdfonts]: https://github.com/ryanoasis/nerd-fonts
 [nerd-fonts]: https://github.com/ryanoasis/nerd-fonts
 [Jetbrains' JetBrains Mono]: https://github.com/JetBrains/JetBrainsMono

@@ -10,7 +10,6 @@ with pkgs; {
   bundletool-bin = callPackage ./pkgs/bundletool-bin { };
   diffuse-bin = callPackage ./pkgs/diffuse-bin { };
   gdrive = callPackage ./pkgs/gdrive { };
-  git-quickfix = callPackage ./pkgs/git-quickfix { };
   hcctl = callPackage ./pkgs/hcctl { };
   healthchecks-monitor = callPackage ./pkgs/healthchecks-monitor { };
   jetbrains-mono-nerdfonts =
