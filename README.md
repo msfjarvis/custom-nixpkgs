@@ -13,7 +13,6 @@ Included packages:
 - [hcctl]: CLI to look up the status of checks on https://healthchecks.io
 - [healthchecks-monitor]: CLI tool to run commands and report its result to https://healthchecks.io
 - [jetbrains-mono-nerdfonts] : Packaging of the [nerd-fonts] variant of [JetBrains' JetBrains Mono] typeface
-- [lychee] : Packaging of [lychee], may be slightly out of date as I don't use it actively
 - [natls]: `ls` alternative with useful info and a splash of color art
 - [pidcat] : Fork of [JakeWharton's pidcat] with Python3 support and some other fixes
 
@@ -28,7 +27,6 @@ Included packages:
 [jetbrains-mono-nerdfonts]: https://github.com/ryanoasis/nerd-fonts
 [nerd-fonts]: https://github.com/ryanoasis/nerd-fonts
 [Jetbrains' JetBrains Mono]: https://github.com/JetBrains/JetBrainsMono
-[lychee]: https://github.com/lycheeverse/lychee
 [natls]: https://github.com/willdoescode/nat
 [pidcat]: https://msfjarvis.dev/g/pidcat
 [JakeWharton's pidcat]: https://github.com/JakeWharton/pidcat
