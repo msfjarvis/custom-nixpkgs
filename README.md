@@ -16,7 +16,6 @@ Included packages:
 - [lychee] : Packaging of [lychee], may be slightly out of date as I don't use it actively
 - [natls]: `ls` alternative with useful info and a splash of color art
 - [pidcat] : Fork of [JakeWharton's pidcat] with Python3 support and some other fixes
-- [rust-script]: Command-line tool to run Rust "scripts" which can make use of crates.
 
 [adb-sync]: https://msfjarvis.dev/g/adb-sync
 [Google's adb-sync]: https://github.com/google/adb-sync
@@ -33,6 +32,5 @@ Included packages:
 [natls]: https://github.com/willdoescode/nat
 [pidcat]: https://msfjarvis.dev/g/pidcat
 [JakeWharton's pidcat]: https://github.com/JakeWharton/pidcat
-[rust-script]: https://rust-script.org/
 [hcctl]: https://msfjarvis.dev/g/healthchecks-rs
 [healthchecks-monitor]: https://msfjarvis.dev/g/healthchecks-rs
