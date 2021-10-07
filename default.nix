@@ -14,6 +14,5 @@ with pkgs; {
   healthchecks-monitor = callPackage ./pkgs/healthchecks-monitor { };
   jetbrains-mono-nerdfonts =
     callPackage ./pkgs/jetbrains-mono-nerdfonts { };
-  natls = callPackage ./pkgs/natls { };
   pidcat = callPackage ./pkgs/pidcat { };
 }
