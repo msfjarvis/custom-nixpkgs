@@ -6,11 +6,7 @@ declare -a ITEMS=(
   adb-sync
   adx
   gdrive
-  git-quickfix
-  lychee
-  natls
   pidcat
-  rust-script
 )
 
 PKG="${1:-}"
