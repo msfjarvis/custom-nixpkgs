@@ -8,6 +8,7 @@ with pkgs; {
   adb-sync = callPackage ./pkgs/adb-sync { };
   adx = callPackage ./pkgs/adx { };
   bundletool-bin = callPackage ./pkgs/bundletool-bin { };
+  clipboard-substitutor = callPackage ./pkgs/clipboard-substitutor { };
   diffuse-bin = callPackage ./pkgs/diffuse-bin { };
   gdrive = callPackage ./pkgs/gdrive { };
   hcctl = callPackage ./pkgs/hcctl { };
