@@ -5,7 +5,7 @@ let
   mkRustPlatform = pkgs.callPackage ./../../lib/mk-rust-platform.nix { };
 
   rustPlatform = mkRustPlatform {
-    date = "2021-08-21";
+    date = "2021-11-13";
     channel = "nightly";
   };
 
