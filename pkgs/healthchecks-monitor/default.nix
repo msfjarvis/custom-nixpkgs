@@ -1,15 +1,7 @@
-{ stdenv, fetchFromGitHub, rustPlatform, pkg-config, openssl
+{ stdenv, fetchFromGitHub, mkRustPlatform, openssl, pkg-config
 , pkgs ? import <nixpkgs> { } }:
 
-let
-  mkRustPlatform = pkgs.callPackage ./../../lib/mk-rust-platform.nix { };
-
-  rustPlatform = mkRustPlatform {
-    date = "2021-11-13";
-    channel = "nightly";
-  };
-
-in rustPlatform.buildRustPackage rec {
+mkRustPlatform.buildRustPackage rec {
   pname = "healthchecks-monitor";
   version = "3.0.0";
 

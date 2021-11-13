@@ -1,4 +1,4 @@
-{ lib, fetchFromGitHub, buildGoModule, installShellFiles }:
+{ lib, buildGoModule, fetchFromGitHub, installShellFiles }:
 
 buildGoModule rec {
   pname = "gdrive";

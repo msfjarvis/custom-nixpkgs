@@ -1,15 +1,7 @@
-{ stdenv, fetchFromGitHub, rustPlatform, pkgs ? import <nixpkgs> { }, pkg-config
-}:
+{ stdenv, fetchFromGitHub, mkRustPlatform, pkg-config
+, pkgs ? import <nixpkgs> { } }:
 
-let
-  mkRustPlatform = pkgs.callPackage ./../../lib/mk-rust-platform.nix { };
-
-  rustPlatform = mkRustPlatform {
-    date = "2021-11-13";
-    channel = "nightly";
-  };
-
-in rustPlatform.buildRustPackage rec {
+mkRustPlatform.buildRustPackage rec {
   pname = "adx";
   version = "4.1.0";
 

@@ -1,15 +1,7 @@
-{ stdenv, fetchFromGitHub, rustPlatform, pkg-config, pkgs ? import <nixpkgs> { }
-}:
+{ stdenv, fetchFromGitHub, pkg-config, pkgs ? import <nixpkgs> { }
+, mkRustPlatform }:
 
-let
-  mkRustPlatform = pkgs.callPackage ./../../lib/mk-rust-platform.nix { };
-
-  rustPlatform = mkRustPlatform {
-    date = "2021-11-13";
-    channel = "nightly";
-  };
-
-in rustPlatform.buildRustPackage rec {
+mkRustPlatform.buildRustPackage rec {
   pname = "clipboard-substitutor";
   version = "0.1.0-alpha.1";
 
