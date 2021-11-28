@@ -5,6 +5,7 @@ set -euxo pipefail
 declare -a ITEMS=(
   adb-sync
   adx
+  clipboard-substitutor
   gdrive
   pidcat
 )
