@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - develop
+      - main
     paths-ignore:
       - xtask
       - README.md
@@ -10,7 +10,7 @@ on:
 
   pull_request:
     branches:
-      - develop
+      - main
     paths-ignore:
       - xtask
       - README.md
