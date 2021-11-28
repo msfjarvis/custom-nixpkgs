@@ -15,7 +15,7 @@ mkRustPlatform.buildRustPackage rec {
   cargoSha256 = "sha256-5A4Fpe0zgJPn5KkQ7SNZvP8WWGexnCE4FDoQipMaXlw=";
 
   nativeBuildInputs = [ pkg-config pkgs.python3 ];
-  buildInputs = [ ] ++ pkgs.lib.optionals stdenv.isLinux [ pkgs.xorg.libxcb ]
+  buildInputs = pkgs.lib.optionals stdenv.isLinux [ pkgs.xorg.libxcb ]
     ++ pkgs.lib.optionals stdenv.isDarwin
     [ pkgs.darwin.apple_sdk.frameworks.AppKit ];
 
