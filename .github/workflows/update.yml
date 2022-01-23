@@ -58,7 +58,7 @@ jobs:
       with:
         assignees: msfjarvis
         author: GitHub Actions <noreply@github.com>
-        base: develop
+        base: main
         body: This is an automated pull request to update Nix packages in this repository
         branch: bot/update-packages
         title: Update packages
