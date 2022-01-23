@@ -3,13 +3,13 @@
 
 mkRustPlatform.buildRustPackage rec {
   pname = "adx";
-  version = "4.1.0";
+  version = "4.2.0";
 
   src = fetchFromGitHub {
     owner = "msfjarvis";
     repo = "androidx-release-watcher";
     rev = "v${version}";
-    sha256 = "sha256-KG990Wcbb7EYaZkKnS3r5VVvEyNEU/0FQKUdSffhisc=";
+    sha256 = "sha256-UfxVKkTiydtey6vhRa3sQ0Hz0TKA4eKgDJqw5aDL1L8=";
   };
 
   nativeBuildInputs = [ pkg-config ];
@@ -20,7 +20,7 @@ mkRustPlatform.buildRustPackage rec {
     pkgs.libiconvReal
   ] ++ pkgs.lib.optionals stdenv.isLinux [ pkgs.openssl ];
 
-  cargoSha256 = "sha256-QgjfL8fzZhFfx2XWPq/N9Fax8Tv+6SGE8JBprbLWggo=";
+  cargoSha256 = "sha256-U2r/bHT/W9cwkza1L8s/Tqv3DCgxwTwtok3+lU7zkCQ=";
 
   meta = with pkgs.lib; {
     description =
