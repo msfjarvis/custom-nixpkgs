@@ -8,11 +8,11 @@ mkRustPlatform.buildRustPackage rec {
   src = fetchFromGitHub {
     owner = "msfjarvis";
     repo = "clipboard-substitutor";
-    rev = "d425ae9133fe33253e05766de8cd879802cb50ab";
-    sha256 = "sha256-+KAhVcpQc4MgHpeWQBVnbV0hofSJFzG5Ecq3BhiDUMc=";
+    rev = "v${version}";
+    sha256 = "sha256-ntnx4ROkkBBFj4UEnd4ER1RyYkOlcZxu9+widfNTBro=";
   };
 
-  cargoSha256 = "sha256-XPvEngArrj94udRxqOLa/eXyqgzEQOe21pXlUp2zYRc=";
+  cargoSha256 = "sha256-ablp6TgPnZy47dMBbT//KBXq3lE0Q69CbmL4XLi67XE=";
 
   nativeBuildInputs = [ pkg-config pkgs.python3 ];
   buildInputs = pkgs.lib.optionals stdenv.isLinux [ pkgs.xorg.libxcb ]
