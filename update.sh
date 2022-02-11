@@ -12,13 +12,18 @@ declare -a ITEMS=(
 
 PKG="${1:-}"
 VERSION="${2:-}"
+NO_BUILD="${NO_BUILD:-}"
+declare -a PARAMS=("--commit")
+if [ -z "${NO_BUILD}" ]; then
+  PARAMS+=("--build")
+fi
 
 if [ -z "${PKG}" ]; then
   for item in "${ITEMS[@]}"; do
-    nix-update --commit --build "${item}"
+    nix-update "${PARAMS[@]}" "${item}"
   done
 elif [ -z "${VERSION}" ]; then
-  nix-update --commit --build "${PKG}"
+  nix-update "${PARAMS[@]}" "${PKG}"
 else
-  nix-update --commit --build "${PKG}" --version "${VERSION}"
+  nix-update "${PARAMS[@]}" "${PKG}" --version "${VERSION}"
 fi
