@@ -13,6 +13,7 @@ Included packages:
 - [healthchecks-monitor]: CLI tool to run commands and report its result to https://healthchecks.io
 - [jetbrains-mono-nerdfonts] : Packaging of the [nerd-fonts] variant of [JetBrains' JetBrains Mono] typeface
 - [pidcat] : Fork of [JakeWharton's pidcat] with Python3 support and some other fixes
+- [when] : A CLI tool to deal with timezones
 
 [adb-sync]: https://msfjarvis.dev/g/adb-sync
 [Google's adb-sync]: https://github.com/google/adb-sync
@@ -28,3 +29,4 @@ Included packages:
 [JakeWharton's pidcat]: https://github.com/JakeWharton/pidcat
 [hcctl]: https://msfjarvis.dev/g/healthchecks-rs
 [healthchecks-monitor]: https://msfjarvis.dev/g/healthchecks-rs
+[when]: https://github.com/mitsuhiko/when

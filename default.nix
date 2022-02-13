@@ -18,4 +18,5 @@ in with pkgs; {
     callPackage ./pkgs/healthchecks-monitor { inherit mkRustPlatform; };
   jetbrains-mono-nerdfonts = callPackage ./pkgs/jetbrains-mono-nerdfonts { };
   pidcat = callPackage ./pkgs/pidcat { };
+  when = callPackage ./pkgs/when { inherit mkRustPlatform; };
 }
