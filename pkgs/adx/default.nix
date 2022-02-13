@@ -7,7 +7,7 @@ mkRustPlatform.buildRustPackage rec {
 
   src = fetchFromGitHub {
     owner = "msfjarvis";
-    repo = "androidx-release-watcher";
+    repo = "adx";
     rev = "v${version}";
     sha256 = "sha256-UfxVKkTiydtey6vhRa3sQ0Hz0TKA4eKgDJqw5aDL1L8=";
   };
