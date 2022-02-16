@@ -1,5 +1,4 @@
-{ stdenv, fetchgit, mkRustPlatform, pkg-config
-, pkgs ? import <nixpkgs> { } }:
+{ stdenv, fetchgit, mkRustPlatform, pkg-config, pkgs ? import <nixpkgs> { } }:
 
 mkRustPlatform.buildRustPackage rec {
   pname = "when";
