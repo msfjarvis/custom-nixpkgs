@@ -13,6 +13,7 @@ in with pkgs; {
     callPackage ./pkgs/clipboard-substitutor { inherit mkRustPlatform; };
   diffuse-bin = callPackage ./pkgs/diffuse-bin { };
   gdrive = callPackage ./pkgs/gdrive { };
+  jless = callPackage ./pkgs/jless { inherit mkRustPlatform; };
   hcctl = callPackage ./pkgs/hcctl { inherit mkRustPlatform; };
   healthchecks-monitor =
     callPackage ./pkgs/healthchecks-monitor { inherit mkRustPlatform; };
