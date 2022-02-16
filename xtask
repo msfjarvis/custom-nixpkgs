@@ -24,7 +24,11 @@ case "${1:-nothing}" in
   fmt)
     fd -tf \.nix$ -X nixfmt
     ;;
+  sri)
+    shift
+    nix to-sri --type sha256 "${1:?}"
+    ;;
   nothing)
-    echo -e "${CL_RED}USAGE:${CL_RST}\n${CL_YLW}${0} '<action>'\n\t[possible values: 'clean' 'hash' 'fmt']${CL_RST}"
+    echo -e "${CL_RED}USAGE:${CL_RST}\n${CL_YLW}${0} '<action>'\n\t[possible values: 'clean' 'hash' 'fmt' 'sri']${CL_RST}"
     ;;
 esac
