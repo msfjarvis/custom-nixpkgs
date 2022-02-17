@@ -3,16 +3,16 @@
 
 mkRustPlatform.buildRustPackage rec {
   pname = "clipboard-substitutor";
-  version = "0.4.1";
+  version = "0.4.2";
 
   src = fetchFromGitHub {
     owner = "msfjarvis";
     repo = "clipboard-substitutor";
     rev = "v${version}";
-    sha256 = "sha256-ntnx4ROkkBBFj4UEnd4ER1RyYkOlcZxu9+widfNTBro=";
+    sha256 = "sha256-dZ/1JfPZ5skofl8MYK0ExVMhlz5gqtpErK254DO7fE8=";
   };
 
-  cargoSha256 = "sha256-ablp6TgPnZy47dMBbT//KBXq3lE0Q69CbmL4XLi67XE=";
+  cargoSha256 = "sha256-b1R6vrcVSOTKlbSvjKPtR07ajCY6Voh2GfFpEn3JAZg=";
 
   nativeBuildInputs = [ pkg-config pkgs.python3 ];
   buildInputs = pkgs.lib.optionals stdenv.isLinux [ pkgs.xorg.libxcb ]
