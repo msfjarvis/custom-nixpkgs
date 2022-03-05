@@ -8,6 +8,7 @@ in with pkgs; {
 
   adb-sync = callPackage ./pkgs/adb-sync { };
   adx = callPackage ./pkgs/adx { inherit mkRustPlatform; };
+  argc = callPackage ./pkgs/argc { inherit mkRustPlatform; };
   bundletool-bin = callPackage ./pkgs/bundletool-bin { };
   clipboard-substitutor =
     callPackage ./pkgs/clipboard-substitutor { inherit mkRustPlatform; };
