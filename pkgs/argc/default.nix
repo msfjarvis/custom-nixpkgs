@@ -14,9 +14,8 @@ mkRustPlatform.buildRustPackage rec {
   cargoSha256 = "sha256-9SfUJZ28EYP8p7VfvWfX6SDIuRgDLJGOTrAq98gGK2Q=";
 
   meta = with pkgs.lib; {
-    description =
-      "Rust binary that polls Google's Maven repository and extracts the latest version of all dependencies, with as few network calls as possible.";
-    homepage = "https://github.com/msfjarvis/androidx-release-watcher";
+    description = "A handy way to handle sh/bash cli parameters.";
+    homepage = "https://github.com/sigoden/argc";
     license = licenses.mit;
     platforms = platforms.all;
   };
