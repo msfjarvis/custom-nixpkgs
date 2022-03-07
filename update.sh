@@ -5,9 +5,12 @@ set -euxo pipefail
 declare -a ITEMS=(
   adb-sync
   adx
+  argc
   clipboard-substitutor
   gdrive
+  jless
   pidcat
+  when
 )
 
 PKG="${1:-}"
