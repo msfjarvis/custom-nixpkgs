@@ -2,16 +2,16 @@
 
 mkRustPlatform.buildRustPackage rec {
   pname = "argc";
-  version = "0.2.3";
+  version = "0.4.0";
 
   src = fetchFromGitHub {
     owner = "sigoden";
     repo = "argc";
     rev = "v${version}";
-    sha256 = "sha256-h/2fZwRsXMn8ctEuX2KbLvkMVkaYbC08KDZAM/p7At8=";
+    sha256 = "sha256-AWnOa0QnsIQvrp6f1QrN8wrFCd0nIDLNfZ2cyy/J7Gw=";
   };
 
-  cargoSha256 = "sha256-9SfUJZ28EYP8p7VfvWfX6SDIuRgDLJGOTrAq98gGK2Q=";
+  cargoSha256 = "sha256-XXoUYgS2w24NlUNA6MZGe3O6zFygWT8OrFPWdqT2XSE=";
 
   meta = with pkgs.lib; {
     description = "A handy way to handle sh/bash cli parameters.";
