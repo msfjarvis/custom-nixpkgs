@@ -12,6 +12,7 @@ mkRustPlatform.buildRustPackage rec {
     sha256 = "sha256-iixrHCEwfYmWex3BxWlO18PoRoFA95T54n0SStxTtkU=";
   };
 
+  buildFeatures = pkgs.lib.optionals stdenv.isLinux [ "journald" ];
   cargoSha256 = "sha256-HIVeZiUKSy3mUTncol5HDfEyIeB201nAnmGQp1/ByNs=";
 
   nativeBuildInputs = [ pkg-config pkgs.python3 ];
