@@ -1,6 +1,6 @@
 { pkgs ? import <nixpkgs> { } }:
 
-let mkRustPlatform = import ./lib/mk-rust-platform.nix { inherit pkgs; };
+let mkRustPlatform = import ./lib/mk-rust-platform.nix;
 in with pkgs; {
   lib = import ./lib { inherit pkgs; }; # functions
   modules = import ./modules; # NixOS modules
