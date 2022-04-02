@@ -21,7 +21,7 @@ Included packages:
 [Google's adb-sync]: https://github.com/google/adb-sync
 [adx]: https://msfjarvis.dev/g/androidx-release-watcher
 [bundletool]: https://developer.android.com/studio/command-line/bundletool
-[clipboard-subsitutor]: https://msfjarvis.dev/g/clipboard-subsitutor
+[clipboard-substitutor]: https://msfjarvis.dev/g/clipboard-subsitutor
 [diffuse]: https://github.com/JakeWharton/diffuse
 [gdrive]: https://msfjarvis.dev/g/gdrive
 [hcctl]: https://msfjarvis.dev/g/healthchecks-rs
