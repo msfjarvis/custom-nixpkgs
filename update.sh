@@ -5,7 +5,7 @@ set -euxo pipefail
 declare -a ITEMS=(
   adb-sync
   adx
-  argc
+  # argc
   clipboard-substitutor
   gdrive
   jless

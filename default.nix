@@ -7,7 +7,7 @@ with pkgs; {
 
   adb-sync = callPackage ./pkgs/adb-sync { };
   adx = callPackage ./pkgs/adx { };
-  argc = callPackage ./pkgs/argc { };
+  # argc = callPackage ./pkgs/argc { };
   bundletool-bin = callPackage ./pkgs/bundletool-bin { };
   clipboard-substitutor = callPackage ./pkgs/clipboard-substitutor { };
   diffuse-bin = callPackage ./pkgs/diffuse-bin { };
