@@ -3,13 +3,13 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "adx";
-  version = "4.2.0";
+  version = "4.3.0";
 
   src = fetchFromGitHub {
     owner = "msfjarvis";
     repo = "adx";
     rev = "v${version}";
-    sha256 = "sha256-UfxVKkTiydtey6vhRa3sQ0Hz0TKA4eKgDJqw5aDL1L8=";
+    sha256 = "sha256-FxkzQua3bA+BKE77twnfu7+fv2mE24x3JG67mRmPilY=";
   };
 
   nativeBuildInputs = [ pkg-config ];
@@ -20,7 +20,7 @@ rustPlatform.buildRustPackage rec {
     pkgs.libiconvReal
   ] ++ pkgs.lib.optionals stdenv.isLinux [ pkgs.openssl ];
 
-  cargoSha256 = "sha256-U2r/bHT/W9cwkza1L8s/Tqv3DCgxwTwtok3+lU7zkCQ=";
+  cargoSha256 = "sha256-ja1Zei1OBGhRiRUwV9DcfBdDQ1zLSftT6ncJohSg2gs=";
 
   meta = with pkgs.lib; {
     description =
