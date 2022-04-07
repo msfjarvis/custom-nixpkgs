@@ -1,17 +1,23 @@
-{ stdenv, fetchFromGitHub, rustPlatform, pkgs ? import <nixpkgs> { } }:
+{ stdenv, fetchFromGitHub, pkg-config, rustPlatform, pkgs ? import <nixpkgs> { }
+}:
 
 rustPlatform.buildRustPackage rec {
   pname = "jless";
-  version = "0.7.2";
+  version = "0.8.0";
 
   src = fetchFromGitHub {
     owner = "PaulJuliusMartinez";
     repo = "jless";
     rev = "v${version}";
-    sha256 = "sha256-IK+EllkctdhIYuzj7eLjadxKoutICPeSXAjLMFiRjmo=";
+    sha256 = "sha256-NB/s29M46mVhTsJWFYnBgJjSjUVbfdmuz69VdpVuR7c=";
   };
 
-  cargoSha256 = "sha256-CAyKWwtMq5UOODVRrpVHrhlep2wqG434dMGeYV2FSZY=";
+  cargoSha256 = "sha256-cPj9cTRhWK/YU8Cae63p4Vm5ohB1IfGL5fu7yyFGSXA=";
+
+  nativeBuildInputs = [ pkg-config pkgs.python3 ];
+  buildInputs = pkgs.lib.optionals stdenv.isLinux [ pkgs.xorg.libxcb ]
+    ++ pkgs.lib.optionals stdenv.isDarwin
+    [ pkgs.darwin.apple_sdk.frameworks.AppKit ];
 
   meta = with pkgs.lib; {
     description = "A command-line pager for JSON data.";
