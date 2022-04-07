@@ -1,24 +1,21 @@
 { pkgs ? import <nixpkgs> { } }:
 
-let mkRustPlatform = import ./lib/mk-rust-platform.nix;
-in with pkgs; {
+with pkgs; {
   lib = import ./lib { inherit pkgs; }; # functions
   modules = import ./modules; # NixOS modules
   overlays = import ./overlays; # nixpkgs overlays
 
   adb-sync = callPackage ./pkgs/adb-sync { };
-  adx = callPackage ./pkgs/adx { inherit mkRustPlatform; };
-  argc = callPackage ./pkgs/argc { inherit mkRustPlatform; };
+  adx = callPackage ./pkgs/adx { };
+  argc = callPackage ./pkgs/argc { };
   bundletool-bin = callPackage ./pkgs/bundletool-bin { };
-  clipboard-substitutor =
-    callPackage ./pkgs/clipboard-substitutor { inherit mkRustPlatform; };
+  clipboard-substitutor = callPackage ./pkgs/clipboard-substitutor { };
   diffuse-bin = callPackage ./pkgs/diffuse-bin { };
   gdrive = callPackage ./pkgs/gdrive { };
-  jless = callPackage ./pkgs/jless { inherit mkRustPlatform; };
-  hcctl = callPackage ./pkgs/hcctl { inherit mkRustPlatform; };
-  healthchecks-monitor =
-    callPackage ./pkgs/healthchecks-monitor { inherit mkRustPlatform; };
+  jless = callPackage ./pkgs/jless { };
+  hcctl = callPackage ./pkgs/hcctl { };
+  healthchecks-monitor = callPackage ./pkgs/healthchecks-monitor { };
   jetbrains-mono-nerdfonts = callPackage ./pkgs/jetbrains-mono-nerdfonts { };
   pidcat = callPackage ./pkgs/pidcat { };
-  when = callPackage ./pkgs/when { inherit mkRustPlatform; };
+  when = callPackage ./pkgs/when { };
 }

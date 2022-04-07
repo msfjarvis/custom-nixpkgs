@@ -1,7 +1,7 @@
-{ stdenv, fetchFromGitHub, mkRustPlatform, openssl, pkg-config
+{ stdenv, fetchFromGitHub, rustPlatform, openssl, pkg-config
 , pkgs ? import <nixpkgs> { } }:
 
-mkRustPlatform.buildRustPackage rec {
+rustPlatform.buildRustPackage rec {
   pname = "healthchecks-monitor";
   version = "3.0.0";
 
