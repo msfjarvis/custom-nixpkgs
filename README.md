@@ -23,7 +23,7 @@ Included packages:
 [adx]: https://msfjarvis.dev/g/androidx-release-watcher
 <!-- [argc]: https://github.com/sigoden/argc -->
 [bundletool]: https://developer.android.com/studio/command-line/bundletool
-[clipboard-substitutor]: https://msfjarvis.dev/g/clipboard-subsitutor
+[clipboard-substitutor]: https://msfjarvis.dev/g/clipboard-substitutor
 [diffuse]: https://github.com/JakeWharton/diffuse
 [gdrive]: https://msfjarvis.dev/g/gdrive
 [hcctl]: https://msfjarvis.dev/g/healthchecks-rs
