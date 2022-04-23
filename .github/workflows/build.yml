@@ -18,6 +18,8 @@ on:
       - .github/workflows/update.yml
 
   workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * 6'
 
 name: Build nix packages
 jobs:
