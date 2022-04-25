@@ -1,13 +1,13 @@
 { lib, fetchzip }:
 
-let version = "1.9.1";
+let version = "1.10.0";
 in fetchzip rec {
   name = "bundletool-${version}";
 
   url =
     "https://github.com/google/bundletool/releases/download/${version}/bundletool-all-${version}.jar";
 
-  sha256 = "sha256-OTonRbkbj4cXl2PDvoEfQc2gx6yOOsmVccf0gxlkuss=";
+  sha256 = "sha256-hp1wf0skWqJcwfygUBayEDTqPfgtEYhk7wWYcfF6+tk=";
 
   postFetch = ''
     mkdir -p $out/bin
