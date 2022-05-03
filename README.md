@@ -9,6 +9,7 @@ Included packages:
 <!-- - [argc] : A handy way to handle sh/bash cli parameters. -->
 - [bundletool] : Command-line tool to manipulate Android App Bundles
 - [clipboard-substitutor] : Rust CLI to listen to clipboard events and perform operations on the copied text
+- [comma] : Comma runs software without installing it
 - [diffuse] : Java tool to diff between APKs, AARs and JARs
 - [gdrive] : Golang CLI to interact with Google Drive
 - [hcctl]: CLI to look up the status of checks on https://healthchecks.io
@@ -24,6 +25,7 @@ Included packages:
 <!-- [argc]: https://github.com/sigoden/argc -->
 [bundletool]: https://developer.android.com/studio/command-line/bundletool
 [clipboard-substitutor]: https://msfjarvis.dev/g/clipboard-substitutor
+[comma]: https://github.com/nix-community/comma
 [diffuse]: https://github.com/JakeWharton/diffuse
 [gdrive]: https://msfjarvis.dev/g/gdrive
 [hcctl]: https://msfjarvis.dev/g/healthchecks-rs

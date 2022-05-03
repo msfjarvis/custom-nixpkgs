@@ -10,6 +10,7 @@ with pkgs; {
   # argc = callPackage ./pkgs/argc { };
   bundletool-bin = callPackage ./pkgs/bundletool-bin { };
   clipboard-substitutor = callPackage ./pkgs/clipboard-substitutor { };
+  comma = callPackage ./pkgs/comma { };
   diffuse-bin = callPackage ./pkgs/diffuse-bin { };
   gdrive = callPackage ./pkgs/gdrive { };
   jless = callPackage ./pkgs/jless { };
