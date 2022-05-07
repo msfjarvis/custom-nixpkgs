@@ -16,6 +16,7 @@ Included packages:
 - [healthchecks-monitor]: CLI tool to run commands and report its result to https://healthchecks.io
 - [jetbrains-mono-nerdfonts] : Packaging of the [nerd-fonts] variant of [JetBrains Mono] typeface
 - [jless] : A command-line pager for JSON
+- [katbin] : A CLI for [katb.in]
 - [pidcat] : Fork of [JakeWharton's pidcat] with Python3 support and some other fixes
 - [when] : A CLI tool to deal with timezones 
 
@@ -34,6 +35,8 @@ Included packages:
 [nerd-fonts]: https://github.com/ryanoasis/nerd-fonts
 [JetBrains Mono]: https://github.com/JetBrains/JetBrainsMono
 [jless]: https://jless.io
+[katbin]: https://github.com/SphericalKat/katbin-cli
+[katb.in]: https://katb.in
 [pidcat]: https://msfjarvis.dev/g/pidcat
 [JakeWharton's pidcat]: https://github.com/JakeWharton/pidcat
 [when]: https://github.com/mitsuhiko/when
