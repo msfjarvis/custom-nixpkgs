@@ -2,19 +2,19 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "katbin";
-  version = "1.2.0";
+  version = "1.2.1";
 
   src = fetchFromGitHub {
     owner = "SphericalKat";
     repo = "katbin-cli";
     rev = "v${version}";
-    sha256 = "sha256-B4K+GEGmcq2/eQl2yayPI75ClrjGkzhlkstZIwsdMgY=";
+    sha256 = "sha256-Ba3dtGOhDWx3DhzuF1e6spyCeoLfi7iAEtcVRm6aYZQ=";
   };
 
   buildInputs = pkgs.lib.optionals stdenv.isDarwin
     [ pkgs.darwin.apple_sdk.frameworks.Security ];
 
-  cargoSha256 = "sha256-/bsrRWbmxDDKVGl/k8kG5Yh6gRg864yATGU5D8JHo3o=";
+  cargoSha256 = "sha256-IUMDNVO7O/78axuXhXuISp4tjovLHqAAJt9cB/9kp30=";
 
   meta = with pkgs.lib; {
     description = "A CLI for katbin";
