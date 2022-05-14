@@ -1,4 +1,4 @@
-{ lib, buildGoModule, fetchFromGitHub, installShellFiles }:
+{ lib, buildGoModule, fetchFromGitHub }:
 
 buildGoModule rec {
   pname = "gdrive";
@@ -12,19 +12,6 @@ buildGoModule rec {
   };
 
   vendorSha256 = "sha256-Arx5IucNNw6c8uvJAMNR7Yo1H+XNprSkwFtjW9RdjJA=";
-  clientId = lib.fakeSha256;
-  clientSecret = lib.fakeSha256;
-
-  buildPhase = ''
-    go build -ldflags "-X main.ClientId=${clientId} -X main.ClientSecret=${clientSecret}"
-  '';
-
-  installPhase = ''
-    install -Dm755 gdrive -t $out/bin
-  '';
-
-  # has no tests
-  doCheck = false;
 
   meta = with lib; {
     description = "GDrive CLI tool";
