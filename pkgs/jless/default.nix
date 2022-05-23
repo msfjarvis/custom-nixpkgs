@@ -15,9 +15,9 @@ rustPlatform.buildRustPackage rec {
   cargoSha256 = "sha256-cPj9cTRhWK/YU8Cae63p4Vm5ohB1IfGL5fu7yyFGSXA=";
 
   nativeBuildInputs = [ pkg-config pkgs.python3 ];
-  buildInputs = pkgs.lib.optionals stdenv.isLinux [ pkgs.xorg.libxcb ]
-    ++ pkgs.lib.optionals stdenv.isDarwin
-    [ pkgs.darwin.apple_sdk.frameworks.AppKit ];
+  buildInputs = pkgs.lib.optionals stdenv.isDarwin
+    [ pkgs.darwin.apple_sdk.frameworks.AppKit ]
+    ++ pkgs.lib.optionals stdenv.isLinux [ pkgs.xorg.libxcb ];
 
   meta = with pkgs.lib; {
     description = "A command-line pager for JSON data.";

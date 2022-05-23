@@ -16,9 +16,9 @@ rustPlatform.buildRustPackage rec {
   cargoSha256 = "sha256-jwig0NIfZI3iVcxxKCWq1a2hFHsKG9PkKGTOfJ489ZA=";
 
   nativeBuildInputs = [ pkg-config pkgs.python3 ];
-  buildInputs = pkgs.lib.optionals stdenv.isLinux [ pkgs.xorg.libxcb ]
-    ++ pkgs.lib.optionals stdenv.isDarwin
-    [ pkgs.darwin.apple_sdk.frameworks.AppKit ];
+  buildInputs = pkgs.lib.optionals stdenv.isDarwin
+    [ pkgs.darwin.apple_sdk.frameworks.AppKit ]
+    ++ pkgs.lib.optionals stdenv.isLinux [ pkgs.xorg.libxcb ];
 
   meta = with pkgs.lib; {
     description =
