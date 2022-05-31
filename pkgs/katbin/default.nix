@@ -1,6 +1,6 @@
-{ stdenv, fetchFromGitHub, rustPlatform, pkgs ? import <nixpkgs> { } }:
+{ stdenv, fetchFromGitHub, mkRustPlatform, pkgs ? import <nixpkgs> { } }:
 
-rustPlatform.buildRustPackage rec {
+mkRustPlatform.buildRustPackage rec {
   pname = "katbin";
   version = "1.2.1";
 

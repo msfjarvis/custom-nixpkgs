@@ -1,7 +1,7 @@
-{ stdenv, fetchFromGitHub, pkg-config, pkgs ? import <nixpkgs> { }, rustPlatform
-}:
+{ stdenv, fetchFromGitHub, pkg-config, pkgs ? import <nixpkgs> { }
+, mkRustPlatform }:
 
-rustPlatform.buildRustPackage rec {
+mkRustPlatform.buildRustPackage rec {
   pname = "clipboard-substitutor";
   version = "0.6.0";
 

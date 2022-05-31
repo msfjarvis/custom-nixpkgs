@@ -1,7 +1,7 @@
-{ stdenv, fetchFromGitHub, rustPlatform, openssl, pkg-config
+{ stdenv, fetchFromGitHub, mkRustPlatform, openssl, pkg-config
 , pkgs ? import <nixpkgs> { } }:
 
-rustPlatform.buildRustPackage rec {
+mkRustPlatform.buildRustPackage rec {
   pname = "hcctl";
   version = "2.0.1";
 
