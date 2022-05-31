@@ -5,10 +5,12 @@ set -euxo pipefail
 declare -a ITEMS=(
   adb-sync
   adx
-  # argc
+  argc
   clipboard-substitutor
+  comma
   gdrive
   jless
+  katbin
   pidcat
   when
 )
