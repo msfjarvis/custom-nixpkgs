@@ -1,4 +1,4 @@
-# custom-nixpkgs [![Check nix packages](https://github.com/msfjarvis/custom-nixpkgs/workflows/Check%20nix%20packages/badge.svg?branch=develop)](https://github.com/msfjarvis/custom-nixpkgs/actions?query=workflow%3A%22Check+nix+packages%22)
+# custom-nixpkgs [![Build nix packages](https://github.com/msfjarvis/custom-nixpkgs/actions/workflows/build.yml/badge.svg)](https://github.com/msfjarvis/custom-nixpkgs/actions/workflows/build.yml)
 
 Custom NixOS packages for personal use. They're maintained on a best-effort basis and checked by CI on each push.
 
