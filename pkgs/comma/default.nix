@@ -2,7 +2,7 @@
 
 mkRustPlatform.buildRustPackage rec {
   pname = "comma";
-  version = "1.2.0";
+  version = "1.2.3";
 
   src = fetchFromGitHub {
     owner = "nix-community";
@@ -11,7 +11,7 @@ mkRustPlatform.buildRustPackage rec {
     sha256 = "sha256-emhvBaicLAnu/Kn4oxHngGa5BSxOEwbkhTLO5XvauMw=";
   };
 
-  cargoSha256 = "sha256-dfi1gDqN7+dlQAT8E0NhbNk+rvauChqgd7TNJvd/u18=";
+  cargoSha256 = "sha256-mQxNo4VjW2Q0MYfU+RCb4Ayl9ClpxrSV8X4EKZ7PewA=";
 
   meta = with pkgs.lib; {
     description = "Comma runs software without installing it.";
