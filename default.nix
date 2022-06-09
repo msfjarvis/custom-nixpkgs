@@ -14,6 +14,7 @@ in with pkgs; {
     callPackage ./pkgs/clipboard-substitutor { inherit mkRustPlatform; };
   comma = callPackage ./pkgs/comma { inherit mkRustPlatform; };
   diffuse-bin = callPackage ./pkgs/diffuse-bin { };
+  fsrx = callPackage ./pkgs/fsrx { inherit mkRustPlatform; };
   gdrive = callPackage ./pkgs/gdrive { };
   hcctl = callPackage ./pkgs/hcctl { inherit mkRustPlatform; };
   healthchecks-monitor =
