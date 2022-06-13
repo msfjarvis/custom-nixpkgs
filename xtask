@@ -23,6 +23,7 @@ case "${1:-nothing}" in
     ;;
   fmt)
     fd -tf \.nix$ -X nixfmt
+    shfmt -w -s -i 2 -ci xtask update.sh
     ;;
   sri)
     shift
