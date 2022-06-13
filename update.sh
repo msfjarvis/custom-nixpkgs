@@ -2,7 +2,7 @@
 
 set -euxo pipefail
 
-declare -a ITEMS=(
+declare -a ALL_PACKAGES=(
   adb-sync
   adx
   argc
@@ -15,20 +15,36 @@ declare -a ITEMS=(
   when
 )
 
+declare -A VERSION_REGEX=(
+  ["hcctl"]="hcctl-v(.*)"
+  ["healthchecks-monitor"]="healthchecks-monitor-v(.*)"
+)
+
 PKG="${1:-}"
 VERSION="${2:-}"
 NO_BUILD="${NO_BUILD:-}"
-declare -a PARAMS=("--commit")
+declare -a PACKAGES_TO_BUILD=()
+declare -a BASE_PARAMS=("--commit")
 if [ -z "${NO_BUILD}" ]; then
-  PARAMS+=("--build")
+  BASE_PARAMS+=("--build")
 fi
 
 if [ -z "${PKG}" ]; then
-  for item in "${ITEMS[@]}"; do
-    nix-update "${PARAMS[@]}" "${item}"
-  done
-elif [ -z "${VERSION}" ]; then
-  nix-update "${PARAMS[@]}" "${PKG}"
+  PACKAGES_TO_BUILD+=(${ALL_PACKAGES[@]})
 else
-  nix-update "${PARAMS[@]}" "${PKG}" --version "${VERSION}"
+  PACKAGES_TO_BUILD+=("${PKG}")
 fi
+
+for package in "${PACKAGES_TO_BUILD[@]}"; do
+  declare -a PARAMS=(${BASE_PARAMS[@]})
+  if [[ -v VERSION_REGEX["${PKG}"] ]]; then
+    PARAMS+=("--version-regex")
+    PARAMS+=("${VERSION_REGEX["${PKG}"]}")
+  fi
+  if [ -n "${VERSION}" ]; then
+    PARAMS+=("--version")
+    PARAMS+=("${VERSION}")
+  fi
+  PARAMS+=("${package}")
+  nix-update "${PARAMS[@]}"
+done
