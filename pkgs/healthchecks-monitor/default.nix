@@ -3,13 +3,13 @@
 
 mkRustPlatform.buildRustPackage rec {
   pname = "healthchecks-monitor";
-  version = "3.0.0";
+  version = "3.0.1";
 
   src = fetchFromGitHub {
     owner = "msfjarvis";
     repo = "healthchecks-rs";
-    rev = "monitor-${version}";
-    sha256 = "sha256-74kGwZCUgPS6RX5gfEWjPqCY8nsaTDB2tQAtL0tJoSM=";
+    rev = "healthchecks-monitor-v${version}";
+    sha256 = "sha256-tsWy5WdhWB2OtdtgOsVpOK6kvCgfuQsJ7QnKeVu1ACc=";
   };
 
   nativeBuildInputs = [ pkg-config ];
@@ -18,7 +18,7 @@ mkRustPlatform.buildRustPackage rec {
 
   buildAndTestSubdir = "monitor";
 
-  cargoSha256 = "0lzrqrhbjn52vz6k1qsakn9d94py8fs1mqn7p4508nvhhly7wa9q";
+  cargoSha256 = "sha256-smuHJYKY/RiNUN425jTIJMlxYqA9LJdAA5PsJIoMmlg=";
 
   meta = with pkgs.lib; {
     description =
