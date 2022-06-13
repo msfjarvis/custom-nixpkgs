@@ -3,13 +3,13 @@
 
 mkRustPlatform.buildRustPackage rec {
   pname = "hcctl";
-  version = "2.0.1";
+  version = "2.0.2";
 
   src = fetchFromGitHub {
     owner = "msfjarvis";
     repo = "healthchecks-rs";
     rev = "hcctl-v${version}";
-    sha256 = "sha256-RX4lmb/J6JUF7tS1iYz+ymanY9lt7BtPGHp9BrJqHmA=";
+    sha256 = "sha256-EX7LlDFdUwYMih2CS9EdkDmnVqhB4rQd6iFRlbFTsUU=";
   };
 
   nativeBuildInputs = [ pkg-config ];
@@ -18,7 +18,7 @@ mkRustPlatform.buildRustPackage rec {
 
   buildAndTestSubdir = "hcctl";
 
-  cargoSha256 = "sha256-cuecWPP67AYrmch7DRW2ixvtAZLvChKTPhHI3PQMntE=";
+  cargoSha256 = "sha256-dx9WgFAuFCvRuz9PjLu1BRB7M3HndIda1lplljcM+Nw=";
 
   meta = with pkgs.lib; {
     description =
