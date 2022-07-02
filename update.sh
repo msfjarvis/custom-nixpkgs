@@ -6,6 +6,7 @@ declare -a ALL_PACKAGES=(
   adb-sync
   adx
   argc
+  bundletool-bin
   clipboard-substitutor
   comma
   gdrive
