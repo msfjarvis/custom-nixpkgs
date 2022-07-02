@@ -1,15 +1,17 @@
-{ lib, fetchzip }:
+{ pkgs, lib }:
 
-let version = "1.10.0";
-in fetchzip rec {
-  name = "bundletool-${version}";
+pkgs.stdenv.mkDerivation rec {
+  pname = "bundletool-bin";
+  version = "1.10.0";
+  src = pkgs.fetchurl {
+    url =
+      "https://github.com/google/bundletool/releases/download/${version}/bundletool-all-${version}.jar";
+    sha256 = "sha256-pe7o/SJijD9FZiSSSY09o4+vK/LGTUJZEUkqXba8CBw=";
+  };
 
-  url =
-    "https://github.com/google/bundletool/releases/download/${version}/bundletool-all-${version}.jar";
+  dontUnpack = true;
 
-  sha256 = "sha256-hp1wf0skWqJcwfygUBayEDTqPfgtEYhk7wWYcfF6+tk=";
-
-  postFetch = ''
+  installPhase = ''
     mkdir -p $out/bin
     printf "#!/bin/sh\n\nexec java \$JAVA_OPTS -jar \$0 \"\$@\"\n" > $out/bin/bundletool
     cat $downloadedFile >> $out/bin/bundletool
