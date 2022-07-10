@@ -3,13 +3,13 @@
 
 mkRustPlatform.buildRustPackage rec {
   pname = "adx";
-  version = "4.3.0";
+  version = "4.3.2";
 
   src = fetchFromGitHub {
     owner = "msfjarvis";
     repo = "adx";
     rev = "v${version}";
-    sha256 = "sha256-FxkzQua3bA+BKE77twnfu7+fv2mE24x3JG67mRmPilY=";
+    sha256 = "sha256-636dIamJ5wP8n5A4shGWd9StMcbfvByEUkOjylfIWrc=";
   };
 
   nativeBuildInputs = [ pkg-config ];
@@ -18,7 +18,7 @@ mkRustPlatform.buildRustPackage rec {
     [ pkgs.darwin.apple_sdk.frameworks.Security ]
     ++ pkgs.lib.optionals stdenv.isLinux [ pkgs.openssl ];
 
-  cargoSha256 = "sha256-ja1Zei1OBGhRiRUwV9DcfBdDQ1zLSftT6ncJohSg2gs=";
+  cargoSha256 = "sha256-gv/4vbDPcsAyBC8TCdPdB7nICNZ6vMU8AgwX9TRE03U=";
 
   meta = with pkgs.lib; {
     description =
