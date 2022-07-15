@@ -1,6 +1,6 @@
-{ stdenv, fetchFromGitHub, mkRustPlatform, pkgs ? import <nixpkgs> { } }:
+{ stdenv, fetchFromGitHub, rustPlatform, pkgs ? import <nixpkgs> { } }:
 
-mkRustPlatform.buildRustPackage rec {
+rustPlatform.buildRustPackage rec {
   pname = "fsrx";
   version = "1.0.0";
 

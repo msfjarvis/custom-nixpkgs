@@ -1,6 +1,6 @@
-{ stdenv, fetchgit, mkRustPlatform, pkg-config, pkgs ? import <nixpkgs> { } }:
+{ stdenv, fetchgit, rustPlatform, pkg-config, pkgs ? import <nixpkgs> { } }:
 
-mkRustPlatform.buildRustPackage rec {
+rustPlatform.buildRustPackage rec {
   pname = "when";
   version = "0.4.0";
 

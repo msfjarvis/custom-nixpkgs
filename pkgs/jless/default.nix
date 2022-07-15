@@ -1,7 +1,7 @@
-{ stdenv, fetchFromGitHub, pkg-config, mkRustPlatform
-, pkgs ? import <nixpkgs> { } }:
+{ stdenv, fetchFromGitHub, pkg-config, rustPlatform, pkgs ? import <nixpkgs> { }
+}:
 
-mkRustPlatform.buildRustPackage rec {
+rustPlatform.buildRustPackage rec {
   pname = "jless";
   version = "0.8.0";
 

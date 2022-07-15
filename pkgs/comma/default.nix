@@ -1,6 +1,6 @@
-{ stdenv, fetchFromGitHub, mkRustPlatform, pkgs ? import <nixpkgs> { } }:
+{ stdenv, fetchFromGitHub, rustPlatform, pkgs ? import <nixpkgs> { } }:
 
-mkRustPlatform.buildRustPackage rec {
+rustPlatform.buildRustPackage rec {
   pname = "comma";
   version = "1.2.3";
 

@@ -1,7 +1,7 @@
-{ stdenv, fetchFromGitHub, mkRustPlatform, pkg-config
-, pkgs ? import <nixpkgs> { } }:
+{ stdenv, fetchFromGitHub, rustPlatform, pkgs ? import <nixpkgs> { }, pkg-config
+}:
 
-mkRustPlatform.buildRustPackage rec {
+rustPlatform.buildRustPackage rec {
   pname = "adx";
   version = "4.3.3";
 
