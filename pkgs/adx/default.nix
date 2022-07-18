@@ -1,5 +1,4 @@
-{ stdenv, fetchFromGitHub, rustPlatform, pkgs ? import <nixpkgs> { }, pkg-config
-}:
+{ stdenv, fetchFromGitHub, rustPlatform, pkgs ? import <nixpkgs> { } }:
 
 rustPlatform.buildRustPackage rec {
   pname = "adx";
@@ -12,11 +11,8 @@ rustPlatform.buildRustPackage rec {
     sha256 = "sha256-4XgypEgjqyawVHHjJjflzLb+Tm4oon6D815JSSTz4pU=";
   };
 
-  nativeBuildInputs = [ pkg-config ];
-
   buildInputs = pkgs.lib.optionals stdenv.isDarwin
-    [ pkgs.darwin.apple_sdk.frameworks.Security ]
-    ++ pkgs.lib.optionals stdenv.isLinux [ pkgs.openssl ];
+    [ pkgs.darwin.apple_sdk.frameworks.Security ];
 
   cargoSha256 = "sha256-0In78YoaVmkbueoNYzgPyvNKHT5KcmFd0dZwwQ+Ucig=";
 
