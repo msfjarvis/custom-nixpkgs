@@ -4,6 +4,8 @@ set -e
 set -u
 set -o pipefail
 
+NIX_2_3="$([[ "$(nix --version)" =~ "2.3" ]] && echo 'true')"
+
 case "${1:-nothing}" in
   clean)
     fd -Itl -X rm -fv
@@ -16,7 +18,11 @@ case "${1:-nothing}" in
     IFS='/' read -r -a FIELDS <<<"${FULL_SLUG:?}"
     if [[ ${#FIELDS[@]} -eq 2 ]]; then
       CHECKSUM="$(nix-prefetch-url --type sha256 --unpack "https://github.com/${FULL_SLUG}/archive/${REV:?}.tar.gz" 2>/dev/null)"
-      nix to-sri --type sha256 "${CHECKSUM:?}"
+      if [[ -z ${NIX_2_3} ]]; then
+        nix hash to-sri --type sha256 "${CHECKSUM:?}"
+      else
+        nix to-sri --type sha256 "${CHECKSUM:?}"
+      fi
     else
       echo -e "${CL_RED}Repo slug should be in OWNER/REPO format${CL_RST}"
     fi
@@ -27,7 +33,11 @@ case "${1:-nothing}" in
     ;;
   sri)
     shift
-    nix to-sri --type sha256 "${1:?}"
+    if [[ -z ${NIX_2_3} ]]; then
+      nix hash to-sri --type sha256 "${1:?}"
+    else
+      nix to-sri --type sha256 "${1:?}"
+    fi
     ;;
   nothing)
     echo -e "${CL_RED}USAGE:${CL_RST}\n${CL_YLW}${0} '<action>'\n\t[possible values: 'clean' 'hash' 'fmt' 'sri']${CL_RST}"
