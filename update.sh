@@ -12,6 +12,7 @@ declare -a ALL_PACKAGES=(
   gdrive
   jless
   katbin
+  lurk
   pidcat
   when
 )
