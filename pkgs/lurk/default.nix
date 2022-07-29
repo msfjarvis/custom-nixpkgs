@@ -18,5 +18,6 @@ rustPlatform.buildRustPackage rec {
     homepage = "https://github.com/JakWai01/lurk";
     license = licenses.agpl3Only;
     platforms = platforms.linux;
+    broken = stdenv.isDarwin;
   };
 }
