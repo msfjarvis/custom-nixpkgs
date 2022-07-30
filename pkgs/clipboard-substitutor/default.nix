@@ -3,17 +3,17 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "clipboard-substitutor";
-  version = "0.7.0";
+  version = "0.7.1";
 
   src = fetchFromGitHub {
     owner = "msfjarvis";
     repo = "clipboard-substitutor";
     rev = "v${version}";
-    sha256 = "sha256-Sk1J0uvn3ixPIGymv9AzSS6H7NH1olO0DxJdx9XZoOM=";
+    sha256 = "sha256-O0ImA4mNit/SJ+R1fS4yKmfvecDLBtoGz2amcfa0VFA=";
   };
 
   buildFeatures = pkgs.lib.optionals stdenv.isLinux [ "journald" ];
-  cargoSha256 = "sha256-PCeEIo+op+GFe9zhLlGBgCi7KIpPPI5m07EeWz8yiEQ=";
+  cargoSha256 = "sha256-zRmrkmQeHiz0IBUa5MniO9EAOdlifWWema2G/Zy8KZk=";
 
   nativeBuildInputs = [ pkg-config pkgs.python3 ];
   buildInputs = pkgs.lib.optionals stdenv.isDarwin
