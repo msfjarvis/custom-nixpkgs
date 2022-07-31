@@ -2,16 +2,16 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "lurk";
-  version = "0.2.7";
+  version = "0.2.9";
 
   src = fetchFromGitHub {
     owner = "JakWai01";
     repo = pname;
     rev = "v${version}";
-    sha256 = "sha256-+wLQibZ0bmMGzm4gulJQQAC0PfCPcWsRwPrndl5W+W0=";
+    sha256 = "sha256-Vvz1CWNpMbVpICL42VQHLM7AWSONGSXP5kfZ8rZlw8M=";
   };
 
-  cargoSha256 = "sha256-ASoFHre2Gh7SgzhnkZcNQZgiPwM4allcIy8lRP0AP6k=";
+  cargoSha256 = "sha256-AoFkgm13vj/18GOuSIgzs+xk82lSQ6zGpq4QVWcClv8=";
 
   meta = with pkgs.lib; {
     description = "A pretty (simple) alternative to strace";
