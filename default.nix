@@ -20,7 +20,6 @@ with pkgs; {
   jetbrains-mono-nerdfonts = callPackage ./pkgs/jetbrains-mono-nerdfonts { };
   jless = callPackage ./pkgs/jless { };
   katbin = callPackage ./pkgs/katbin { };
-  lurk = callPackage ./pkgs/lurk { };
   pidcat = callPackage ./pkgs/pidcat { };
   when = callPackage ./pkgs/when { };
 }
