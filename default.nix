@@ -12,6 +12,7 @@ with pkgs; {
   clipboard-substitutor = callPackage ./pkgs/clipboard-substitutor { };
   comma = callPackage ./pkgs/comma { };
   diffuse-bin = callPackage ./pkgs/diffuse-bin { };
+  file-collector = callPackage ./pkgs/file-collector { };
   fsrx = callPackage ./pkgs/fsrx { };
   gdrive = callPackage ./pkgs/gdrive { };
   hcctl = callPackage ./pkgs/hcctl { };
