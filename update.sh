@@ -9,6 +9,7 @@ declare -a ALL_PACKAGES=(
   bundletool-bin
   clipboard-substitutor
   comma
+  file-collector
   gdrive
   jless
   katbin
