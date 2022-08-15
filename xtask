@@ -8,7 +8,7 @@ NIX_2_3="$([[ "$(nix --version)" =~ "2.3" ]] && echo 'true')"
 
 case "${1:-nothing}" in
   clean)
-    fd -Itl -X rm -fv
+    fd -Itl -X rm -rfv
     ;;
   hash)
     shift
