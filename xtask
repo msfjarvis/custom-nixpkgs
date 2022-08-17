@@ -25,6 +25,12 @@ case "${1:-nothing}" in
     fd -tf \.nix$ -X nixfmt
     shfmt -w -s -i 2 -ci xtask update.sh
     ;;
+  update)
+    shift
+    PACKAGE="${1}"
+    VERSION="${2}"
+    echo "{\"package\": \"${PACKAGE}\", \"version\": \"${VERSION}\"}" | gh workflow run update.yml --json
+    ;;
   sri)
     shift
     nix hash to-sri --type sha256 "${1:?}"
