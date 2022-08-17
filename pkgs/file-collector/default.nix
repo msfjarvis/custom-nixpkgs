@@ -3,17 +3,17 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "file-collector";
-  version = "0.2.2";
+  version = "0.2.3";
 
   src = fetchFromGitHub {
     owner = "msfjarvis";
     repo = "file-collector";
     rev = "v${version}";
-    sha256 = "sha256-6oAFtMCtcwbblMnFT2wrOqIfKVpPB4c7AWj4E+9lBhg=";
+    sha256 = "sha256-r8BCz+3jbjiXqjApMnsy80W1EM9Ft4h9El7+rr1w0FI=";
   };
 
   buildFeatures = pkgs.lib.optionals stdenv.isLinux [ "journald" ];
-  cargoSha256 = "sha256-hxs/2X4JQ5M9CsBFv6btCb3Bxs1InS1YA4gL+mKQfUs=";
+  cargoSha256 = "sha256-mT4ebBdwTfK8oQMQv22FAtAlo1kR9P9eZ1CPA230/ew=";
 
   meta = with pkgs.lib; {
     description =
