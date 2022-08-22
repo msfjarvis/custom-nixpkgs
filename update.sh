@@ -11,6 +11,8 @@ declare -a ALL_PACKAGES=(
   comma
   file-collector
   gdrive
+  hcctl
+  healthchecks-monitor
   jless
   katbin
   pidcat
