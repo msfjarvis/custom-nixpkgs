@@ -3,13 +3,13 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "healthchecks-monitor";
-  version = "3.0.1";
+  version = "3.0.2";
 
   src = fetchFromGitHub {
     owner = "msfjarvis";
     repo = "healthchecks-rs";
     rev = "healthchecks-monitor-v${version}";
-    sha256 = "sha256-tsWy5WdhWB2OtdtgOsVpOK6kvCgfuQsJ7QnKeVu1ACc=";
+    sha256 = "sha256-7rNr3PCS7JKhYwqXU2a6CZune41/6m3U8eXKFzl76JY=";
   };
 
   nativeBuildInputs = [ pkg-config ];
@@ -18,7 +18,7 @@ rustPlatform.buildRustPackage rec {
 
   buildAndTestSubdir = "monitor";
 
-  cargoSha256 = "sha256-smuHJYKY/RiNUN425jTIJMlxYqA9LJdAA5PsJIoMmlg=";
+  cargoSha256 = "sha256-On9VvowxP8tdPTEjmu1sjnvy8Aw0WonX0czI016uqjs=";
 
   meta = with pkgs.lib; {
     description =
