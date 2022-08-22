@@ -43,7 +43,7 @@ for PACKAGE in "${PACKAGES_TO_BUILD[@]}"; do
   declare -a PARAMS=("${BASE_PARAMS[@]}")
   if [[ -v VERSION_REGEX["${PACKAGE}"] ]]; then
     PARAMS+=("--version-regex")
-    PARAMS+=("${VERSION_REGEX["${PKG}"]}")
+    PARAMS+=("${VERSION_REGEX["${PACKAGE}"]}")
   fi
   if [ -n "${VERSION}" ]; then
     PARAMS+=("--version")
