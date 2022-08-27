@@ -30,6 +30,7 @@ case "${1:-nothing}" in
     PACKAGE="${1:-}"
     VERSION="${2:-}"
     echo "{\"package\": \"${PACKAGE}\", \"version\": \"${VERSION}\"}" | gh workflow run update.yml --json
+    sleep 5
     gh run list --workflow=update.yml --json databaseId | jq .[0].databaseId | xargs gh run watch
     ;;
   sri)
