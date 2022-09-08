@@ -17,7 +17,6 @@ with pkgs; {
   gdrive = callPackage ./pkgs/gdrive { };
   hcctl = callPackage ./pkgs/hcctl { };
   healthchecks-monitor = callPackage ./pkgs/healthchecks-monitor { };
-  jetbrains-mono-nerdfonts = callPackage ./pkgs/jetbrains-mono-nerdfonts { };
   jless = callPackage ./pkgs/jless { };
   katbin = callPackage ./pkgs/katbin { };
   pidcat = callPackage ./pkgs/pidcat { };
