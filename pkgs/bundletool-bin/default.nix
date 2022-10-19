@@ -2,11 +2,11 @@
 
 pkgs.stdenv.mkDerivation rec {
   pname = "bundletool-bin";
-  version = "1.11.2";
+  version = "1.12.0";
   src = pkgs.fetchurl {
     url =
       "https://github.com/google/bundletool/releases/download/${version}/bundletool-all-${version}.jar";
-    sha256 = "sha256-MCZW642cjuC0XQ0MXnLlyQEJft3z1gaZaXYD1qIiffg=";
+    sha256 = "sha256-OMWMjchjbd7XfqhZ8CMOfEgl525xkxNdPU+9kzWnRos=";
   };
 
   dontUnpack = true;
