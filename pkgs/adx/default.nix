@@ -2,19 +2,19 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "adx";
-  version = "4.3.3";
+  version = "4.3.4";
 
   src = fetchFromGitHub {
     owner = "msfjarvis";
     repo = "adx";
     rev = "v${version}";
-    sha256 = "sha256-4XgypEgjqyawVHHjJjflzLb+Tm4oon6D815JSSTz4pU=";
+    sha256 = "sha256-boTth+mhqzfnM7TOouBfrJ+/ETjgyx0KTKBdbCty5tA=";
   };
 
   buildInputs = pkgs.lib.optionals stdenv.isDarwin
     [ pkgs.darwin.apple_sdk.frameworks.Security ];
 
-  cargoSha256 = "sha256-0In78YoaVmkbueoNYzgPyvNKHT5KcmFd0dZwwQ+Ucig=";
+  cargoSha256 = "sha256-f8YYlm2X9APsQmn26zEh3fZkt1uQCdLx5c3kdpbIonY=";
 
   meta = with pkgs.lib; {
     description =
