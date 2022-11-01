@@ -19,6 +19,7 @@ Included packages:
 - [jless] : A command-line pager for JSON
 - [katbin] : A CLI for [katb.in]
 - [pidcat] : Fork of [JakeWharton's pidcat] with Python3 support and some other fixes
+- [twt] : Multipurpose tool to extract metadata from a user's tweets
 - [when] : A CLI tool to deal with timezones 
 
 [adb-sync]: https://msfjarvis.dev/g/adb-sync
@@ -40,4 +41,5 @@ Included packages:
 [katb.in]: https://katb.in
 [pidcat]: https://msfjarvis.dev/g/pidcat
 [JakeWharton's pidcat]: https://github.com/JakeWharton/pidcat
+[twt]: https://msfjarvis.dev/g/twt
 [when]: https://github.com/mitsuhiko/when

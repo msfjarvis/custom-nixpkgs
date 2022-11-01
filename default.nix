@@ -20,5 +20,6 @@ with pkgs; {
   jless = callPackage ./pkgs/jless { };
   katbin = callPackage ./pkgs/katbin { };
   pidcat = callPackage ./pkgs/pidcat { };
+  twt = callPackage ./pkgs/twt { };
   when = callPackage ./pkgs/when { };
 }
