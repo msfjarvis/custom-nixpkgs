@@ -21,5 +21,6 @@ with pkgs; {
   katbin = callPackage ./pkgs/katbin { };
   pidcat = callPackage ./pkgs/pidcat { };
   twt = callPackage ./pkgs/twt { };
+  walls-bot-rs = callPackage ./pkgs/walls-bot-rs { };
   when = callPackage ./pkgs/when { };
 }

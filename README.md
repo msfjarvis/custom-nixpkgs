@@ -20,6 +20,7 @@ Included packages:
 - [katbin] : A CLI for [katb.in]
 - [pidcat] : Fork of [JakeWharton's pidcat] with Python3 support and some other fixes
 - [twt] : Multipurpose tool to extract metadata from a user's tweets
+- [walls-bot-rs] : A Telegram bot with an identity crisis
 - [when] : A CLI tool to deal with timezones 
 
 [adb-sync]: https://msfjarvis.dev/g/adb-sync
@@ -42,4 +43,5 @@ Included packages:
 [pidcat]: https://msfjarvis.dev/g/pidcat
 [JakeWharton's pidcat]: https://github.com/JakeWharton/pidcat
 [twt]: https://msfjarvis.dev/g/twt
+[walls-bot-rs]: https://msfjarvis.dev/g/walls-bot-rs
 [when]: https://github.com/mitsuhiko/when
