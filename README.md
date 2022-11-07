@@ -6,7 +6,6 @@ Included packages:
 
 - [adb-sync] : Fork of [Google's adb-sync] with bugfixes for busybox users and the pull times feature
 - [adx] : Rust tool to poll Google Maven for AndroidX packages and their latest versions
-- [argc] : A handy way to handle sh/bash cli parameters
 - [bundletool] : Command-line tool to manipulate Android App Bundles
 - [clipboard-substitutor] : Rust CLI to listen to clipboard events and perform operations on the copied text
 - [comma] : Comma runs software without installing it
@@ -16,7 +15,6 @@ Included packages:
 - [gdrive] : Golang CLI to interact with Google Drive
 - [hcctl]: CLI to look up the status of checks on https://healthchecks.io
 - [healthchecks-monitor]: CLI tool to run commands and report its result to https://healthchecks.io
-- [jless] : A command-line pager for JSON
 - [katbin] : A CLI for [katb.in]
 - [pidcat] : Fork of [JakeWharton's pidcat] with Python3 support and some other fixes
 - [twt] : Multipurpose tool to extract metadata from a user's tweets
@@ -26,7 +24,6 @@ Included packages:
 [adb-sync]: https://msfjarvis.dev/g/adb-sync
 [Google's adb-sync]: https://github.com/google/adb-sync
 [adx]: https://msfjarvis.dev/g/androidx-release-watcher
-[argc]: https://github.com/sigoden/argc
 [bundletool]: https://developer.android.com/studio/command-line/bundletool
 [clipboard-substitutor]: https://msfjarvis.dev/g/clipboard-substitutor
 [comma]: https://github.com/nix-community/comma
@@ -37,7 +34,6 @@ Included packages:
 [hcctl]: https://msfjarvis.dev/g/healthchecks-rs
 [healthchecks-monitor]: https://msfjarvis.dev/g/healthchecks-rs
 [jetbrains-mono-nerdfonts]: https://github.com/ryanoasis/nerd-fonts
-[jless]: https://jless.io
 [katbin]: https://github.com/SphericalKat/katbin-cli
 [katb.in]: https://katb.in
 [pidcat]: https://msfjarvis.dev/g/pidcat

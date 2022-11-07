@@ -7,7 +7,6 @@ with pkgs; {
 
   adb-sync = callPackage ./pkgs/adb-sync { };
   adx = callPackage ./pkgs/adx { };
-  argc = callPackage ./pkgs/argc { };
   bundletool-bin = callPackage ./pkgs/bundletool-bin { };
   clipboard-substitutor = callPackage ./pkgs/clipboard-substitutor { };
   comma = callPackage ./pkgs/comma { };
@@ -17,7 +16,6 @@ with pkgs; {
   gdrive = callPackage ./pkgs/gdrive { };
   hcctl = callPackage ./pkgs/hcctl { };
   healthchecks-monitor = callPackage ./pkgs/healthchecks-monitor { };
-  jless = callPackage ./pkgs/jless { };
   katbin = callPackage ./pkgs/katbin { };
   pidcat = callPackage ./pkgs/pidcat { };
   twt = callPackage ./pkgs/twt { };
