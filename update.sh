@@ -5,7 +5,6 @@ set -euxo pipefail
 declare -a ALL_PACKAGES=(
   adb-sync
   adx
-  argc
   bundletool-bin
   clipboard-substitutor
   comma
@@ -13,7 +12,6 @@ declare -a ALL_PACKAGES=(
   gdrive
   hcctl
   healthchecks-monitor
-  jless
   katbin
   pidcat
   when
