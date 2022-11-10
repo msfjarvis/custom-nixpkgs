@@ -2,16 +2,16 @@
 
 buildGo118Module rec {
   pname = "gdrive";
-  version = "3.0.12";
+  version = "3.0.13";
 
   src = fetchFromGitHub {
     owner = "msfjarvis";
     repo = pname;
     rev = "v${version}";
-    sha256 = "sha256-50UchzfAsALt4D9L1EtUWiFUfY7OYQ/Uv0KoeDs0xzo=";
+    sha256 = "sha256-FFNgMV3gPQ2p1ilYK+t10UgcNF/knO/PVM3Zw/VSSGw=";
   };
 
-  vendorSha256 = "sha256-TX0uGtyiygmOudY8zfgKqYAjFOWYiW3XOw9GaOMaW6o=";
+  vendorSha256 = "sha256-WibiLYMeWR63Q8lu287jeczT0n0/lh6T8PfOH7eJh8Q=";
 
   meta = with lib; {
     description = "GDrive CLI tool";
