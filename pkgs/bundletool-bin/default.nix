@@ -14,7 +14,7 @@ pkgs.stdenv.mkDerivation rec {
   installPhase = ''
     mkdir -p $out/bin
     printf "#!/bin/sh\n\nexec java \$JAVA_OPTS -jar \$0 \"\$@\"\n" > $out/bin/bundletool
-    cat $downloadedFile >> $out/bin/bundletool
+    cat $src >> $out/bin/bundletool
     chmod +x $out/bin/bundletool
   '';
 
