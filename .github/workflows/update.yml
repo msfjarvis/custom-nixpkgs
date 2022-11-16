@@ -23,6 +23,13 @@ jobs:
       with:
         nix_path: nixpkgs=channel:nixos-unstable
 
+    - name: Set up Cachix
+      uses: cachix/cachix-action@6a9a34cdd93d0ae4b4b59fd678660efb08109f2f # tag=v12
+      with:
+        name: msfjarvis
+        authToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
+        cachixArgs: -c9 --omit-deriver
+
     - name: Set Git user and email
       run: |
         git config user.name "GitHub Actions"
@@ -31,14 +38,6 @@ jobs:
     - name: Check pre-update Git ref
       run: |
         echo "OLD_REF=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
-
-    - name: Install and enable cachix
-      run: |
-        nix-env --quiet -j8 -iA cachix -f https://cachix.org/api/v1/install
-        cachix use msfjarvis
-
-    - name: Enable cachix binary cache
-      run: cachix use msfjarvis
 
     - name: Check for updates of given package
       if: "github.event.inputs.package != null"
