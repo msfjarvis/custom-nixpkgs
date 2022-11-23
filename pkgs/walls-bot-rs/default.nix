@@ -22,19 +22,19 @@ let
 
 in nightlyRustPlatform.buildRustPackage rec {
   pname = "walls-bot-rs";
-  version = "0.19.3";
+  version = "0.20.1";
 
   src = fetchFromGitHub {
     owner = "msfjarvis";
     repo = pname;
     rev = "v${version}";
-    sha256 = "sha256-BRKTK+/LFCMNH3wWO2cWgeUoiWVGIImS5H6+eYfoZpQ=";
+    sha256 = "sha256-uzDLQKrb9UMFZ47jFt8RvGBmKLC0X6IImZnU7a44TP0=";
   };
 
   buildInputs = pkgs.lib.optionals stdenv.isDarwin
     [ pkgs.darwin.apple_sdk.frameworks.Security ];
 
-  cargoSha256 = "sha256-bSZBUIDlO54ZHicapujexOVS0NrDvxMusv+0NnItffQ=";
+  cargoSha256 = "sha256-lvQrQOY0OnlC0eYQW/dXdZ6ZZKLaf3OvDkKdLIcjphg=";
 
   meta = with pkgs.lib; {
     description = "A Telegram bot with an identity crisis";
