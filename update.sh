@@ -14,6 +14,7 @@ declare -a ALL_PACKAGES=(
   healthchecks-monitor
   katbin
   pidcat
+  walls-bot-rs
   when
 )
 
