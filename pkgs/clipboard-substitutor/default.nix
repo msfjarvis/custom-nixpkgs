@@ -1,11 +1,10 @@
-{ stdenv, fetchFromGitHub, rustPlatform, pkg-config, pkgs ? import <nixpkgs> { }
-}:
+{ stdenv, pkgs }:
 
-rustPlatform.buildRustPackage rec {
+pkgs.rustPlatform.buildRustPackage rec {
   pname = "clipboard-substitutor";
   version = "0.7.3";
 
-  src = fetchFromGitHub {
+  src = pkgs.fetchFromGitHub {
     owner = "msfjarvis";
     repo = "clipboard-substitutor";
     rev = "v${version}";
@@ -15,7 +14,7 @@ rustPlatform.buildRustPackage rec {
   buildFeatures = pkgs.lib.optionals stdenv.isLinux [ "journald" ];
   cargoSha256 = "sha256-1nutZIzeKGZO8u2m9wsNi0CHgpIKsyfLDi/EgZGXvsY=";
 
-  nativeBuildInputs = [ pkg-config pkgs.python3 ];
+  nativeBuildInputs = [ pkgs.pkg-config pkgs.python3 ];
   buildInputs = pkgs.lib.optionals stdenv.isDarwin
     [ pkgs.darwin.apple_sdk.frameworks.AppKit ]
     ++ pkgs.lib.optionals stdenv.isLinux [ pkgs.xorg.libxcb ];

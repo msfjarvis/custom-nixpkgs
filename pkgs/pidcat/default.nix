@@ -1,4 +1,4 @@
-{ stdenv, fetchFromGitHub, installShellFiles, pkgs ? import <nixpkgs> { } }:
+{ stdenv, pkgs }:
 
 stdenv.mkDerivation rec {
   pname = "pidcat";
@@ -6,14 +6,14 @@ stdenv.mkDerivation rec {
   # I already fixed it in the source
   dontPatchShebangs = 1;
 
-  src = fetchFromGitHub {
+  src = pkgs.fetchFromGitHub {
     owner = "msfjarvis";
     repo = pname;
     rev = "v${version}";
     sha256 = "sha256-VOIND2CzWo+LV84C+FbTC0r3FqY7VpBaWn95IKTYFT8=";
   };
 
-  nativeBuildInputs = [ installShellFiles ];
+  nativeBuildInputs = [ pkgs.installShellFiles ];
 
   postInstall = ''
     installShellCompletion --bash bash_completion.d/pidcat

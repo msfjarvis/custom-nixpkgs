@@ -1,10 +1,10 @@
-{ stdenv, fetchFromGitHub, rustPlatform, pkgs ? import <nixpkgs> { } }:
+{ stdenv, pkgs }:
 
-rustPlatform.buildRustPackage rec {
+pkgs.rustPlatform.buildRustPackage rec {
   pname = "adx";
   version = "4.3.4";
 
-  src = fetchFromGitHub {
+  src = pkgs.fetchFromGitHub {
     owner = "msfjarvis";
     repo = "adx";
     rev = "v${version}";

@@ -1,10 +1,10 @@
-{ stdenv, fetchFromGitHub, pkgs ? import <nixpkgs> { } }:
+{ stdenv, pkgs }:
 
 stdenv.mkDerivation rec {
   pname = "adb-sync";
   version = "1.0.0";
 
-  src = fetchFromGitHub {
+  src = pkgs.fetchFromGitHub {
     owner = "msfjarvis";
     repo = pname;
     rev = "v${version}";

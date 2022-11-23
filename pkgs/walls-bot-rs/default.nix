@@ -1,4 +1,4 @@
-{ stdenv, fetchFromGitHub, rustPlatform, pkgs ? import <nixpkgs> { } }:
+{ stdenv, pkgs }:
 
 let
   rust-overlay = import (builtins.fetchTarball {
@@ -24,7 +24,7 @@ in nightlyRustPlatform.buildRustPackage rec {
   pname = "walls-bot-rs";
   version = "0.20.1";
 
-  src = fetchFromGitHub {
+  src = pkgs.fetchFromGitHub {
     owner = "msfjarvis";
     repo = pname;
     rev = "v${version}";

@@ -1,10 +1,10 @@
-{ stdenv, fetchFromGitHub, rustPlatform, pkgs ? import <nixpkgs> { } }:
+{ stdenv, pkgs }:
 
-rustPlatform.buildRustPackage rec {
+pkgs.rustPlatform.buildRustPackage rec {
   pname = "katbin";
   version = "1.3.12";
 
-  src = fetchFromGitHub {
+  src = pkgs.fetchFromGitHub {
     owner = "SphericalKat";
     repo = "katbin-cli";
     rev = "v${version}";

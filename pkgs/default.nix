@@ -1,4 +1,4 @@
-{ pkgs ? import <nixpkgs> { } }:
+{ pkgs }:
 let callPackage = pkg: pkgs.callPackage pkg;
 in {
   adb-sync = callPackage ./adb-sync { inherit pkgs; };

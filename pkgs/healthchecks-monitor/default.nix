@@ -1,19 +1,18 @@
-{ stdenv, fetchFromGitHub, rustPlatform, pkg-config, openssl
-, pkgs ? import <nixpkgs> { } }:
+{ stdenv, pkgs }:
 
-rustPlatform.buildRustPackage rec {
+pkgs.rustPlatform.buildRustPackage rec {
   pname = "healthchecks-monitor";
   version = "3.0.3";
 
-  src = fetchFromGitHub {
+  src = pkgs.fetchFromGitHub {
     owner = "msfjarvis";
     repo = "healthchecks-rs";
     rev = "healthchecks-monitor-v${version}";
     sha256 = "sha256-KCV2AWdd3reh6B2ghnj/9yOtt+B38esuPk+aTnuXXNQ=";
   };
 
-  nativeBuildInputs = [ pkg-config ];
-  buildInputs = [ openssl ] ++ pkgs.lib.optionals stdenv.isDarwin
+  nativeBuildInputs = [ pkgs.pkg-config ];
+  buildInputs = pkgs.lib.optionals stdenv.isDarwin
     [ pkgs.darwin.apple_sdk.frameworks.Security ];
 
   buildAndTestSubdir = "monitor";

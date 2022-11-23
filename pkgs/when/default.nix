@@ -1,10 +1,10 @@
-{ stdenv, fetchgit, rustPlatform, pkg-config, pkgs ? import <nixpkgs> { } }:
+{ stdenv, pkgs }:
 
-rustPlatform.buildRustPackage rec {
+pkgs.rustPlatform.buildRustPackage rec {
   pname = "when";
   version = "0.4.0";
 
-  src = fetchgit {
+  src = pkgs.fetchgit {
     url = "https://github.com/mitsuhiko/when.git";
     rev = "refs/tags/${version}";
     sha256 = "sha256-JvnvGD14VOXu0+xVMF4aQLvgOFLxNsebCSgKZLycHUw=";
