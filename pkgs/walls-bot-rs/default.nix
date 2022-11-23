@@ -3,14 +3,14 @@
 let
   rust-overlay = import (builtins.fetchTarball {
     url =
-      "https://github.com/oxalica/rust-overlay/archive/528499f67169671e931cf1ba63601803e58abd2a.tar.gz";
-    sha256 = "sha256-Yid92tEY2CeS8VUiexjSw0hsjfQbRLbUCpqkdVLaEnI=";
+      "https://github.com/oxalica/rust-overlay/archive/5200195aa2a0cef1becc2ba6ff61cba65e1f90fe.tar.gz";
+    sha256 = "sha256-3oGeJgeA4+8Wj2XZnbZKJYHoZziyJl36ZGU49I2VC8U=";
   });
   rustPkgs = if pkgs.lib.hasAttrByPath [ "rust-bin" ] pkgs then
     pkgs
   else
     pkgs.lib.fix (pkgs.lib.extends rust-overlay (self: pkgs));
-  rustSpecific = rustPkgs.rust-bin.nightly."2022-10-14".default.override {
+  rustSpecific = rustPkgs.rust-bin.nightly."2022-11-14".default.override {
     extensions = [ ];
     targets = pkgs.lib.optionals pkgs.stdenv.isDarwin [ "aarch64-apple-darwin" ]
       ++ pkgs.lib.optionals pkgs.stdenv.isLinux [ "x86_64-unknown-linux-gnu" ];
