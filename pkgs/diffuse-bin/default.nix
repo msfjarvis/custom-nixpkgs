@@ -1,17 +1,21 @@
-{ lib, fetchzip }:
+{ pkgs, lib }:
 
-let version = "0.1.0";
-in fetchzip rec {
-  name = "diffuse-${version}";
+pkgs.stdenv.mkDerivation rec {
+  pname = "diffuse-bin";
+  version = "0.1.0";
+  src = pkgs.fetchurl {
+    url =
+      "https://github.com/JakeWharton/diffuse/releases/download/${version}/diffuse-${version}-binary.jar";
 
-  url =
-    "https://github.com/JakeWharton/diffuse/releases/download/${version}/diffuse-${version}-binary.jar";
+    sha256 = "sha256-YNYZNzxGpdBrgSbB1h4K3Bi3Lyy7kkXvkg0zh+RLhs8=";
+  };
 
-  sha256 = "0lnmgphjbsbrb4pg1pfvnnb19ngmj3dzj0wxgn84n4phjdhy4h2b";
+  dontUnpack = true;
 
-  postFetch = ''
+  installPhase = ''
     mkdir -p $out/bin
-    mv -v $downloadedFile $out/bin/diffuse
+    printf "#!/bin/sh\n\nexec java \$JAVA_OPTS -jar \$0 \"\$@\"\n" > $out/bin/diffuse
+    cat $src >> $out/bin/diffuse
     chmod +x $out/bin/diffuse
   '';
 
