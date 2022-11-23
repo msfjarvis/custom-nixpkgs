@@ -4,8 +4,9 @@ pkgs.rustPlatform.buildRustPackage rec {
   pname = "when";
   version = "0.4.0";
 
-  src = pkgs.fetchgit {
-    url = "https://github.com/mitsuhiko/when.git";
+  src = pkgs.fetchFromGitHub {
+    owner = "mitsuhiko";
+    repo = "when";
     rev = "refs/tags/${version}";
     sha256 = "sha256-JvnvGD14VOXu0+xVMF4aQLvgOFLxNsebCSgKZLycHUw=";
     fetchSubmodules = true;
