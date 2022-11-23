@@ -1,10 +1,10 @@
-{ lib, buildGo118Module, fetchFromGitHub }:
+{ pkgs, lib }:
 
-buildGo118Module rec {
+pkgs.buildGo119Module rec {
   pname = "gdrive";
   version = "3.0.13";
 
-  src = fetchFromGitHub {
+  src = pkgs.fetchFromGitHub {
     owner = "msfjarvis";
     repo = pname;
     rev = "v${version}";
