@@ -12,6 +12,7 @@ in {
   gdrive = callPackage ./gdrive { inherit pkgs; };
   hcctl = callPackage ./hcctl { inherit pkgs; };
   healthchecks-monitor = callPackage ./healthchecks-monitor { inherit pkgs; };
+  hyperlink = callPackage ./hyperlink { inherit pkgs; };
   katbin = callPackage ./katbin { inherit pkgs; };
   pidcat = callPackage ./pidcat { inherit pkgs; };
   twt = callPackage ./twt { inherit pkgs; };

@@ -15,6 +15,7 @@ Included packages:
 - [gdrive] : Golang CLI to interact with Google Drive
 - [hcctl]: CLI to look up the status of checks on https://healthchecks.io
 - [healthchecks-monitor]: CLI tool to run commands and report its result to https://healthchecks.io
+- [hyperlink]: Very fast link checker for CI
 - [katbin] : A CLI for [katb.in]
 - [pidcat] : Fork of [JakeWharton's pidcat] with Python3 support and some other fixes
 - [twt] : Multipurpose tool to extract metadata from a user's tweets
@@ -33,6 +34,7 @@ Included packages:
 [gdrive]: https://msfjarvis.dev/g/gdrive
 [hcctl]: https://msfjarvis.dev/g/healthchecks-rs
 [healthchecks-monitor]: https://msfjarvis.dev/g/healthchecks-rs
+[hyperlink]: https://github.com/untitaker/hyperlink
 [jetbrains-mono-nerdfonts]: https://github.com/ryanoasis/nerd-fonts
 [katbin]: https://github.com/SphericalKat/katbin-cli
 [katb.in]: https://katb.in
