@@ -11,7 +11,6 @@ Included packages:
 - [comma] : Comma runs software without installing it
 - [diffuse] : Java tool to diff between APKs, AARs and JARs
 - [file-collector] : Simple CLI tool to watch directories and move their files to a single dumping ground
-- [fsrx] : 📚 flow state reading in the terminal
 - [gdrive] : Golang CLI to interact with Google Drive
 - [hcctl]: CLI to look up the status of checks on https://healthchecks.io
 - [healthchecks-monitor]: CLI tool to run commands and report its result to https://healthchecks.io
@@ -30,7 +29,6 @@ Included packages:
 [comma]: https://github.com/nix-community/comma
 [diffuse]: https://github.com/JakeWharton/diffuse
 [file-collector]: https://msfjarvis.dev/g/file-collector
-[fsrx]: https://github.com/coloradocolby/fsrx
 [gdrive]: https://msfjarvis.dev/g/gdrive
 [hcctl]: https://msfjarvis.dev/g/healthchecks-rs
 [healthchecks-monitor]: https://msfjarvis.dev/g/healthchecks-rs
