@@ -7,6 +7,9 @@ set -u
 set -o pipefail
 
 case "${1:-nothing}" in
+  build)
+    nix flake show --json | jq -r '.packages."x86_64-linux"|keys[]' | xargs -I {} nix build .#{}
+    ;;
   clean)
     fd -Itl -X rm -rfv
     ;;
