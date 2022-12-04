@@ -17,6 +17,7 @@ Included packages:
 - [hyperlink]: Very fast link checker for CI
 - [katbin] : A CLI for [katb.in]
 - [pidcat] : Fork of [JakeWharton's pidcat] with Python3 support and some other fixes
+- [topgrade] : The original [topgrade] package from before it was forked by the community and started dwindling in quality
 - [twt] : Multipurpose tool to extract metadata from a user's tweets
 - [walls-bot-rs] : A Telegram bot with an identity crisis
 - [when] : A CLI tool to deal with timezones 
@@ -38,6 +39,7 @@ Included packages:
 [katb.in]: https://katb.in
 [pidcat]: https://msfjarvis.dev/g/pidcat
 [JakeWharton's pidcat]: https://github.com/JakeWharton/pidcat
+[topgrade]: https://github.com/r-darwish/topgrade
 [twt]: https://msfjarvis.dev/g/twt
 [walls-bot-rs]: https://msfjarvis.dev/g/walls-bot-rs
 [when]: https://github.com/mitsuhiko/when

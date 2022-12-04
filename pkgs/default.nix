@@ -14,6 +14,7 @@ in {
   hyperlink = callPackage ./hyperlink { inherit pkgs; };
   katbin = callPackage ./katbin { inherit pkgs; };
   pidcat = callPackage ./pidcat { inherit pkgs; };
+  topgrade-og = callPackage ./topgrade-og { inherit pkgs; };
   twt = callPackage ./twt { inherit pkgs; };
   walls-bot-rs = callPackage ./walls-bot-rs { inherit pkgs; };
   when = callPackage ./when { inherit pkgs; };
