@@ -54,8 +54,5 @@ jobs:
     - name: Push to main branch
       if: env.OLD_REF != env.NEW_REF
       shell: bash
-      env:
-        GH_TOKEN: ${{ secrets.WORKFLOW_KICKOFF_TOKEN }}
       run: |
         git push origin main
-        gh workflow run build.yml
