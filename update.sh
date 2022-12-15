@@ -13,8 +13,8 @@ declare -a ALL_PACKAGES=(
   hcctl
   healthchecks-monitor
   katbin
+  linkleaner
   pidcat
-  walls-bot-rs
   when
 )
 

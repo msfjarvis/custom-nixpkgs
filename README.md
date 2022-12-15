@@ -16,10 +16,10 @@ Included packages:
 - [healthchecks-monitor]: CLI tool to run commands and report its result to https://healthchecks.io
 - [hyperlink]: Very fast link checker for CI
 - [katbin] : A CLI for [katb.in]
+- [linkleaner] : Telegram bot to fix social media link previews
 - [pidcat] : Fork of [JakeWharton's pidcat] with Python3 support and some other fixes
 - [topgrade] : The original [topgrade] package from before it was forked by the community and started dwindling in quality
 - [twt] : Multipurpose tool to extract metadata from a user's tweets
-- [walls-bot-rs] : A Telegram bot with an identity crisis
 - [when] : A CLI tool to deal with timezones 
 
 [adb-sync]: https://msfjarvis.dev/g/adb-sync
@@ -37,9 +37,9 @@ Included packages:
 [jetbrains-mono-nerdfonts]: https://github.com/ryanoasis/nerd-fonts
 [katbin]: https://github.com/SphericalKat/katbin-cli
 [katb.in]: https://katb.in
+[linkleaner]: https://msfjarvis.dev/g/linkleaner
 [pidcat]: https://msfjarvis.dev/g/pidcat
 [JakeWharton's pidcat]: https://github.com/JakeWharton/pidcat
 [topgrade]: https://github.com/r-darwish/topgrade
 [twt]: https://msfjarvis.dev/g/twt
-[walls-bot-rs]: https://msfjarvis.dev/g/walls-bot-rs
 [when]: https://github.com/mitsuhiko/when

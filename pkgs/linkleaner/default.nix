@@ -21,7 +21,7 @@ let
   };
 
 in nightlyRustPlatform.buildRustPackage rec {
-  pname = "walls-bot-rs";
+  pname = "linkleaner";
   version = "0.20.2";
 
   src = pkgs.fetchFromGitHub {
@@ -38,7 +38,7 @@ in nightlyRustPlatform.buildRustPackage rec {
 
   meta = with pkgs.lib; {
     description = "A Telegram bot with an identity crisis";
-    homepage = "https://msfjarvis.dev/g/walls-bot-rs/";
+    homepage = "https://msfjarvis.dev/g/linkleaner/";
     license = licenses.mit;
     platforms = platforms.all;
   };
