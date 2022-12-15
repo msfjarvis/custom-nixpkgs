@@ -22,19 +22,19 @@ let
 
 in nightlyRustPlatform.buildRustPackage rec {
   pname = "linkleaner";
-  version = "0.20.2";
+  version = "1.0.0";
 
   src = pkgs.fetchFromGitHub {
     owner = "msfjarvis";
     repo = pname;
     rev = "v${version}";
-    sha256 = "sha256-46w29rMuTePleFHqO+3ogslwpYvzKISWtL8j/X4+xmg=";
+    sha256 = "sha256-2Ne9L7LOBK0flxAxiq2hSr4XEozL360kKa2EbS/FslM=";
   };
 
   buildInputs = pkgs.lib.optionals stdenv.isDarwin
     [ pkgs.darwin.apple_sdk.frameworks.Security ];
 
-  cargoSha256 = "sha256-WRAXTAWFBQILhcOehhuzlx4jchFl49XwAlCs4GTat3k=";
+  cargoSha256 = "sha256-MopVmYjuYi5/fK4+/x1+40sBP87Fw2AE918x/OLcoD4=";
 
   meta = with pkgs.lib; {
     description = "A Telegram bot with an identity crisis";
