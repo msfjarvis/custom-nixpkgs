@@ -1,5 +1,7 @@
-{ pkgs, lib }:
-
+{
+  pkgs,
+  lib,
+}:
 pkgs.buildGo119Module rec {
   pname = "gdrive";
   version = "3.0.13";

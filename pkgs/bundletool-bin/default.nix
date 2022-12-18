@@ -1,11 +1,12 @@
-{ pkgs, lib }:
-
+{
+  pkgs,
+  lib,
+}:
 pkgs.stdenv.mkDerivation rec {
   pname = "bundletool-bin";
   version = "1.13.2";
   src = pkgs.fetchurl {
-    url =
-      "https://github.com/google/bundletool/releases/download/${version}/bundletool-all-${version}.jar";
+    url = "https://github.com/google/bundletool/releases/download/${version}/bundletool-all-${version}.jar";
     sha256 = "sha256-sbX7IYFcU9gwKzHKC8xtmZKVE2XImeNT4RYOx+cSI2Y=";
   };
 
@@ -19,8 +20,7 @@ pkgs.stdenv.mkDerivation rec {
   '';
 
   meta = with lib; {
-    description =
-      "Bundletool is a command-line tool to manipulate Android App Bundles";
+    description = "Bundletool is a command-line tool to manipulate Android App Bundles";
     homepage = "https://g.co/androidappbundle";
     license = licenses.asl20;
     platforms = platforms.all;

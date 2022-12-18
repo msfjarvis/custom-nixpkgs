@@ -1,5 +1,7 @@
-{ stdenv, pkgs }:
-
+{
+  stdenv,
+  pkgs,
+}:
 stdenv.mkDerivation rec {
   pname = "pidcat";
   version = "2.2.0";
@@ -13,7 +15,7 @@ stdenv.mkDerivation rec {
     sha256 = "sha256-VOIND2CzWo+LV84C+FbTC0r3FqY7VpBaWn95IKTYFT8=";
   };
 
-  nativeBuildInputs = [ pkgs.installShellFiles ];
+  nativeBuildInputs = [pkgs.installShellFiles];
 
   postInstall = ''
     installShellCompletion --bash bash_completion.d/pidcat

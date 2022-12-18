@@ -1,4 +1,7 @@
-{ system ? builtins.currentSystem, pkgs ? import <nixpkgs> { inherit system; }
+{
+  system ? builtins.currentSystem,
+  pkgs ? import <nixpkgs> {inherit system;},
 }:
 rec {
-} // import ./pkgs { inherit pkgs; }
+}
+// import ./pkgs {inherit pkgs;}

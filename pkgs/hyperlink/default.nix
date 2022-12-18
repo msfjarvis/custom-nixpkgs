@@ -1,5 +1,7 @@
-{ stdenv, pkgs }:
-
+{
+  stdenv,
+  pkgs,
+}:
 pkgs.rustPlatform.buildRustPackage rec {
   pname = "hyperlink";
   version = "0.1.26";

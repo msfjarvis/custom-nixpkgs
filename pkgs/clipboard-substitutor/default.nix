@@ -1,5 +1,7 @@
-{ stdenv, pkgs }:
-
+{
+  stdenv,
+  pkgs,
+}:
 pkgs.rustPlatform.buildRustPackage rec {
   pname = "clipboard-substitutor";
   version = "0.7.3";
@@ -11,17 +13,17 @@ pkgs.rustPlatform.buildRustPackage rec {
     sha256 = "sha256-3yPL46SJBOEIcWaJPLJ8UNyRmtaTN43TMHgjHzBpUwY=";
   };
 
-  buildFeatures = pkgs.lib.optionals stdenv.isLinux [ "journald" ];
+  buildFeatures = pkgs.lib.optionals stdenv.isLinux ["journald"];
   cargoSha256 = "sha256-1nutZIzeKGZO8u2m9wsNi0CHgpIKsyfLDi/EgZGXvsY=";
 
-  nativeBuildInputs = [ pkgs.pkg-config pkgs.python3 ];
-  buildInputs = pkgs.lib.optionals stdenv.isDarwin
-    [ pkgs.darwin.apple_sdk.frameworks.AppKit ]
-    ++ pkgs.lib.optionals stdenv.isLinux [ pkgs.xorg.libxcb ];
+  nativeBuildInputs = [pkgs.pkg-config pkgs.python3];
+  buildInputs =
+    pkgs.lib.optionals stdenv.isDarwin
+    [pkgs.darwin.apple_sdk.frameworks.AppKit]
+    ++ pkgs.lib.optionals stdenv.isLinux [pkgs.xorg.libxcb];
 
   meta = with pkgs.lib; {
-    description =
-      "CLI tool to monitor clipboard contents and perform actions based on a set of matchers";
+    description = "CLI tool to monitor clipboard contents and perform actions based on a set of matchers";
     homepage = "https://msfjarvis.dev/g/clipboard-substitutor";
     license = licenses.mit;
     platforms = platforms.all;

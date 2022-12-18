@@ -1,5 +1,7 @@
-{ stdenv, pkgs }:
-
+{
+  stdenv,
+  pkgs,
+}:
 stdenv.mkDerivation rec {
   pname = "adb-sync";
   version = "1.0.0";
@@ -18,8 +20,7 @@ stdenv.mkDerivation rec {
 
   meta = with pkgs.lib; {
     homepage = "https://github.com/google/adb-sync";
-    description =
-      "adb-sync is a tool to synchronize files between a PC and an Android device using the ADB (Android Debug Bridge)";
+    description = "adb-sync is a tool to synchronize files between a PC and an Android device using the ADB (Android Debug Bridge)";
     license = licenses.asl20;
     platforms = platforms.all;
   };

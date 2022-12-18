@@ -1,11 +1,12 @@
-{ pkgs, lib }:
-
+{
+  pkgs,
+  lib,
+}:
 pkgs.stdenv.mkDerivation rec {
   pname = "diffuse-bin";
   version = "0.1.0";
   src = pkgs.fetchurl {
-    url =
-      "https://github.com/JakeWharton/diffuse/releases/download/${version}/diffuse-${version}-binary.jar";
+    url = "https://github.com/JakeWharton/diffuse/releases/download/${version}/diffuse-${version}-binary.jar";
 
     sha256 = "sha256-YNYZNzxGpdBrgSbB1h4K3Bi3Lyy7kkXvkg0zh+RLhs8=";
   };

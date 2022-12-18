@@ -1,5 +1,7 @@
-{ stdenv, pkgs }:
-
+{
+  stdenv,
+  pkgs,
+}:
 pkgs.rustPlatform.buildRustPackage rec {
   pname = "when";
   version = "0.4.0";

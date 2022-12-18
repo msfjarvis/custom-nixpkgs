@@ -1,5 +1,7 @@
-{ stdenv, pkgs }:
-
+{
+  stdenv,
+  pkgs,
+}:
 pkgs.rustPlatform.buildRustPackage rec {
   pname = "topgrade";
   version = "9.0.1";
@@ -18,7 +20,7 @@ pkgs.rustPlatform.buildRustPackage rec {
     pkgs.darwin.apple_sdk.frameworks.Foundation
   ];
 
-  nativeBuildInputs = [ pkgs.installShellFiles ];
+  nativeBuildInputs = [pkgs.installShellFiles];
 
   postInstall = ''
     installManPage topgrade.8
@@ -28,7 +30,7 @@ pkgs.rustPlatform.buildRustPackage rec {
     description = "Upgrade all the things";
     homepage = "https://github.com/r-darwish/topgrade";
     license = licenses.gpl3Only;
-    maintainers = with maintainers; [ msfjarvis ];
+    maintainers = with maintainers; [msfjarvis];
     broken = stdenv.isDarwin;
   };
 }

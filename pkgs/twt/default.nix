@@ -1,5 +1,7 @@
-{ stdenv, pkgs }:
-
+{
+  stdenv,
+  pkgs,
+}:
 pkgs.rustPlatform.buildRustPackage rec {
   pname = "twt";
   version = "1.0.1";
@@ -11,8 +13,9 @@ pkgs.rustPlatform.buildRustPackage rec {
     sha256 = "sha256-wq3pQNR72EQqeiWbC82ZXTg10601BC2x8mjkLsi6dzA=";
   };
 
-  buildInputs = pkgs.lib.optionals stdenv.isDarwin
-    [ pkgs.darwin.apple_sdk.frameworks.Security ];
+  buildInputs =
+    pkgs.lib.optionals stdenv.isDarwin
+    [pkgs.darwin.apple_sdk.frameworks.Security];
 
   cargoSha256 = "sha256-WaQocM8BTad+y5fpKg3HZE1U1u4Xl5+NW5eeTIQTiTE=";
 
