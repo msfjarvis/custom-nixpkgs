@@ -8,7 +8,6 @@ Included packages:
 - [adx] : Rust tool to poll Google Maven for AndroidX packages and their latest versions
 - [bundletool] : Command-line tool to manipulate Android App Bundles
 - [clipboard-substitutor] : Rust CLI to listen to clipboard events and perform operations on the copied text
-- [comma] : Comma runs software without installing it
 - [diffuse] : Java tool to diff between APKs, AARs and JARs
 - [file-collector] : Simple CLI tool to watch directories and move their files to a single dumping ground
 - [gdrive] : Golang CLI to interact with Google Drive
@@ -27,7 +26,6 @@ Included packages:
 [adx]: https://msfjarvis.dev/g/androidx-release-watcher
 [bundletool]: https://developer.android.com/studio/command-line/bundletool
 [clipboard-substitutor]: https://msfjarvis.dev/g/clipboard-substitutor
-[comma]: https://github.com/nix-community/comma
 [diffuse]: https://github.com/JakeWharton/diffuse
 [file-collector]: https://msfjarvis.dev/g/file-collector
 [gdrive]: https://msfjarvis.dev/g/gdrive
