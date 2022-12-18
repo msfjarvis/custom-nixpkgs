@@ -1,3 +1,3 @@
 { pkgs ? import <nixpkgs> { } }:
 
-pkgs.mkShell { buildInputs = with pkgs; [ git micro nixfmt nix-update shfmt ]; }
+pkgs.mkShell { buildInputs = with pkgs; [ alejandra git micro nix-update shfmt ]; }

@@ -1,5 +1,5 @@
 #!/usr/bin/env nix-shell
-#!nix-shell -i bash -p nixfmt shfmt
+#!nix-shell -i bash -p alejandra shfmt
 # shellcheck=bash
 
 set -e
@@ -27,7 +27,7 @@ case "${1:-nothing}" in
     fi
     ;;
   fmt)
-    fd -tf \.nix$ -X nixfmt
+    alejandra .
     shfmt -w -s -i 2 -ci xtask update.sh
     ;;
   update)
