@@ -36,6 +36,9 @@ in
       pkgs.lib.optionals stdenv.isDarwin
       [pkgs.darwin.apple_sdk.frameworks.Security];
 
+    buildFeatures = ["console" "journald"];
+    RUSTFLAGS = "--cfg tokio_unstable";
+
     cargoSha256 = "sha256-Iuazco7vAVNwy/hfzFBNL7eiN9sTXXNx176NaPngNQE=";
 
     meta = with pkgs.lib; {
