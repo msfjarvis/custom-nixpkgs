@@ -36,8 +36,8 @@ in
       pkgs.lib.optionals stdenv.isDarwin
       [pkgs.darwin.apple_sdk.frameworks.Security];
 
-    buildFeatures = ["console" "journald"];
-    RUSTFLAGS = "--cfg tokio_unstable";
+    # buildFeatures = ["console" "journald"];
+    # RUSTFLAGS = "--cfg tokio_unstable";
 
     cargoSha256 = "sha256-RiNkQl5yD4uMkvJB9yuxIYKTUMpIMWS/ppV8FltMo0I=";
 
