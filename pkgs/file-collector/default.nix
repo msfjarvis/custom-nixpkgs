@@ -4,17 +4,17 @@
 }:
 pkgs.rustPlatform.buildRustPackage rec {
   pname = "file-collector";
-  version = "0.2.5";
+  version = "0.2.6";
 
   src = pkgs.fetchFromGitHub {
     owner = "msfjarvis";
     repo = "file-collector";
     rev = "v${version}";
-    sha256 = "sha256-ch1Qzm9a/Fjgr1jV5bc4XRjbmVehGOan5xLIAkDjAzk=";
+    sha256 = "sha256-/QLRpi+AlkEPnQkIozOqm5qLvZqaMVXvQ/Z7N43w/sA=";
   };
 
   buildFeatures = pkgs.lib.optionals stdenv.isLinux ["journald"];
-  cargoSha256 = "sha256-yXV5dFdPprrURFDvmu38G5BzTPNdhv8cHiASd1KGftM=";
+  cargoSha256 = "sha256-fzvH8YXfz9TegHRuiyTQpTc1N7B4lurTzGq1v/kPWjg=";
 
   meta = with pkgs.lib; {
     description = "Simple CLI tool to watch directories and move their files to a single dumping ground";
