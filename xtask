@@ -25,7 +25,7 @@ case "${1:-nothing}" in
     fi
     ;;
   fmt)
-    alejandra .
+    alejandra --quiet .
     shfmt -w -s -i 2 -ci xtask update.sh
     ;;
   update)
