@@ -23,13 +23,13 @@
 in
   nightlyRustPlatform.buildRustPackage rec {
     pname = "linkleaner";
-    version = "1.2.0";
+    version = "1.4.4";
 
     src = pkgs.fetchFromGitHub {
       owner = "msfjarvis";
       repo = pname;
       rev = "v${version}";
-      sha256 = "sha256-AGbwGKlpGIBQB9AGV7h/J8naN552Kla18rsOQ6xJPMo=";
+      sha256 = "sha256-jelrigwkzQ0zCYwoOoBScZLjSzqxZ6OgJ897rJtoSCA=";
     };
 
     buildInputs =
@@ -39,7 +39,7 @@ in
     # buildFeatures = ["console" "journald"];
     # RUSTFLAGS = "--cfg tokio_unstable";
 
-    cargoSha256 = "sha256-RiNkQl5yD4uMkvJB9yuxIYKTUMpIMWS/ppV8FltMo0I=";
+    cargoSha256 = "sha256-3kaKEYpZc0Ot6WsH/2GH6nuZuQa9tAksCFM7UOGC3YQ=";
 
     meta = with pkgs.lib; {
       description = "A Telegram bot with an identity crisis";
