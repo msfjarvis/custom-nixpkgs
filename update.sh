@@ -23,9 +23,9 @@ declare -A VERSION_REGEX=(
   ["healthchecks-monitor"]="healthchecks-monitor-v(.*)"
 )
 
-PKG="${1:-}"
-VERSION="${2:-}"
-NO_BUILD="${NO_BUILD:-}"
+PKG="${1-}"
+VERSION="${2-}"
+NO_BUILD="${NO_BUILD-}"
 declare -a PACKAGES_TO_BUILD=()
 declare -a BASE_PARAMS=("--commit")
 if [ -z "${NO_BUILD}" ]; then
