@@ -5,6 +5,7 @@ Custom NixOS packages for personal use. They're maintained on a best-effort basi
 Included packages:
 
 - [adb-sync] : Fork of [Google's adb-sync] with bugfixes for busybox users and the pull times feature
+- [adbtuifm] : TUI based file manager for ADB
 - [adx] : Rust tool to poll Google Maven for AndroidX packages and their latest versions
 - [bundletool] : Command-line tool to manipulate Android App Bundles
 - [clipboard-substitutor] : Rust CLI to listen to clipboard events and perform operations on the copied text
@@ -23,6 +24,7 @@ Included packages:
 
 [adb-sync]: https://msfjarvis.dev/g/adb-sync
 [Google's adb-sync]: https://github.com/google/adb-sync
+[adbtuifm]: https://github.com/darkhz/adbtuifm
 [adx]: https://msfjarvis.dev/g/androidx-release-watcher
 [bundletool]: https://developer.android.com/studio/command-line/bundletool
 [clipboard-substitutor]: https://msfjarvis.dev/g/clipboard-substitutor

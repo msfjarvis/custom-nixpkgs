@@ -2,6 +2,7 @@
   callPackage = pkg: pkgs.callPackage pkg;
 in {
   adb-sync = callPackage ./adb-sync {inherit pkgs;};
+  adbtuifm = callPackage ./adbtuifm {inherit pkgs;};
   adx = callPackage ./adx {inherit pkgs;};
   bundletool-bin = callPackage ./bundletool-bin {inherit pkgs;};
   clipboard-substitutor = callPackage ./clipboard-substitutor {inherit pkgs;};
