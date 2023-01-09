@@ -4,17 +4,20 @@ set -euxo pipefail
 
 declare -a ALL_PACKAGES=(
   adb-sync
+  adbtuifm
   adx
   bundletool-bin
   clipboard-substitutor
-  comma
+  diffuse-bin
   file-collector
   gdrive
   hcctl
   healthchecks-monitor
+  hyperlink
   katbin
   linkleaner
   pidcat
+  twt
   when
 )
 
