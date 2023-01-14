@@ -39,7 +39,7 @@ in
     # buildFeatures = ["console" "journald"];
     # RUSTFLAGS = "--cfg tokio_unstable";
 
-    cargoSha256 = "sha256-gGZEt4qTFpzG10psi3gEs6McARJDy+AeQYIqAlOxrIo=";
+    cargoHash = "sha256-gGZEt4qTFpzG10psi3gEs6McARJDy+AeQYIqAlOxrIo=";
 
     meta = with pkgs.lib; {
       description = "A Telegram bot with an identity crisis";

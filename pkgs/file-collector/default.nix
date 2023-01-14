@@ -14,7 +14,7 @@ pkgs.rustPlatform.buildRustPackage rec {
   };
 
   buildFeatures = pkgs.lib.optionals stdenv.isLinux ["journald"];
-  cargoSha256 = "sha256-fzvH8YXfz9TegHRuiyTQpTc1N7B4lurTzGq1v/kPWjg=";
+  cargoHash = "sha256-fzvH8YXfz9TegHRuiyTQpTc1N7B4lurTzGq1v/kPWjg=";
 
   meta = with pkgs.lib; {
     description = "Simple CLI tool to watch directories and move their files to a single dumping ground";

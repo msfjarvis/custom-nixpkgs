@@ -20,7 +20,7 @@ pkgs.rustPlatform.buildRustPackage rec {
 
   buildAndTestSubdir = "hcctl";
 
-  cargoSha256 = "sha256-0xHrnlGxKczogSyAHYRzv9FsB9GJm1pCebuqsTBBlp8=";
+  cargoHash = "sha256-0xHrnlGxKczogSyAHYRzv9FsB9GJm1pCebuqsTBBlp8=";
 
   meta = with pkgs.lib; {
     description = "Simple CLI tool to keep a track of your https://healthchecks.io account";

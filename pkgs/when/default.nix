@@ -14,7 +14,7 @@ pkgs.rustPlatform.buildRustPackage rec {
     fetchSubmodules = true;
   };
 
-  cargoSha256 = "sha256-HhxAk5pLOpn2cRDoPkrxyV27n6IGAI2vkep9j3o275I=";
+  cargoHash = "sha256-HhxAk5pLOpn2cRDoPkrxyV27n6IGAI2vkep9j3o275I=";
 
   meta = with pkgs.lib; {
     description = "Timezones from the command line";

@@ -13,7 +13,7 @@ pkgs.rustPlatform.buildRustPackage rec {
     sha256 = "sha256-9zP+rWhaK4fC2Qhd0oq9WVvCkvryooYo09k7016Rbxw=";
   };
 
-  cargoSha256 = "sha256-otn0XvZ0wufD+4mCGSM0hevKM+wWSvFVCKtTu/5m1uA=";
+  cargoHash = "sha256-otn0XvZ0wufD+4mCGSM0hevKM+wWSvFVCKtTu/5m1uA=";
 
   buildInputs = pkgs.lib.optionals stdenv.isDarwin [
     pkgs.darwin.apple_sdk.frameworks.Cocoa

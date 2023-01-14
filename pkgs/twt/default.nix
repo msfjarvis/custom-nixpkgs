@@ -17,7 +17,7 @@ pkgs.rustPlatform.buildRustPackage rec {
     pkgs.lib.optionals stdenv.isDarwin
     [pkgs.darwin.apple_sdk.frameworks.Security];
 
-  cargoSha256 = "sha256-WaQocM8BTad+y5fpKg3HZE1U1u4Xl5+NW5eeTIQTiTE=";
+  cargoHash = "sha256-WaQocM8BTad+y5fpKg3HZE1U1u4Xl5+NW5eeTIQTiTE=";
 
   meta = with pkgs.lib; {
     description = "Multipurpose tool to extract metadata from a user's tweets";

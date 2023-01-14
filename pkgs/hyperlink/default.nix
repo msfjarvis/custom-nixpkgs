@@ -13,7 +13,7 @@ pkgs.rustPlatform.buildRustPackage rec {
     sha256 = "sha256-V1CFk08Wm8/92rul3EOFrSuOm1oRp+8hGExaf+DZwl0=";
   };
 
-  cargoSha256 = "sha256-v7n5C9637NPztZBI8qavGZzGng9FtfPuWtGMpBCqIeo=";
+  cargoHash = "sha256-v7n5C9637NPztZBI8qavGZzGng9FtfPuWtGMpBCqIeo=";
 
   meta = with pkgs.lib; {
     description = "Very fast link checker for CI.";

@@ -17,7 +17,7 @@ pkgs.rustPlatform.buildRustPackage rec {
     pkgs.lib.optionals stdenv.isDarwin
     [pkgs.darwin.apple_sdk.frameworks.Security];
 
-  cargoSha256 = "sha256-zI3YZ8m9YQ1+ZWiRyX4nPAP86BKpSg80G+dabkePGhk=";
+  cargoHash = "sha256-zI3YZ8m9YQ1+ZWiRyX4nPAP86BKpSg80G+dabkePGhk=";
 
   meta = with pkgs.lib; {
     description = "A CLI for katbin";

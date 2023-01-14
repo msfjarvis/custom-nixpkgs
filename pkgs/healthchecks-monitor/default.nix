@@ -20,7 +20,7 @@ pkgs.rustPlatform.buildRustPackage rec {
 
   buildAndTestSubdir = "monitor";
 
-  cargoSha256 = "sha256-Wrjsn7D4OplCRkAez+VFLd8CLsQNiQUEIUW1ZTrt+C4=";
+  cargoHash = "sha256-Wrjsn7D4OplCRkAez+VFLd8CLsQNiQUEIUW1ZTrt+C4=";
 
   meta = with pkgs.lib; {
     description = "CLI tool to run shell jobs and report status to https://healthchecks.io";

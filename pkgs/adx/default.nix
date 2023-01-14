@@ -17,7 +17,7 @@ pkgs.rustPlatform.buildRustPackage rec {
     pkgs.lib.optionals stdenv.isDarwin
     [pkgs.darwin.apple_sdk.frameworks.Security];
 
-  cargoSha256 = "sha256-FRxWGbQgUXR4b1PO9YEpXk87vyeqD023RD9aeBx+JzE=";
+  cargoHash = "sha256-FRxWGbQgUXR4b1PO9YEpXk87vyeqD023RD9aeBx+JzE=";
 
   meta = with pkgs.lib; {
     description = "Rust binary that polls Google's Maven repository and extracts the latest version of all dependencies, with as few network calls as possible.";

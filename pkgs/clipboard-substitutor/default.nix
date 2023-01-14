@@ -14,7 +14,7 @@ pkgs.rustPlatform.buildRustPackage rec {
   };
 
   buildFeatures = pkgs.lib.optionals stdenv.isLinux ["journald"];
-  cargoSha256 = "sha256-1nutZIzeKGZO8u2m9wsNi0CHgpIKsyfLDi/EgZGXvsY=";
+  cargoHash = "sha256-1nutZIzeKGZO8u2m9wsNi0CHgpIKsyfLDi/EgZGXvsY=";
 
   nativeBuildInputs = [pkgs.pkg-config pkgs.python3];
   buildInputs =
