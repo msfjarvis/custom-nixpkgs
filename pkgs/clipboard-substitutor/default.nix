@@ -4,17 +4,17 @@
 }:
 pkgs.rustPlatform.buildRustPackage rec {
   pname = "clipboard-substitutor";
-  version = "0.7.3";
+  version = "0.7.4";
 
   src = pkgs.fetchFromGitHub {
     owner = "msfjarvis";
     repo = "clipboard-substitutor";
     rev = "v${version}";
-    sha256 = "sha256-3yPL46SJBOEIcWaJPLJ8UNyRmtaTN43TMHgjHzBpUwY=";
+    sha256 = "sha256-WevcICkODt1vrjNctHrMLXjbbZ7Ggxtp7H47lMnLfkc=";
   };
 
   buildFeatures = pkgs.lib.optionals stdenv.isLinux ["journald"];
-  cargoHash = "sha256-1nutZIzeKGZO8u2m9wsNi0CHgpIKsyfLDi/EgZGXvsY=";
+  cargoHash = "sha256-SzikVNQmY3jzvu+3ZJ7JiKDmw7iuyveQ+Cq95Cdzkx8=";
 
   nativeBuildInputs = [pkgs.pkg-config pkgs.python3];
   buildInputs =
