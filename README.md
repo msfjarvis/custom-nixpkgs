@@ -8,6 +8,7 @@ Included packages:
 - [adbtuifm] : TUI based file manager for ADB
 - [adx] : Rust tool to poll Google Maven for AndroidX packages and their latest versions
 - [bundletool] : Command-line tool to manipulate Android App Bundles
+- [cargo-dist] : Package shippable application packaging for Rust
 - [clipboard-substitutor] : Rust CLI to listen to clipboard events and perform operations on the copied text
 - [diffuse] : Java tool to diff between APKs, AARs and JARs
 - [file-collector] : Simple CLI tool to watch directories and move their files to a single dumping ground
@@ -27,6 +28,7 @@ Included packages:
 [adbtuifm]: https://github.com/darkhz/adbtuifm
 [adx]: https://msfjarvis.dev/g/androidx-release-watcher
 [bundletool]: https://developer.android.com/studio/command-line/bundletool
+[cargo-dist]: https://github.com/axodotdev/cargo-dist
 [clipboard-substitutor]: https://msfjarvis.dev/g/clipboard-substitutor
 [diffuse]: https://github.com/JakeWharton/diffuse
 [file-collector]: https://msfjarvis.dev/g/file-collector

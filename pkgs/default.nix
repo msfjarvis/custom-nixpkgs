@@ -5,6 +5,7 @@ in {
   adbtuifm = callPackage ./adbtuifm {inherit pkgs;};
   adx = callPackage ./adx {inherit pkgs;};
   bundletool-bin = callPackage ./bundletool-bin {inherit pkgs;};
+  cargo-dist = callPackage ./cargo-dist {inherit pkgs;};
   clipboard-substitutor = callPackage ./clipboard-substitutor {inherit pkgs;};
   diffuse-bin = callPackage ./diffuse-bin {inherit pkgs;};
   file-collector = callPackage ./file-collector {inherit pkgs;};
