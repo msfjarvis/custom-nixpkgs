@@ -4,20 +4,20 @@
 }:
 pkgs.rustPlatform.buildRustPackage rec {
   pname = "twt";
-  version = "1.0.1";
+  version = "1.0.3";
 
   src = pkgs.fetchFromGitHub {
     owner = "msfjarvis";
     repo = pname;
     rev = "v${version}";
-    sha256 = "sha256-wq3pQNR72EQqeiWbC82ZXTg10601BC2x8mjkLsi6dzA=";
+    sha256 = "sha256-CYQcKy+iyPLYXRQkdt2W1fGqlpoEdihpJSbgw0OohDg=";
   };
 
   buildInputs =
     pkgs.lib.optionals stdenv.isDarwin
     [pkgs.darwin.apple_sdk.frameworks.Security];
 
-  cargoHash = "sha256-WaQocM8BTad+y5fpKg3HZE1U1u4Xl5+NW5eeTIQTiTE=";
+  cargoHash = "sha256-fDrZJKrzUcs2LH6H8ZIPSIxcC3yMC3D7tiaJ71D/Nt4=";
 
   meta = with pkgs.lib; {
     description = "Multipurpose tool to extract metadata from a user's tweets";
