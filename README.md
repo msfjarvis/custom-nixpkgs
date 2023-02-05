@@ -18,6 +18,7 @@ Included packages:
 - [hyperlink]: Very fast link checker for CI
 - [katbin] : A CLI for [katb.in]
 - [linkleaner] : Telegram bot to fix social media link previews
+- [monocraft-nerdfonts] : A monospaced programming font inspired by the Minecraft typeface
 - [pidcat] : Fork of [JakeWharton's pidcat] with Python3 support and some other fixes
 - [topgrade] : The original [topgrade] package from before it was forked by the community and started dwindling in quality
 - [twt] : Multipurpose tool to extract metadata from a user's tweets
@@ -40,6 +41,7 @@ Included packages:
 [katbin]: https://github.com/SphericalKat/katbin-cli
 [katb.in]: https://katb.in
 [linkleaner]: https://msfjarvis.dev/g/linkleaner
+[monocraft-nerdfonts]: https://github.com/IdreesInc/Monocraft
 [pidcat]: https://msfjarvis.dev/g/pidcat
 [JakeWharton's pidcat]: https://github.com/JakeWharton/pidcat
 [topgrade]: https://github.com/r-darwish/topgrade
