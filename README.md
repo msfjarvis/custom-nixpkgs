@@ -1,4 +1,4 @@
-# custom-nixpkgs [![Build nix packages](https://github.com/msfjarvis/custom-nixpkgs/actions/workflows/build.yml/badge.svg)](https://github.com/msfjarvis/custom-nixpkgs/actions/workflows/build.yml) [![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
+# custom-nixpkgs [![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/) [![Built with Garnix](https://img.shields.io/static/v1?label=Built%20with&message=Garnix&color=blue&style=flat&logo=nixos&link=https://garnix.io&labelColor=111212)](https://garnix.io)
 
 NixOS packages for personal use.
 
