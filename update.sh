@@ -7,6 +7,7 @@ declare -a ALL_PACKAGES=(
   adbtuifm
   adx
   bundletool-bin
+  cargo-dist
   clipboard-substitutor
   diffuse-bin
   file-collector
@@ -16,6 +17,8 @@ declare -a ALL_PACKAGES=(
   hyperlink
   katbin
   linkleaner
+  monocraft-nerdfonts
+  oranda
   pidcat
   twt
   when
