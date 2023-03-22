@@ -19,6 +19,7 @@ NixOS packages for personal use.
 - [katbin] : A CLI for [katb.in]
 - [linkleaner] : Telegram bot to fix social media link previews
 - [monocraft-nerdfonts] : A monospaced programming font inspired by the Minecraft typeface
+- [oranda] : Generate beautiful landing pages for your developer tools
 - [pidcat] : Fork of [JakeWharton's pidcat] with Python3 support and some other fixes
 - [topgrade] : The original [topgrade] package from before it was forked by the community and started dwindling in quality
 - [twt] : Multipurpose tool to extract metadata from a user's tweets
@@ -42,6 +43,7 @@ NixOS packages for personal use.
 [katb.in]: https://katb.in
 [linkleaner]: https://msfjarvis.dev/g/linkleaner
 [monocraft-nerdfonts]: https://github.com/IdreesInc/Monocraft
+[oranda]: https://github.com/axodotdev/oranda
 [pidcat]: https://msfjarvis.dev/g/pidcat
 [JakeWharton's pidcat]: https://github.com/JakeWharton/pidcat
 [topgrade]: https://github.com/r-darwish/topgrade

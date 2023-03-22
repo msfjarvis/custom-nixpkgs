@@ -16,6 +16,7 @@ in {
   katbin = callPackage ./katbin {inherit pkgs;};
   linkleaner = callPackage ./linkleaner {inherit pkgs;};
   monocraft-nerdfonts = callPackage ./monocraft-nerdfonts {inherit pkgs;};
+  oranda = callPackage ./oranda {};
   pidcat = callPackage ./pidcat {inherit pkgs;};
   topgrade-og = callPackage ./topgrade-og {inherit pkgs;};
   twt = callPackage ./twt {inherit pkgs;};
