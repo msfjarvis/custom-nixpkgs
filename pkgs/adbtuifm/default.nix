@@ -1,24 +1,27 @@
 {
-  pkgs,
   lib,
+  buildGoModule,
+  fetchFromGitHub,
 }:
-pkgs.buildGo119Module rec {
+buildGoModule rec {
   pname = "adbtuifm";
   version = "0.5.8";
 
-  src = pkgs.fetchFromGitHub {
+  src = fetchFromGitHub {
     owner = "darkhz";
-    repo = pname;
+    repo = "adbtuifm";
     rev = "v${version}";
-    sha256 = "sha256-TK93O9XwMrsrQT3EG0969HYMtYkK0a4PzG9FSTqHxAY=";
+    hash = "sha256-TK93O9XwMrsrQT3EG0969HYMtYkK0a4PzG9FSTqHxAY=";
   };
 
-  vendorSha256 = "sha256-voVoowjM90OGWXF4REEevO8XEzT7azRYiDay4bnGBks=";
+  vendorHash = "sha256-voVoowjM90OGWXF4REEevO8XEzT7azRYiDay4bnGBks=";
+
+  ldflags = ["-s" "-w"];
 
   meta = with lib; {
     description = "A TUI File Manager for ADB";
     homepage = "https://github.com/darkhz/adbtuifm";
     license = licenses.mit;
-    platforms = platforms.all;
+    maintainers = with maintainers; [];
   };
 }
