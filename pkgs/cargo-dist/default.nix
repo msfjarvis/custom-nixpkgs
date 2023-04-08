@@ -1,24 +1,38 @@
 {
-  stdenv,
-  pkgs,
+  lib,
+  rustPlatform,
+  fetchFromGitHub,
+  pkg-config,
+  bzip2,
+  xz,
 }:
-pkgs.rustPlatform.buildRustPackage rec {
+rustPlatform.buildRustPackage rec {
   pname = "cargo-dist";
-  version = "0.0.2";
+  version = "0.0.5";
 
-  src = pkgs.fetchFromGitHub {
+  src = fetchFromGitHub {
     owner = "axodotdev";
-    repo = pname;
+    repo = "cargo-dist";
     rev = "v${version}";
-    sha256 = "sha256-7/TUk9LGwmHhKwFtwFQM7C/1ItRsoJ4IodeUPWfGjkc=";
+    hash = "sha256-AbEreN8pv/aZoBX1amoihb6HxWRdMuEX0waBlbvueQw=";
   };
 
-  cargoHash = "sha256-vmHPjecd1u0f8wSTu+LE2BNiZlskDADLXNjIj2v7D5E=";
+  cargoHash = "sha256-U2pTvTk6oc6PV4W4XBKLzsaqSTb7Oqyw2Ponc9H0xs8=";
 
-  meta = with pkgs.lib; {
-    description = "Package shippable application packaging for Rust";
+  nativeBuildInputs = [
+    pkg-config
+  ];
+
+  buildInputs = [
+    bzip2
+    xz
+  ];
+
+  meta = with lib; {
+    description = "Shippable application packaging for Rust";
     homepage = "https://github.com/axodotdev/cargo-dist";
-    license = licenses.mit;
-    platforms = platforms.all;
+    changelog = "https://github.com/axodotdev/cargo-dist/blob/${src.rev}/CHANGELOG.md";
+    license = with licenses; [asl20 mit];
+    maintainers = with maintainers; [];
   };
 }
