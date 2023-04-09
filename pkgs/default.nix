@@ -21,5 +21,5 @@ in {
   pidcat = callPackage ./pidcat {inherit pkgs;};
   topgrade-og = callPackage ./topgrade-og {inherit pkgs;};
   twt = callPackage ./twt {};
-  when = callPackage ./when {inherit pkgs;};
+  when = callPackage ./when {};
 }
