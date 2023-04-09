@@ -6,7 +6,7 @@ in {
   adx = callPackage ./adx {};
   bundletool-bin = callPackage ./bundletool-bin {inherit pkgs;};
   cargo-dist = callPackage ./cargo-dist {};
-  clipboard-substitutor = callPackage ./clipboard-substitutor {inherit pkgs;};
+  clipboard-substitutor = callPackage ./clipboard-substitutor {};
   diffuse-bin = callPackage ./diffuse-bin {inherit pkgs;};
   file-collector = callPackage ./file-collector {inherit pkgs;};
   gdrive = callPackage ./gdrive {inherit pkgs;};

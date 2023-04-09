@@ -1,31 +1,37 @@
 {
+  lib,
+  rustPlatform,
+  fetchFromGitHub,
   stdenv,
-  pkgs,
+  darwin,
+  xorg,
 }:
-pkgs.rustPlatform.buildRustPackage rec {
+rustPlatform.buildRustPackage rec {
   pname = "clipboard-substitutor";
   version = "0.7.4";
 
-  src = pkgs.fetchFromGitHub {
+  src = fetchFromGitHub {
     owner = "msfjarvis";
     repo = "clipboard-substitutor";
     rev = "v${version}";
-    sha256 = "sha256-WevcICkODt1vrjNctHrMLXjbbZ7Ggxtp7H47lMnLfkc=";
+    hash = "sha256-WevcICkODt1vrjNctHrMLXjbbZ7Ggxtp7H47lMnLfkc=";
   };
 
-  buildFeatures = pkgs.lib.optionals stdenv.isLinux ["journald"];
+  buildFeatures = lib.optionals stdenv.isLinux ["journald"];
   cargoHash = "sha256-SzikVNQmY3jzvu+3ZJ7JiKDmw7iuyveQ+Cq95Cdzkx8=";
 
-  nativeBuildInputs = [pkgs.pkg-config pkgs.python3];
   buildInputs =
-    pkgs.lib.optionals stdenv.isDarwin
-    [pkgs.darwin.apple_sdk.frameworks.AppKit]
-    ++ pkgs.lib.optionals stdenv.isLinux [pkgs.xorg.libxcb];
+    lib.optionals stdenv.isDarwin [
+      darwin.apple_sdk.frameworks.AppKit
+    ]
+    ++ lib.optionals stdenv.isLinux [
+      xorg.libxcb
+    ];
 
-  meta = with pkgs.lib; {
-    description = "CLI tool to monitor clipboard contents and perform actions based on a set of matchers";
-    homepage = "https://msfjarvis.dev/g/clipboard-substitutor";
-    license = licenses.mit;
-    platforms = platforms.all;
+  meta = with lib; {
+    description = "CLI to listen to clipboard events and perform operations on the copied text";
+    homepage = "https://github.com/msfjarvis/clipboard-substitutor";
+    license = with licenses; [asl20 mit];
+    maintainers = with maintainers; [];
   };
 }
