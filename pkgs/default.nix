@@ -8,7 +8,7 @@ in {
   cargo-dist = callPackage ./cargo-dist {};
   clipboard-substitutor = callPackage ./clipboard-substitutor {};
   diffuse-bin = callPackage ./diffuse-bin {inherit pkgs;};
-  file-collector = callPackage ./file-collector {inherit pkgs;};
+  file-collector = callPackage ./file-collector {};
   gdrive = callPackage ./gdrive {inherit pkgs;};
   hcctl = callPackage ./hcctl {inherit pkgs;};
   healthchecks-monitor = callPackage ./healthchecks-monitor {inherit pkgs;};
