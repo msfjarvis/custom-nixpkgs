@@ -11,7 +11,7 @@ in {
   file-collector = callPackage ./file-collector {};
   gdrive = callPackage ./gdrive {};
   hcctl = callPackage ./hcctl {};
-  healthchecks-monitor = callPackage ./healthchecks-monitor {inherit pkgs;};
+  healthchecks-monitor = callPackage ./healthchecks-monitor {};
   hyperlink = callPackage ./hyperlink {inherit pkgs;};
   katbin = callPackage ./katbin {inherit pkgs;};
   linkleaner = callPackage ./linkleaner {inherit pkgs;};
