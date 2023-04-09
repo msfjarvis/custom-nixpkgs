@@ -12,7 +12,7 @@ in {
   gdrive = callPackage ./gdrive {};
   hcctl = callPackage ./hcctl {};
   healthchecks-monitor = callPackage ./healthchecks-monitor {};
-  hyperlink = callPackage ./hyperlink {inherit pkgs;};
+  hyperlink = callPackage ./hyperlink {};
   katbin = callPackage ./katbin {inherit pkgs;};
   linkleaner = callPackage ./linkleaner {inherit pkgs;};
   monocraft-nerdfonts = callPackage ./monocraft-nerdfonts {inherit pkgs;};
