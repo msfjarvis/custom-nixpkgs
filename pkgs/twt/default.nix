@@ -1,28 +1,32 @@
 {
+  lib,
+  rustPlatform,
+  fetchFromGitHub,
   stdenv,
-  pkgs,
+  darwin,
 }:
-pkgs.rustPlatform.buildRustPackage rec {
+rustPlatform.buildRustPackage rec {
   pname = "twt";
-  version = "1.2.0";
+  version = "1.2.1";
 
-  src = pkgs.fetchFromGitHub {
+  src = fetchFromGitHub {
     owner = "msfjarvis";
-    repo = pname;
+    repo = "twt";
     rev = "v${version}";
-    sha256 = "sha256-cdYdsDk71skhoVN5oLP6QUG0y8ubqqbcXa+/JNt+dKA=";
+    hash = "sha256-bBE0B4m9CSLFpBSD+BjbD74vMrY8aEd5nxf5RLRr8fA=";
   };
 
-  buildInputs =
-    pkgs.lib.optionals stdenv.isDarwin
-    [pkgs.darwin.apple_sdk.frameworks.Security];
+  cargoHash = "sha256-h6KsHesCpn19DJvFsEEle7CAivQ/fSP4/+tLZw7gmRo=";
 
-  cargoHash = "sha256-kaYlm6Fr+Dw3EyycklgUer1zJj4gSYJlRro8rCdtBEY=";
+  buildInputs = lib.optionals stdenv.isDarwin [
+    darwin.apple_sdk.frameworks.CoreFoundation
+    darwin.apple_sdk.frameworks.Security
+  ];
 
-  meta = with pkgs.lib; {
-    description = "Multipurpose tool to extract metadata from a user's tweets";
-    homepage = "https://msfjarvis.dev/g/twt/";
-    license = licenses.mit;
-    platforms = platforms.all;
+  meta = with lib; {
+    description = "Tools for extracting metadata from tweets";
+    homepage = "https://github.com/msfjarvis/twt";
+    license = with licenses; [asl20 mit];
+    maintainers = with maintainers; [];
   };
 }
