@@ -1,24 +1,27 @@
 {
-  pkgs,
   lib,
+  buildGoModule,
+  fetchFromGitHub,
 }:
-pkgs.buildGo119Module rec {
+buildGoModule rec {
   pname = "gdrive";
   version = "3.0.13";
 
-  src = pkgs.fetchFromGitHub {
+  src = fetchFromGitHub {
     owner = "msfjarvis";
-    repo = pname;
+    repo = "gdrive";
     rev = "v${version}";
-    sha256 = "sha256-FFNgMV3gPQ2p1ilYK+t10UgcNF/knO/PVM3Zw/VSSGw=";
+    hash = "sha256-FFNgMV3gPQ2p1ilYK+t10UgcNF/knO/PVM3Zw/VSSGw=";
   };
 
-  vendorSha256 = "sha256-WibiLYMeWR63Q8lu287jeczT0n0/lh6T8PfOH7eJh8Q=";
+  vendorHash = "sha256-WibiLYMeWR63Q8lu287jeczT0n0/lh6T8PfOH7eJh8Q=";
+
+  ldflags = ["-s" "-w"];
 
   meta = with lib; {
-    description = "GDrive CLI tool";
+    description = "Google Drive CLI Client";
     homepage = "https://github.com/msfjarvis/gdrive";
     license = licenses.mit;
-    platforms = platforms.all;
+    maintainers = with maintainers; [];
   };
 }

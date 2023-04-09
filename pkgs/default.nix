@@ -9,7 +9,7 @@ in {
   clipboard-substitutor = callPackage ./clipboard-substitutor {};
   diffuse-bin = callPackage ./diffuse-bin {inherit pkgs;};
   file-collector = callPackage ./file-collector {};
-  gdrive = callPackage ./gdrive {inherit pkgs;};
+  gdrive = callPackage ./gdrive {};
   hcctl = callPackage ./hcctl {inherit pkgs;};
   healthchecks-monitor = callPackage ./healthchecks-monitor {inherit pkgs;};
   hyperlink = callPackage ./hyperlink {inherit pkgs;};
