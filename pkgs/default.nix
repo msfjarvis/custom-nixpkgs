@@ -13,7 +13,7 @@ in {
   hcctl = callPackage ./hcctl {};
   healthchecks-monitor = callPackage ./healthchecks-monitor {};
   hyperlink = callPackage ./hyperlink {};
-  katbin = callPackage ./katbin {inherit pkgs;};
+  katbin = callPackage ./katbin {};
   linkleaner = callPackage ./linkleaner {inherit pkgs;};
   monocraft-nerdfonts = callPackage ./monocraft-nerdfonts {inherit pkgs;};
   oranda = callPackage ./oranda {};

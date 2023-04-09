@@ -1,28 +1,32 @@
 {
+  lib,
+  rustPlatform,
+  fetchFromGitHub,
   stdenv,
-  pkgs,
+  darwin,
 }:
-pkgs.rustPlatform.buildRustPackage rec {
-  pname = "katbin";
-  version = "1.3.14-develop.1";
+rustPlatform.buildRustPackage rec {
+  pname = "katbin-cli";
+  version = "1.3.13";
 
-  src = pkgs.fetchFromGitHub {
+  src = fetchFromGitHub {
     owner = "SphericalKat";
     repo = "katbin-cli";
     rev = "v${version}";
-    sha256 = "sha256-0DiXswIUyLRIpVM26x6Q/efEG1ueu8CgaUoto7KBfmA=";
+    hash = "sha256-thL2NUaE6UNPiEjsmNHcbcF7/Rs2JZcPDQq5sL0roYU=";
   };
 
-  buildInputs =
-    pkgs.lib.optionals stdenv.isDarwin
-    [pkgs.darwin.apple_sdk.frameworks.Security];
+  cargoHash = "sha256-S9kGW9pV0otjoDNZQqTMQhBr+Y/ilQpcw2GnvimGe+0=";
 
-  cargoHash = "sha256-zI3YZ8m9YQ1+ZWiRyX4nPAP86BKpSg80G+dabkePGhk=";
+  buildInputs = lib.optionals stdenv.isDarwin [
+    darwin.apple_sdk.frameworks.Security
+  ];
 
-  meta = with pkgs.lib; {
+  meta = with lib; {
     description = "A CLI for katbin";
-    homepage = "https://katb.in/";
-    license = licenses.mit;
-    platforms = platforms.all;
+    homepage = "https://github.com/SphericalKat/katbin-cli";
+    changelog = "https://github.com/SphericalKat/katbin-cli/blob/${src.rev}/CHANGELOG.md";
+    license = with licenses; [];
+    maintainers = with maintainers; [];
   };
 }
