@@ -23,7 +23,7 @@ NixOS packages for personal use.
 - [patreon-dl] : Download content from creators you're subscribed to on Patreon
 - [pidcat] : Fork of [JakeWharton's pidcat] with Python3 support and some other fixes
 - [rye] : Armin Ronacher's experimental alternative to traditional Python tooling
-- [topgrade] : The original [topgrade] package from before it was forked by the community and started dwindling in quality
+- topgrade-og : The original [topgrade] package from before it was forked by the community and started dwindling in quality
 - [twt] : Multipurpose tool to extract metadata from a user's tweets
 - [when] : A CLI tool to deal with timezones 
 

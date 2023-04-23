@@ -20,7 +20,7 @@ in {
   patreon-dl = callPackage ./patreon-dl {};
   pidcat = callPackage ./pidcat {inherit pkgs;};
   rye = callPackage ./rye {};
-  topgrade-og = callPackage ./topgrade-og {inherit pkgs;};
+  topgrade-og = callPackage ./topgrade-og {};
   twt = callPackage ./twt {};
   when = callPackage ./when {};
 }
