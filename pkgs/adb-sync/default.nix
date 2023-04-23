@@ -1,27 +1,34 @@
 {
-  stdenv,
-  pkgs,
+  lib,
+  stdenvNoCC,
+  fetchFromGitHub,
 }:
-stdenv.mkDerivation rec {
+stdenvNoCC.mkDerivation rec {
   pname = "adb-sync";
   version = "1.0.0";
 
-  src = pkgs.fetchFromGitHub {
+  src = fetchFromGitHub {
     owner = "msfjarvis";
     repo = pname;
     rev = "v${version}";
     sha256 = "0di7n6npziq37jz18k7kkiwhv1v3yphyhj0a3sjmx6p14rwjx0ms";
   };
 
+  outputs = ["out" "bin"];
+
+  dontConfigure = true;
+  dontBuild = true;
+
   installPhase = ''
-    install -m755 -D adb-sync $out/bin/adb-sync
-    install -m755 -D adb-channel $out/bin/adb-channel
+    install -m755 -D adb-sync $bin/adb-sync
+    install -m755 -D adb-channel $bin/adb-channel
   '';
 
-  meta = with pkgs.lib; {
+  meta = with lib; {
     homepage = "https://github.com/google/adb-sync";
     description = "adb-sync is a tool to synchronize files between a PC and an Android device using the ADB (Android Debug Bridge)";
     license = licenses.asl20;
     platforms = platforms.all;
+    maintainers = with maintainers; [];
   };
 }

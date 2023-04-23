@@ -1,7 +1,7 @@
 {pkgs}: let
   callPackage = pkg: pkgs.callPackage pkg;
 in {
-  adb-sync = callPackage ./adb-sync {inherit pkgs;};
+  adb-sync = callPackage ./adb-sync {};
   adbtuifm = callPackage ./adbtuifm {};
   adx = callPackage ./adx {};
   bundletool-bin = callPackage ./bundletool-bin {inherit pkgs;};
