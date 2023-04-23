@@ -19,6 +19,7 @@ in {
   oranda = callPackage ./oranda {};
   patreon-dl = callPackage ./patreon-dl {};
   pidcat = callPackage ./pidcat {inherit pkgs;};
+  rye = callPackage ./rye {};
   topgrade-og = callPackage ./topgrade-og {inherit pkgs;};
   twt = callPackage ./twt {};
   when = callPackage ./when {};
