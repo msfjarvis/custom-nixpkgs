@@ -18,7 +18,7 @@ in {
   hyperlink = callPackage ./hyperlink {};
   katbin = callPackage ./katbin {};
   linkleaner = callPackage ./linkleaner {inherit (fenix) fromToolchainFile;};
-  monocraft-nerdfonts = callPackage ./monocraft-nerdfonts {inherit pkgs;};
+  monocraft-nerdfonts = callPackage ./monocraft-nerdfonts {};
   oranda = callPackage ./oranda {};
   patreon-dl = callPackage ./patreon-dl {};
   pidcat = callPackage ./pidcat {inherit pkgs;};

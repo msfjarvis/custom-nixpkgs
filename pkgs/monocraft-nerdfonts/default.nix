@@ -1,17 +1,19 @@
 {
-  pkgs,
   lib,
+  stdenvNoCC,
+  fetchurl,
 }:
-pkgs.stdenv.mkDerivation rec {
+stdenvNoCC.mkDerivation rec {
   pname = "monocraft-nerdfonts";
   version = "2.4";
-  src = pkgs.fetchurl {
+  src = fetchurl {
     url = "https://github.com/IdreesInc/Monocraft/releases/download/v${version}/Monocraft-nerd-fonts-patched.ttf";
     sha256 = "sha256-QxMp8UwcRjWySNHWoNeX2sX9teZ4+tCFj+DG41azsXw=";
   };
 
-  dontBuild = true;
   dontUnpack = true;
+  dontBuild = true;
+  dontConfigure = true;
 
   installPhase = ''
     mkdir -p $out/share/fonts/truetype/
