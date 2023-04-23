@@ -10,7 +10,7 @@ in {
   bundletool-bin = callPackage ./bundletool-bin {};
   cargo-dist = callPackage ./cargo-dist {};
   clipboard-substitutor = callPackage ./clipboard-substitutor {};
-  diffuse-bin = callPackage ./diffuse-bin {inherit pkgs;};
+  diffuse-bin = callPackage ./diffuse-bin {};
   file-collector = callPackage ./file-collector {};
   gdrive = callPackage ./gdrive {};
   hcctl = callPackage ./hcctl {};
