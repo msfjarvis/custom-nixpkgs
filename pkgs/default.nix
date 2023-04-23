@@ -1,4 +1,7 @@
-{pkgs}: let
+{
+  pkgs,
+  fenix,
+}: let
   callPackage = pkg: pkgs.callPackage pkg;
 in {
   adb-sync = callPackage ./adb-sync {};
@@ -14,7 +17,7 @@ in {
   healthchecks-monitor = callPackage ./healthchecks-monitor {};
   hyperlink = callPackage ./hyperlink {};
   katbin = callPackage ./katbin {};
-  linkleaner = callPackage ./linkleaner {inherit pkgs;};
+  linkleaner = callPackage ./linkleaner {inherit (fenix) fromToolchainFile;};
   monocraft-nerdfonts = callPackage ./monocraft-nerdfonts {inherit pkgs;};
   oranda = callPackage ./oranda {};
   patreon-dl = callPackage ./patreon-dl {};
