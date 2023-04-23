@@ -19,6 +19,7 @@ declare -a ALL_PACKAGES=(
   linkleaner
   monocraft-nerdfonts
   oranda
+  patreon-dl
   pidcat
   twt
   when
