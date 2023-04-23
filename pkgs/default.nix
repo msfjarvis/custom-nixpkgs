@@ -21,7 +21,7 @@ in {
   monocraft-nerdfonts = callPackage ./monocraft-nerdfonts {};
   oranda = callPackage ./oranda {};
   patreon-dl = callPackage ./patreon-dl {};
-  pidcat = callPackage ./pidcat {inherit pkgs;};
+  pidcat = callPackage ./pidcat {};
   rye = callPackage ./rye {};
   topgrade-og = callPackage ./topgrade-og {};
   twt = callPackage ./twt {};

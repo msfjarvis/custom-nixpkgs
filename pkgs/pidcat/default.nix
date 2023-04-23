@@ -1,21 +1,23 @@
 {
-  stdenv,
-  pkgs,
+  lib,
+  stdenvNoCC,
+  fetchFromGitHub,
+  installShellFiles,
 }:
-stdenv.mkDerivation rec {
+stdenvNoCC.mkDerivation rec {
   pname = "pidcat";
   version = "2.2.0";
   # I already fixed it in the source
   dontPatchShebangs = 1;
 
-  src = pkgs.fetchFromGitHub {
+  src = fetchFromGitHub {
     owner = "msfjarvis";
     repo = pname;
     rev = "v${version}";
     sha256 = "sha256-VOIND2CzWo+LV84C+FbTC0r3FqY7VpBaWn95IKTYFT8=";
   };
 
-  nativeBuildInputs = [pkgs.installShellFiles];
+  nativeBuildInputs = [installShellFiles];
 
   postInstall = ''
     installShellCompletion --bash bash_completion.d/pidcat
@@ -25,7 +27,7 @@ stdenv.mkDerivation rec {
     install -m755 -D pidcat.py $out/bin/pidcat
   '';
 
-  meta = with pkgs.lib; {
+  meta = with lib; {
     homepage = "https://github.com/JakeWharton/pidcat";
     description = "pidcat - colored logcat script";
     license = licenses.asl20;
