@@ -7,7 +7,7 @@ in {
   adb-sync = callPackage ./adb-sync {};
   adbtuifm = callPackage ./adbtuifm {};
   adx = callPackage ./adx {};
-  bundletool-bin = callPackage ./bundletool-bin {inherit pkgs;};
+  bundletool-bin = callPackage ./bundletool-bin {};
   cargo-dist = callPackage ./cargo-dist {};
   clipboard-substitutor = callPackage ./clipboard-substitutor {};
   diffuse-bin = callPackage ./diffuse-bin {inherit pkgs;};

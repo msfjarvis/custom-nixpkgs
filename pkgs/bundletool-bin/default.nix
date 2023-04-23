@@ -1,16 +1,19 @@
 {
-  pkgs,
   lib,
+  stdenvNoCC,
+  fetchurl,
 }:
-pkgs.stdenv.mkDerivation rec {
+stdenvNoCC.mkDerivation rec {
   pname = "bundletool-bin";
   version = "1.14.0";
-  src = pkgs.fetchurl {
+  src = fetchurl {
     url = "https://github.com/google/bundletool/releases/download/${version}/bundletool-all-${version}.jar";
     sha256 = "sha256-50Dn04VixejYfMgXVIstuU5CgC6aB3T99nTnWP95aU0=";
   };
 
   dontUnpack = true;
+  dontBuild = true;
+  dontConfigure = true;
 
   installPhase = ''
     mkdir -p $out/bin
