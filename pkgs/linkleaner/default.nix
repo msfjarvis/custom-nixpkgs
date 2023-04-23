@@ -7,13 +7,13 @@
   fetchFromGitHub,
 }: let
   pname = "linkleaner";
-  version = "1.5.0";
+  version = "1.5.1";
 
   src = fetchFromGitHub {
     owner = "msfjarvis";
     repo = pname;
     rev = "v${version}";
-    sha256 = "sha256-Yhyi7XsC/j2yPxXcEF/UROVzsjeJ5mRk+K4evRrlTfI=";
+    sha256 = "sha256-eYkGwFhh06RdHpPQZgikOiYfFt4Q8QrGeKv5IdMHUHg=";
   };
   toolchain = fromToolchainFile {
     file = "${src}/rust-toolchain.toml";
@@ -31,7 +31,7 @@ in
       lib.optionals stdenv.isDarwin
       [darwin.apple_sdk.frameworks.Security];
 
-    cargoHash = "sha256-/4s2hMs5q1JS9yQCUORf1kCGMPRMio3UhzleIfCw4SM=";
+    cargoHash = "sha256-j/KlfWxAxXvXEM9HRuoBKpT9u2F6EFZuVKqlFcplUGI=";
 
     meta = with lib; {
       description = "A Telegram bot with an identity crisis";
