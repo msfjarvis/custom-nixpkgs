@@ -5,7 +5,7 @@
 }:
 buildGoModule rec {
   pname = "patreon-dl";
-  version = "unstable-2023-01-05";
+  version = "1.0.2";
 
   src = fetchFromGitHub {
     owner = "PrivateGER";
