@@ -8,7 +8,6 @@ in {
   adbtuifm = callPackage ./adbtuifm {};
   adx = callPackage ./adx {};
   bundletool-bin = callPackage ./bundletool-bin {};
-  cargo-dist = callPackage ./cargo-dist {};
   clipboard-substitutor = callPackage ./clipboard-substitutor {};
   diffuse-bin = callPackage ./diffuse-bin {};
   file-collector = callPackage ./file-collector {};
@@ -22,7 +21,6 @@ in {
   oranda = callPackage ./oranda {};
   patreon-dl = callPackage ./patreon-dl {};
   pidcat = callPackage ./pidcat {};
-  rye = callPackage ./rye {};
   topgrade-og = callPackage ./topgrade-og {};
   twt = callPackage ./twt {};
   when = callPackage ./when {};

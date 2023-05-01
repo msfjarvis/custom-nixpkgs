@@ -8,7 +8,6 @@ NixOS packages for personal use.
 - [adbtuifm] : TUI based file manager for ADB
 - [adx] : Rust tool to poll Google Maven for AndroidX packages and their latest versions
 - [bundletool] : Command-line tool to manipulate Android App Bundles
-- [cargo-dist] : Package shippable application packaging for Rust
 - [clipboard-substitutor] : Rust CLI to listen to clipboard events and perform operations on the copied text
 - [diffuse] : Java tool to diff between APKs, AARs and JARs
 - [file-collector] : Simple CLI tool to watch directories and move their files to a single dumping ground
@@ -22,7 +21,6 @@ NixOS packages for personal use.
 - [oranda] : Generate beautiful landing pages for your developer tools
 - [patreon-dl] : Download content from creators you're subscribed to on Patreon
 - [pidcat] : Fork of [JakeWharton's pidcat] with Python3 support and some other fixes
-- [rye] : Armin Ronacher's experimental alternative to traditional Python tooling
 - topgrade-og : The original [topgrade] package from before it was forked by the community and started dwindling in quality
 - [twt] : Multipurpose tool to extract metadata from a user's tweets
 - [when] : A CLI tool to deal with timezones 
@@ -32,7 +30,6 @@ NixOS packages for personal use.
 [adbtuifm]: https://github.com/darkhz/adbtuifm
 [adx]: https://msfjarvis.dev/g/androidx-release-watcher
 [bundletool]: https://developer.android.com/studio/command-line/bundletool
-[cargo-dist]: https://github.com/axodotdev/cargo-dist
 [clipboard-substitutor]: https://msfjarvis.dev/g/clipboard-substitutor
 [diffuse]: https://github.com/JakeWharton/diffuse
 [file-collector]: https://msfjarvis.dev/g/file-collector
@@ -49,7 +46,6 @@ NixOS packages for personal use.
 [patreon-dl]: https://github.com/PrivateGER/patreon-dl
 [pidcat]: https://msfjarvis.dev/g/pidcat
 [JakeWharton's pidcat]: https://github.com/JakeWharton/pidcat
-[rye]: https://github.com/mitsuhiko/rye
 [topgrade]: https://github.com/r-darwish/topgrade
 [twt]: https://msfjarvis.dev/g/twt
 [when]: https://github.com/mitsuhiko/when
