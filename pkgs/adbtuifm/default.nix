@@ -22,6 +22,6 @@ buildGoModule rec {
     description = "A TUI File Manager for ADB";
     homepage = "https://github.com/darkhz/adbtuifm";
     license = licenses.mit;
-    maintainers = with maintainers; [];
+    maintainers = with maintainers; [msfjarvis];
   };
 }

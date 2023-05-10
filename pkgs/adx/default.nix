@@ -26,6 +26,6 @@ rustPlatform.buildRustPackage rec {
     description = "Rust tooling to poll Google Maven repository for updates to AndroidX artifacts";
     homepage = "https://github.com/msfjarvis/adx";
     license = with licenses; [asl20 mit];
-    maintainers = with maintainers; [];
+    maintainers = with maintainers; [msfjarvis];
   };
 }

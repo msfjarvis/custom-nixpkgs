@@ -28,6 +28,6 @@ rustPlatform.buildRustPackage rec {
     description = "CLI tool to run shell jobs and report status to https://healthchecks.io";
     homepage = "https://msfjarvis.dev/g/healthchecks-rs";
     license = with licenses; [asl20 mit];
-    maintainers = with maintainers; [];
+    maintainers = with maintainers; [msfjarvis];
   };
 }

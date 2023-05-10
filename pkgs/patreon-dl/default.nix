@@ -3,7 +3,7 @@
   buildGoModule,
   fetchFromGitHub,
 }:
-buildGoModule rec {
+buildGoModule {
   pname = "patreon-dl";
   version = "1.0.2";
 
@@ -22,6 +22,6 @@ buildGoModule rec {
     description = "A Patreon Image Downloader";
     homepage = "https://github.com/PrivateGER/patreon-dl";
     license = licenses.unlicense;
-    maintainers = with maintainers; [];
+    maintainers = with maintainers; [msfjarvis];
   };
 }

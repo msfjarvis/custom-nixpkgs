@@ -22,6 +22,6 @@ rustPlatform.buildRustPackage rec {
     description = "Simple CLI tool to watch directories and move their files to a single dumping ground";
     homepage = "https://github.com/msfjarvis/file-collector";
     license = with licenses; [asl20 mit];
-    maintainers = with maintainers; [];
+    maintainers = with maintainers; [msfjarvis];
   };
 }

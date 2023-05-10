@@ -28,6 +28,6 @@ rustPlatform.buildRustPackage rec {
     description = "Simple CLI tool to keep a track of your https://healthchecks.io account";
     homepage = "https://msfjarvis.dev/g/healthchecks-rs";
     license = with licenses; [asl20 mit];
-    maintainers = with maintainers; [];
+    maintainers = with maintainers; [msfjarvis];
   };
 }

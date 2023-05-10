@@ -27,6 +27,6 @@ rustPlatform.buildRustPackage rec {
     description = "Tools for extracting metadata from tweets";
     homepage = "https://github.com/msfjarvis/twt";
     license = with licenses; [asl20 mit];
-    maintainers = with maintainers; [];
+    maintainers = with maintainers; [msfjarvis];
   };
 }

@@ -32,6 +32,6 @@ rustPlatform.buildRustPackage rec {
     description = "CLI to listen to clipboard events and perform operations on the copied text";
     homepage = "https://github.com/msfjarvis/clipboard-substitutor";
     license = with licenses; [asl20 mit];
-    maintainers = with maintainers; [];
+    maintainers = with maintainers; [msfjarvis];
   };
 }

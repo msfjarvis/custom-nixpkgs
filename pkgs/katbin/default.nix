@@ -26,7 +26,7 @@ rustPlatform.buildRustPackage rec {
     description = "A CLI for katbin";
     homepage = "https://github.com/SphericalKat/katbin-cli";
     changelog = "https://github.com/SphericalKat/katbin-cli/blob/${src.rev}/CHANGELOG.md";
-    license = with licenses; [];
-    maintainers = with maintainers; [];
+    license = with licenses; [asl20 mit];
+    maintainers = with maintainers; [msfjarvis];
   };
 }

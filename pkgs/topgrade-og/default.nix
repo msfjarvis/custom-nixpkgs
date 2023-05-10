@@ -26,6 +26,6 @@ rustPlatform.buildRustPackage rec {
     description = "Upgrade everything";
     homepage = "https://github.com/r-darwish/topgrade";
     license = licenses.gpl3Only;
-    maintainers = with maintainers; [];
+    maintainers = with maintainers; [msfjarvis];
   };
 }

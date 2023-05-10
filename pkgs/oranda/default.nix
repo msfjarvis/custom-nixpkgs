@@ -40,6 +40,6 @@ rustPlatform.buildRustPackage rec {
     homepage = "https://github.com/axodotdev/oranda";
     changelog = "https://github.com/axodotdev/oranda/blob/${src.rev}/CHANGELOG.md";
     license = with licenses; [asl20 mit];
-    maintainers = with maintainers; [];
+    maintainers = with maintainers; [msfjarvis];
   };
 }

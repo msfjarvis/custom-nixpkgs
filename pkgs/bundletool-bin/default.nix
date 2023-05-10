@@ -27,5 +27,6 @@ stdenvNoCC.mkDerivation rec {
     homepage = "https://g.co/androidappbundle";
     license = licenses.asl20;
     platforms = platforms.all;
+    maintainers = with maintainers; [msfjarvis];
   };
 }
