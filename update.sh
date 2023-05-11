@@ -7,11 +7,11 @@ declare -a ALL_PACKAGES=(
   adbtuifm
   adx
   bundletool-bin
-  cargo-dist
   clipboard-substitutor
   diffuse-bin
   file-collector
   gdrive
+  gitice
   hcctl
   healthchecks-monitor
   hyperlink
