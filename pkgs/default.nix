@@ -1,6 +1,7 @@
 {
   pkgs,
   fenix,
+  rust-manifest,
 }: let
   callPackage = pkg: pkgs.callPackage pkg;
 in {
@@ -16,7 +17,10 @@ in {
   healthchecks-monitor = callPackage ./healthchecks-monitor {};
   hyperlink = callPackage ./hyperlink {};
   katbin = callPackage ./katbin {};
-  linkleaner = callPackage ./linkleaner {inherit (fenix) fromToolchainFile;};
+  linkleaner = callPackage ./linkleaner {
+    inherit (fenix) fromManifestFile;
+    inherit rust-manifest;
+  };
   monocraft-nerdfonts = callPackage ./monocraft-nerdfonts {};
   oranda = callPackage ./oranda {};
   patreon-dl = callPackage ./patreon-dl {};

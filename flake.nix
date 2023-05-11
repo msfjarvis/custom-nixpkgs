@@ -6,11 +6,16 @@
       url = "github:nix-community/fenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    rust-manifest = {
+      url = "https://static.rust-lang.org/dist/2023-02-22/channel-rust-nightly.toml";
+      flake = false;
+    };
   };
   outputs = {
     self,
     nixpkgs,
     fenix,
+    rust-manifest,
   }: let
     systems = ["x86_64-linux" "x86_64-darwin" "aarch64-linux" "aarch64-darwin"];
     forAllSystems = nixpkgs.lib.genAttrs systems;
@@ -22,7 +27,7 @@
       };
     in
       import ./default.nix {
-        inherit pkgs;
+        inherit pkgs rust-manifest;
         fenix = import fenix {inherit pkgs;};
       });
   };

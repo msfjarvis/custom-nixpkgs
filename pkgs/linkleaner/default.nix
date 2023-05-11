@@ -3,29 +3,26 @@
   stdenv,
   darwin,
   makeRustPlatform,
-  fromToolchainFile,
+  fromManifestFile,
   fetchFromGitHub,
+  rust-manifest,
 }: let
-  pname = "linkleaner";
-  version = "1.5.2";
-
-  src = fetchFromGitHub {
-    owner = "msfjarvis";
-    repo = pname;
-    rev = "v${version}";
-    sha256 = "sha256-iBDiQC2+apEfgATi7ySTsZn7eNbBJHgLLdLUOFaGOXU=";
-  };
-  toolchain = fromToolchainFile {
-    file = "${src}/rust-toolchain.toml";
-    sha256 = "sha256-1elQHBWEQRZ5qrEtJi6uhvwUNKedyQusyhATdBywep0=";
-  };
+  toolchain = (fromManifestFile rust-manifest).minimalToolchain;
 in
   (makeRustPlatform {
     cargo = toolchain;
     rustc = toolchain;
   })
-  .buildRustPackage {
-    inherit pname version src;
+  .buildRustPackage rec {
+    pname = "linkleaner";
+    version = "1.5.2";
+
+    src = fetchFromGitHub {
+      owner = "msfjarvis";
+      repo = pname;
+      rev = "v${version}";
+      sha256 = "sha256-iBDiQC2+apEfgATi7ySTsZn7eNbBJHgLLdLUOFaGOXU=";
+    };
 
     buildInputs =
       lib.optionals stdenv.isDarwin
