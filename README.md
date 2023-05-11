@@ -12,6 +12,7 @@ NixOS packages for personal use.
 - [diffuse] : Java tool to diff between APKs, AARs and JARs
 - [file-collector] : Simple CLI tool to watch directories and move their files to a single dumping ground
 - [gdrive] : Golang CLI to interact with Google Drive
+- [gitice] : Simple Rust CLI that snapshots the state of Git repositories to allow re-cloning in a separate location
 - [hcctl]: CLI to look up the status of checks on https://healthchecks.io
 - [healthchecks-monitor]: CLI tool to run commands and report its result to https://healthchecks.io
 - [hyperlink]: Very fast link checker for CI
@@ -34,6 +35,7 @@ NixOS packages for personal use.
 [diffuse]: https://github.com/JakeWharton/diffuse
 [file-collector]: https://msfjarvis.dev/g/file-collector
 [gdrive]: https://msfjarvis.dev/g/gdrive
+[gitice]: https://msfjarvis.dev/g/gitice
 [hcctl]: https://msfjarvis.dev/g/healthchecks-rs
 [healthchecks-monitor]: https://msfjarvis.dev/g/healthchecks-rs
 [hyperlink]: https://github.com/untitaker/hyperlink

@@ -13,6 +13,10 @@ in {
   diffuse-bin = callPackage ./diffuse-bin {};
   file-collector = callPackage ./file-collector {};
   gdrive = callPackage ./gdrive {};
+  gitice = callPackage ./gitice {
+    inherit (fenix) fromManifestFile;
+    inherit rust-manifest;
+  };
   hcctl = callPackage ./hcctl {};
   healthchecks-monitor = callPackage ./healthchecks-monitor {};
   hyperlink = callPackage ./hyperlink {};
