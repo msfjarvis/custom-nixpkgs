@@ -15,20 +15,20 @@ in
   })
   .buildRustPackage rec {
     pname = "linkleaner";
-    version = "1.5.3";
+    version = "1.6.2";
 
     src = fetchFromGitHub {
       owner = "msfjarvis";
       repo = pname;
       rev = "v${version}";
-      sha256 = "sha256-cDGGyj+pfKqulXL27ep3ydi7qTAGgVHtksl29mKRcbg=";
+      sha256 = "sha256-K2bsJIAHiDz/xfHdtBeWKuLWsTGJShQRzzE17TYgx9E=";
     };
 
     buildInputs =
       lib.optionals stdenv.isDarwin
       [darwin.apple_sdk.frameworks.Security];
 
-    cargoHash = "sha256-XpIbH9ea6s8IsayoYz/+Zo9Og/dUBymqGBnGsvqWD2A=";
+    cargoHash = "sha256-g1Rxfh6+V1jokGv/8B9LYwYyPp3GyM/NRovlpKCEMb0=";
 
     meta = with lib; {
       description = "A Telegram bot with an identity crisis";
