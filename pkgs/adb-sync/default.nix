@@ -14,14 +14,14 @@ stdenvNoCC.mkDerivation rec {
     sha256 = "0di7n6npziq37jz18k7kkiwhv1v3yphyhj0a3sjmx6p14rwjx0ms";
   };
 
-  outputs = ["out" "bin"];
+  outputs = ["out"];
 
   dontConfigure = true;
   dontBuild = true;
 
   installPhase = ''
-    install -m755 -D adb-sync $bin/adb-sync
-    install -m755 -D adb-channel $bin/adb-channel
+    install -m755 -D adb-sync $out/bin/adb-sync
+    install -m755 -D adb-channel $out/bin/adb-channel
   '';
 
   meta = with lib; {
