@@ -19,16 +19,13 @@
   }: let
     systems = ["x86_64-linux" "aarch64-linux" "aarch64-darwin"];
     forAllSystems = nixpkgs.lib.genAttrs systems;
-  in {
-    packages = forAllSystems (system: let
-      pkgs = import nixpkgs {
-        inherit system;
-        overlays = [fenix.overlays.default];
-      };
-    in
+    pkgs = forAllSystems (system: (nixpkgs.legacyPackages.${system}.extend fenix.overlays.default));
+    packagesFn = pkgs:
       import ./default.nix {
         inherit pkgs rust-manifest;
         fenix = import fenix {inherit pkgs;};
-      });
+      };
+  in {
+    packages = forAllSystems (system: packagesFn pkgs.${system});
   };
 }
