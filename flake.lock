@@ -41,7 +41,8 @@
       "inputs": {
         "fenix": "fenix",
         "nixpkgs": "nixpkgs",
-        "rust-manifest": "rust-manifest"
+        "rust-manifest": "rust-manifest",
+        "systems": "systems"
       }
     },
     "rust-analyzer-src": {
@@ -71,6 +72,21 @@
       "original": {
         "type": "file",
         "url": "https://static.rust-lang.org/dist/2023-06-10/channel-rust-nightly.toml"
+      }
+    },
+    "systems": {
+      "locked": {
+        "lastModified": 1687694171,
+        "narHash": "sha256-m4E0xN69qKj/oKOj8OtiZcSFpFlO8paI6E3Wo5oXDJc=",
+        "owner": "msfjarvis",
+        "repo": "flake-systems",
+        "rev": "7876462a5f60841e8b2712ad20dc18470f448e8d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "msfjarvis",
+        "repo": "flake-systems",
+        "type": "github"
       }
     }
   },
