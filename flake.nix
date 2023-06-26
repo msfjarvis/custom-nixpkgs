@@ -27,5 +27,6 @@
       };
   in {
     packages = eachSystem (system: packagesFn pkgs.${system});
+    overlays.default = final: prev: packagesFn prev;
   };
 }
