@@ -12,9 +12,9 @@ stdenvNoCC.mkDerivation rec {
 
   src = fetchFromGitHub {
     owner = "msfjarvis";
-    repo = pname;
+    repo = "pidcat";
     rev = "v${version}";
-    sha256 = "sha256-VOIND2CzWo+LV84C+FbTC0r3FqY7VpBaWn95IKTYFT8=";
+    hash = "sha256-VOIND2CzWo+LV84C+FbTC0r3FqY7VpBaWn95IKTYFT8=";
   };
 
   nativeBuildInputs = [installShellFiles];

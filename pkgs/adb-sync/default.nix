@@ -9,9 +9,9 @@ stdenvNoCC.mkDerivation rec {
 
   src = fetchFromGitHub {
     owner = "msfjarvis";
-    repo = pname;
+    repo = "adb-sync";
     rev = "v${version}";
-    sha256 = "0di7n6npziq37jz18k7kkiwhv1v3yphyhj0a3sjmx6p14rwjx0ms";
+    hash = "sha256-uoIueSbhml6lHgpI6OH1Y4cNeZzzTBS+PAPHf62xJzY=";
   };
 
   outputs = ["out"];

@@ -19,9 +19,9 @@ in
 
     src = fetchFromGitHub {
       owner = "msfjarvis";
-      repo = pname;
+      repo = "linkleaner";
       rev = "v${version}";
-      sha256 = "sha256-yp7dhOl8Wt8/LO0HXe3DB2prsXH+D6oIVEOLVwY/Gzs=";
+      hash = "sha256-yp7dhOl8Wt8/LO0HXe3DB2prsXH+D6oIVEOLVwY/Gzs=";
     };
 
     buildInputs =

@@ -8,7 +8,7 @@ stdenvNoCC.mkDerivation rec {
   version = "3.0";
   src = fetchurl {
     url = "https://github.com/IdreesInc/Monocraft/releases/download/v${version}/Monocraft-nerd-fonts-patched.ttf";
-    sha256 = "sha256-QxMp8UwcRjWySNHWoNeX2sX9teZ4+tCFj+DG41azsXw=";
+    hash = "sha256-QxMp8UwcRjWySNHWoNeX2sX9teZ4+tCFj+DG41azsXw=";
   };
 
   dontUnpack = true;

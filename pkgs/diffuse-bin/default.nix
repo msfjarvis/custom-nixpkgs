@@ -8,7 +8,7 @@ stdenvNoCC.mkDerivation rec {
   version = "0.1.0";
   src = fetchurl {
     url = "https://github.com/JakeWharton/diffuse/releases/download/${version}/diffuse-${version}-binary.jar";
-    sha256 = "sha256-YNYZNzxGpdBrgSbB1h4K3Bi3Lyy7kkXvkg0zh+RLhs8=";
+    hash = "sha256-YNYZNzxGpdBrgSbB1h4K3Bi3Lyy7kkXvkg0zh+RLhs8=";
   };
 
   dontUnpack = true;
