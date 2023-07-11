@@ -30,6 +30,7 @@ in {
   oranda = callPackage ./oranda {};
   patreon-dl = callPackage ./patreon-dl {};
   pidcat = callPackage ./pidcat {};
+  samply = callPackage ./samply {};
   twt = callPackage ./twt {};
   when = callPackage ./when {};
 }
