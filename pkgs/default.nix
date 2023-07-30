@@ -31,5 +31,6 @@ in {
   pidcat = callPackage ./pidcat {};
   samply = callPackage ./samply {};
   twt = callPackage ./twt {};
+  vscext = callPackage ./vscext {};
   when = callPackage ./when {};
 }

@@ -1,0 +1,41 @@
+diff --git a/update_installed_exts.sh b/update_installed_exts.sh
+index 6fff7454493a..5afe925b66f6 100755
+--- a/update_installed_exts.sh
++++ b/update_installed_exts.sh
+@@ -1,6 +1,4 @@
+-#! /usr/bin/env nix-shell
+-#! nix-shell -i bash -p curl jq unzip
+-# shellcheck shell=bash
++#!/usr/bin/env bash
+ set -eu -o pipefail
+ 
+ # can be added to your configuration with the following command and snippet:
+@@ -60,26 +58,14 @@ function get_vsixpkg() {
+ EOF
+ }
+ 
+-# See if we can find our `code` binary somewhere.
+-if [ $# -ne 0 ]; then
+-    CODE=$1
+-else
+-    CODE=$(command -v code || command -v codium)
+-fi
+-
+-if [ -z "$CODE" ]; then
+-    # Not much point continuing.
+-    fail "VSCode executable not found"
+-fi
+-
+ # Try to be a good citizen and clean up after ourselves if we're killed.
+ trap clean_up SIGINT
+ 
+ # Begin the printing of the nix expression that will house the list of extensions.
+ printf '{ extensions = [\n'
+ 
+-# Note that we are only looking to update extensions that are already installed.
+-for i in $($CODE --list-extensions)
++# Note that we are only looking to update extensions that were passed as arguments
++for i in "$@"
+ do
+     OWNER=$(echo "$i" | cut -d. -f1)
+     EXT=$(echo "$i" | cut -d. -f2)
