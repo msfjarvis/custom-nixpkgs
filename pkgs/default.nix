@@ -8,7 +8,6 @@ in {
   adb-sync = callPackage ./adb-sync {};
   adbtuifm = callPackage ./adbtuifm {};
   adx = callPackage ./adx {};
-  aria2gtls = callPackage ./aria2gtls {};
   bundletool-bin = callPackage ./bundletool-bin {};
   clipboard-substitutor = callPackage ./clipboard-substitutor {};
   diffuse-bin = callPackage ./diffuse-bin {};
