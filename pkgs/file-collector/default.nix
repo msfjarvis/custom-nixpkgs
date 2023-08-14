@@ -6,17 +6,17 @@
 }:
 rustPlatform.buildRustPackage rec {
   pname = "file-collector";
-  version = "0.4.1";
+  version = "0.5.0";
 
   src = fetchFromGitHub {
     owner = "msfjarvis";
     repo = "file-collector";
     rev = "v${version}";
-    hash = "sha256-q6Bd+vPABNWGwotCKB/fvjpnhSYaBEEeicu3AW1lmas=";
+    hash = "sha256-WV7znoQL9Jmtn9MnVj8w/imDXDQk+WC3A5rBxPvuhBc=";
   };
 
   buildFeatures = lib.optionals stdenv.isLinux ["journald"];
-  cargoHash = "sha256-76R6yX/TF/zFLMnqCWnYj0AGi6CwFPO0qUkIJo5ktDA=";
+  cargoHash = "sha256-hkTrzDbCfZdIZ05y6IR7sgb08pGehj9GaSf2AVjeO1k=";
 
   meta = with lib; {
     description = "Simple CLI tool to watch directories and move their files to a single dumping ground";
