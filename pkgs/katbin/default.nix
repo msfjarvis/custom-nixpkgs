@@ -28,5 +28,6 @@ rustPlatform.buildRustPackage rec {
     changelog = "https://github.com/SphericalKat/katbin-cli/blob/${src.rev}/CHANGELOG.md";
     license = with licenses; [asl20 mit];
     maintainers = with maintainers; [msfjarvis];
+    mainProgram = "katbin";
   };
 }

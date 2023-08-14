@@ -23,5 +23,6 @@ buildGoModule rec {
     homepage = "https://github.com/darkhz/adbtuifm";
     license = licenses.mit;
     maintainers = with maintainers; [msfjarvis];
+    mainProgram = "adbtuifm";
   };
 }

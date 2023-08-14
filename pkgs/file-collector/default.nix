@@ -23,5 +23,6 @@ rustPlatform.buildRustPackage rec {
     homepage = "https://github.com/msfjarvis/file-collector";
     license = with licenses; [asl20 mit];
     maintainers = with maintainers; [msfjarvis];
+    mainProgram = "file-collector";
   };
 }

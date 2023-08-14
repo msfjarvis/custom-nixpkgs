@@ -37,5 +37,6 @@ stdenvNoCC.mkDerivation rec {
     license = licenses.cc0;
     platforms = platforms.all;
     maintainers = with maintainers; [msfjarvis];
+    mainProgram = "vscext";
   };
 }

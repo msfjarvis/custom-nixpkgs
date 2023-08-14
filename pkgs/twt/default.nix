@@ -28,5 +28,6 @@ rustPlatform.buildRustPackage rec {
     homepage = "https://github.com/msfjarvis/twt";
     license = with licenses; [asl20 mit];
     maintainers = with maintainers; [msfjarvis];
+    mainProgram = "twt";
   };
 }

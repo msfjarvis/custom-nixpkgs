@@ -27,5 +27,6 @@ rustPlatform.buildRustPackage rec {
     homepage = "https://github.com/msfjarvis/adx";
     license = with licenses; [asl20 mit];
     maintainers = with maintainers; [msfjarvis];
+    mainProgram = "adx";
   };
 }

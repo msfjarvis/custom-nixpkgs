@@ -28,5 +28,6 @@ stdenvNoCC.mkDerivation rec {
     license = licenses.asl20;
     platforms = platforms.all;
     maintainers = with maintainers; [msfjarvis];
+    mainProgram = "diffuse";
   };
 }

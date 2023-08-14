@@ -23,5 +23,6 @@ buildGoModule rec {
     homepage = "https://github.com/msfjarvis/gdrive";
     license = licenses.mit;
     maintainers = with maintainers; [msfjarvis];
+    mainProgram = "gdrive";
   };
 }

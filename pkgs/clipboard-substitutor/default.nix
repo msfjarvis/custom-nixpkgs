@@ -33,5 +33,6 @@ rustPlatform.buildRustPackage rec {
     homepage = "https://github.com/msfjarvis/clipboard-substitutor";
     license = with licenses; [asl20 mit];
     maintainers = with maintainers; [msfjarvis];
+    mainProgram = "clipboard-substitutor";
   };
 }

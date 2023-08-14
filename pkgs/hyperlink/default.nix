@@ -21,5 +21,6 @@ rustPlatform.buildRustPackage rec {
     homepage = "https://github.com/untitaker/hyperlink";
     license = licenses.mit;
     maintainers = with maintainers; [msfjarvis];
+    mainProgram = "hyperlink";
   };
 }

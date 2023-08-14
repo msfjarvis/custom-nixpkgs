@@ -29,5 +29,6 @@ rustPlatform.buildRustPackage rec {
     homepage = "https://msfjarvis.dev/g/healthchecks-rs";
     license = with licenses; [asl20 mit];
     maintainers = with maintainers; [msfjarvis];
+    mainProgram = "hcctl";
   };
 }
