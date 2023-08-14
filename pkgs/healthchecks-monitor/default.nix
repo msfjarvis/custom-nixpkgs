@@ -7,13 +7,13 @@
 }:
 rustPlatform.buildRustPackage rec {
   pname = "healthchecks-monitor";
-  version = "3.0.5";
+  version = "3.0.6";
 
   src = fetchFromGitHub {
     owner = "msfjarvis";
     repo = "healthchecks-rs";
     rev = "healthchecks-monitor-v${version}";
-    hash = "sha256-MCpMKX1T8c6FZ2NIkEqCFL9jBJOB2IEXfYnDvDBlpfc=";
+    hash = "sha256-A83pzY+c4kz59tHEc6hRd0Zp8Uj96KdrenD9RDWwavQ=";
   };
 
   buildInputs =
@@ -22,7 +22,7 @@ rustPlatform.buildRustPackage rec {
 
   buildAndTestSubdir = "monitor";
 
-  cargoHash = "sha256-mdFGHfQUSdo7J4C6JkGi58l5dIay7sFsWW14kRKoA7M=";
+  cargoHash = "sha256-2+dV0mIvbDqXqRfNCBhqUVRYhpcPB2oxD67GBkEDW48=";
 
   meta = with lib; {
     description = "CLI tool to run shell jobs and report status to https://healthchecks.io";
