@@ -7,13 +7,13 @@
 }:
 rustPlatform.buildRustPackage rec {
   pname = "hcctl";
-  version = "2.0.7";
+  version = "2.0.8";
 
   src = fetchFromGitHub {
     owner = "msfjarvis";
     repo = "healthchecks-rs";
     rev = "hcctl-v${version}";
-    hash = "sha256-MCpMKX1T8c6FZ2NIkEqCFL9jBJOB2IEXfYnDvDBlpfc=";
+    hash = "sha256-A83pzY+c4kz59tHEc6hRd0Zp8Uj96KdrenD9RDWwavQ=";
   };
 
   buildInputs =
@@ -22,7 +22,7 @@ rustPlatform.buildRustPackage rec {
 
   buildAndTestSubdir = "hcctl";
 
-  cargoHash = "sha256-PjKBwI55+30vMjgU9NN8Fh4XVGTsre7LIKg+g+fCAPo=";
+  cargoHash = "sha256-v8mpH1akao35P8ePFTFLBidkPW+vzsaMg4h51TudYMM=";
 
   meta = with lib; {
     description = "Simple CLI tool to keep a track of your https://healthchecks.io account";
