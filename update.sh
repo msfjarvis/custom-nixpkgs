@@ -18,7 +18,7 @@ declare -a ALL_PACKAGES=(
   katbin
   linkleaner
   monocraft-nerdfonts
-  oranda
+  # oranda
   patreon-dl
   pidcat
   twt
