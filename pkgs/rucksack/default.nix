@@ -5,24 +5,24 @@
   stdenv,
 }:
 rustPlatform.buildRustPackage rec {
-  pname = "file-collector";
-  version = "0.5.0";
+  pname = "rucksack";
+  version = "1.0.0";
 
   src = fetchFromGitHub {
     owner = "msfjarvis";
-    repo = "file-collector";
+    repo = "rucksack";
     rev = "v${version}";
-    hash = "sha256-WV7znoQL9Jmtn9MnVj8w/imDXDQk+WC3A5rBxPvuhBc=";
+    hash = "sha256-7rCUbVZ0evpwPfR/9G1LCCInWOiQWfZpD6chGR54bwA=";
   };
 
   buildFeatures = lib.optionals stdenv.isLinux ["journald"];
-  cargoHash = "sha256-hkTrzDbCfZdIZ05y6IR7sgb08pGehj9GaSf2AVjeO1k=";
+  cargoHash = "sha256-Ylb/tKFEweMWdgc1ZJs3WxdF7sRutC0d2oAVXu73nSI=";
 
   meta = with lib; {
     description = "Simple CLI tool to watch directories and move their files to a single dumping ground";
-    homepage = "https://github.com/msfjarvis/file-collector";
+    homepage = "https://github.com/msfjarvis/rucksack";
     license = with licenses; [asl20 mit];
     maintainers = with maintainers; [msfjarvis];
-    mainProgram = "file-collector";
+    mainProgram = "rucksack";
   };
 }

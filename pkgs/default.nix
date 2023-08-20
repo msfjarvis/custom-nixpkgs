@@ -11,7 +11,6 @@ in {
   bundletool-bin = callPackage ./bundletool-bin {};
   clipboard-substitutor = callPackage ./clipboard-substitutor {};
   diffuse-bin = callPackage ./diffuse-bin {};
-  file-collector = callPackage ./file-collector {};
   gdrive = callPackage ./gdrive {};
   gitice = callPackage ./gitice {
     inherit (fenix) fromManifestFile;
@@ -29,6 +28,7 @@ in {
   oranda = callPackage ./oranda {};
   patreon-dl = callPackage ./patreon-dl {};
   pidcat = callPackage ./pidcat {};
+  rucksack = callPackage ./rucksack {};
   samply = callPackage ./samply {};
   twt = callPackage ./twt {};
   vscext = callPackage ./vscext {};
