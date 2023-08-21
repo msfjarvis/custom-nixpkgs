@@ -30,6 +30,8 @@ in
 
     cargoHash = "sha256-o9ERriufop5PWrlZH9WQArG5I33O8MsSkWoKCf2CYn8=";
 
+    useNextest = true;
+
     meta = with lib; {
       description = "A Telegram bot with an identity crisis";
       homepage = "https://msfjarvis.dev/g/linkleaner/";

@@ -17,6 +17,8 @@ rustPlatform.buildRustPackage rec {
 
   cargoHash = "sha256-HhxAk5pLOpn2cRDoPkrxyV27n6IGAI2vkep9j3o275I=";
 
+  useNextest = true;
+
   meta = with lib; {
     description = "Timezones from the command line";
     homepage = "https://github.com/mitsuhiko/when";

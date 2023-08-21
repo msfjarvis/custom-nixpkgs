@@ -24,6 +24,8 @@ rustPlatform.buildRustPackage rec {
 
   cargoHash = "sha256-2+dV0mIvbDqXqRfNCBhqUVRYhpcPB2oxD67GBkEDW48=";
 
+  useNextest = true;
+
   meta = with lib; {
     description = "CLI tool to run shell jobs and report status to https://healthchecks.io";
     homepage = "https://msfjarvis.dev/g/healthchecks-rs";

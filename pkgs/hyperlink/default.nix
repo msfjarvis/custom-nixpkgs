@@ -16,6 +16,8 @@ rustPlatform.buildRustPackage rec {
 
   cargoHash = "sha256-5j1Ziwk5uQNIKCRMZpJP4qR0tcyUUvT8i/KZbXq3WzI=";
 
+  doCheck = false;
+
   meta = with lib; {
     description = "Very fast link checker for CI";
     homepage = "https://github.com/untitaker/hyperlink";

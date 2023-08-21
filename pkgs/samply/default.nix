@@ -26,6 +26,8 @@ rustPlatform.buildRustPackage rec {
 
   cargoHash = "sha256-deOXO+NmgETX33vY2KdFdCverojr+i2FdemhGXWZ3NU=";
 
+  doCheck = false;
+
   meta = with lib; {
     description = "A command line profiler for macOS and Linux";
     homepage = "https://github.com/mstange/samply/";

@@ -20,6 +20,8 @@ rustPlatform.buildRustPackage rec {
   buildFeatures = lib.optionals stdenv.isLinux ["journald"];
   cargoHash = "sha256-aGBbni1faj2yA+qZPytHna90b/1/iObu4ECnpR3uIpU=";
 
+  useNextest = true;
+
   buildInputs =
     lib.optionals stdenv.isDarwin [
       darwin.apple_sdk.frameworks.AppKit

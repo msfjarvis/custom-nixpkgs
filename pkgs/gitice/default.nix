@@ -24,6 +24,8 @@ in
 
     cargoHash = "sha256-UefcLP/V14PEvDPhcjacoUmsFMxwN/lW1pR/lio1EfU=";
 
+    useNextest = true;
+
     meta = with lib; {
       description = "Snapshot your local git repositories for easy restoration";
       homepage = "https://github.com/msfjarvis/gitice";
