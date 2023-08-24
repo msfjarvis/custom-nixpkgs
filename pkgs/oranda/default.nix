@@ -35,8 +35,6 @@ rustPlatform.buildRustPackage rec {
       darwin.apple_sdk.frameworks.Security
     ];
 
-  doCheck = false;
-
   meta = with lib; {
     description = "generate beautiful landing pages for your developer tools";
     homepage = "https://github.com/axodotdev/oranda";
