@@ -1,5 +1,6 @@
 {
   pkgs,
+  lib,
   fenix,
   rust-manifest,
 }: let
@@ -31,7 +32,7 @@ in {
   pidcat = callPackage ./pidcat {};
   rucksack = callPackage ./rucksack {};
   samply = callPackage ./samply {};
-  twt = callPackage ./twt {};
+  twt = lib.warn "twt is no longer maintained" callPackage ./twt {};
   vscext = callPackage ./vscext {};
   when = callPackage ./when {};
 }

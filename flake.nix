@@ -23,6 +23,7 @@
     packagesFn = pkgs:
       import ./default.nix {
         inherit pkgs rust-manifest;
+        inherit (pkgs) lib;
         fenix = import fenix {inherit pkgs;};
       };
   in {
