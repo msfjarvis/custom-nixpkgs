@@ -33,6 +33,5 @@ in {
   rucksack = callPackage ./rucksack {};
   samply = callPackage ./samply {};
   twt = lib.warn "twt is no longer maintained" callPackage ./twt {};
-  vscext = callPackage ./vscext {};
   when = callPackage ./when {};
 }
