@@ -9,7 +9,6 @@ declare -a ALL_PACKAGES=(
   bundletool-bin
   clipboard-substitutor
   diffuse-bin
-  file-collector
   gdrive
   gitice
   hcctl
@@ -21,6 +20,7 @@ declare -a ALL_PACKAGES=(
   # oranda
   patreon-dl
   pidcat
+  rucksack
   twt
   when
 )
