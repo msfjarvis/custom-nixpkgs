@@ -13,16 +13,16 @@ in
   })
   .buildRustPackage rec {
     pname = "gitice";
-    version = "2.0.2";
+    version = "2.0.3";
 
     src = fetchFromGitHub {
       owner = "msfjarvis";
       repo = "gitice";
       rev = "v${version}";
-      hash = "sha256-y2U4SHMendU8K5DMgTLdDeIlNHNWNO5zUrQbl6Y3xx4=";
+      hash = "sha256-ouwlQXWhhGmy47/xvjA9Iw2tGMP0gC9e7tzIceHvVM8=";
     };
 
-    cargoHash = "sha256-UefcLP/V14PEvDPhcjacoUmsFMxwN/lW1pR/lio1EfU=";
+    cargoHash = "sha256-D69pQw2ZpEI4EMB17/gLYyDhy8bkQcSQwp3h/ffKXsA=";
 
     useNextest = true;
 
