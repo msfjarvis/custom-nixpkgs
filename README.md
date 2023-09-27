@@ -23,6 +23,7 @@ NixOS packages for personal use.
 - [patreon-dl] : Download content from creators you're subscribed to on Patreon
 - [pidcat] : Fork of [JakeWharton's pidcat] with Python3 support and some other fixes
 - [samply] : A command line profiler for macOS and Linux
+- [tea] : Gitea CLI built from latest sources
 - [twt] : Multipurpose tool to extract metadata from a user's tweets
 - [when] : A CLI tool to deal with timezones 
 
@@ -48,6 +49,7 @@ NixOS packages for personal use.
 [patreon-dl]: https://github.com/PrivateGER/patreon-dl
 [pidcat]: https://msfjarvis.dev/g/pidcat
 [JakeWharton's pidcat]: https://github.com/JakeWharton/pidcat
+[tea]: https://gitea.com/gitea/tea
 [twt]: https://msfjarvis.dev/g/twt
 [samply]: https://github.com/mstange/samply/
 [when]: https://github.com/mitsuhiko/when

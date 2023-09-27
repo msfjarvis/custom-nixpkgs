@@ -32,6 +32,7 @@ in {
   pidcat = callPackage ./pidcat {};
   rucksack = callPackage ./rucksack {};
   samply = callPackage ./samply {};
+  tea-dev = callPackage ./tea-dev {};
   twt = lib.warn "twt is no longer maintained" callPackage ./twt {};
   when = callPackage ./when {};
 }
