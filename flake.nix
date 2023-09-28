@@ -1,7 +1,7 @@
 {
   description = "My personal NUR repository";
 
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+  inputs.nixpkgs.url = "github:NixOS/nixpkgs/master";
 
   inputs.systems.url = "github:msfjarvis/flake-systems";
 
