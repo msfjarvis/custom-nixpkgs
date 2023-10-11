@@ -5,10 +5,10 @@
 }:
 stdenvNoCC.mkDerivation rec {
   pname = "bundletool-bin";
-  version = "1.15.4";
+  version = "1.15.5";
   src = fetchurl {
     url = "https://github.com/google/bundletool/releases/download/${version}/bundletool-all-${version}.jar";
-    hash = "sha256-5fVFl9u1IR8FDo3dA9TXMam036VoTHaHkotlSo3cISo=";
+    hash = "sha256-DrrIh2ThayFUqnUGGHkX0WmVkzitnVEOMXS8yWydD0A=";
   };
 
   dontUnpack = true;
