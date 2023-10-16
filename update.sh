@@ -7,6 +7,7 @@ declare -a ALL_PACKAGES=(
   adbtuifm
   adx
   bundletool-bin
+  cargo-dist-unstable
   clipboard-substitutor
   diffuse-bin
   gdrive
