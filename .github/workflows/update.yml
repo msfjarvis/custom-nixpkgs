@@ -20,11 +20,21 @@ jobs:
 
     - name: Install Nix
       uses: DeterminateSystems/nix-installer-action@bc7b19257469c8029b46f45ac99ecc11156c8b2d # v6
+
+    - name: Set up Magic Nix Cache
+      uses: DeterminateSystems/magic-nix-cache-action@8a218f9e264e9c3803c9a1ee1c30d8e4ab55be63 # v2
+
+    - name: Set up Cachix (msfjarvis)
+      uses: cachix/cachix-action@6a9a34cdd93d0ae4b4b59fd678660efb08109f2f # tag=v12
       with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        extra-conf: |
-          trusted-substituters = https://cache.nixos.org https://nix-community.cachix.org https://cache.garnix.io
-          trusted-public-keys = cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY= nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs= cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g=    
+        name: msfjarvis
+        authToken: ${{ secrets.cachix-token }}
+        cachixArgs: -c9 --omit-deriver
+
+    - name: Set up Cachix (nix-community)
+      uses: cachix/cachix-action@6a9a34cdd93d0ae4b4b59fd678660efb08109f2f # tag=v12
+      with:
+        name: nix-community
 
     - name: Set Git user and email
       run: |
