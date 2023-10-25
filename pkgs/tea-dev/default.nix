@@ -1,8 +1,8 @@
-{ lib
-, buildGoModule
-, fetchFromGitea
+{
+  lib,
+  buildGoModule,
+  fetchFromGitea,
 }:
-
 buildGoModule rec {
   pname = "tea";
   version = "dev-897dc50bfea08321a9af095d8051a03b2fa8c861";
@@ -27,6 +27,6 @@ buildGoModule rec {
     description = "A command line tool to interact with Gitea servers";
     homepage = "https://gitea.com/gitea/tea";
     license = licenses.mit;
-    maintainers = with maintainers; [ ];
+    maintainers = with maintainers; [];
   };
 }
