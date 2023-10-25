@@ -13,16 +13,16 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "cargo-dist-unstable";
-  version = "0.4.0-prerelease.2";
+  version = "0.4.0-prerelease.3";
 
   src = fetchFromGitHub {
     owner = "axodotdev";
     repo = "cargo-dist";
     rev = "v${version}";
-    hash = "sha256-GjavUktFf3JbQIQXrB5iPQOW6UAkraQSRRGJmyj3XUE=";
+    hash = "sha256-bEetPRBdlSkiWvaXaxFiVk8gBZ2ZDBVh3A549LjdKtA=";
   };
 
-  cargoHash = "sha256-0TJrdlk/htr2FmEqo+r+Cmi4+7S6GKB6+FD4+WTOJ3A=";
+  cargoHash = "sha256-AC+m7Fg2v9FOemzrdgRX3UUOks9aZSnb22Lpt5NKfTs=";
 
   nativeBuildInputs = [
     pkg-config
@@ -39,7 +39,6 @@ rustPlatform.buildRustPackage rec {
 
   nativeCheckInputs = [
     git
-  ] ++ lib.optionals stdenv.isDarwin [
     rustup
   ];
 
