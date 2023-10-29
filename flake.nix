@@ -8,7 +8,7 @@
   inputs.fenix.url = "github:nix-community/fenix";
   inputs.fenix.inputs.nixpkgs.follows = "nixpkgs";
 
-  inputs.rust-manifest.url = "https://static.rust-lang.org/dist/2023-07-08/channel-rust-nightly.toml";
+  inputs.rust-manifest.url = "https://static.rust-lang.org/dist/2023-10-22/channel-rust-nightly.toml";
   inputs.rust-manifest.flake = false;
 
   outputs = {
