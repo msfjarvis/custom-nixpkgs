@@ -15,20 +15,20 @@ in
   })
   .buildRustPackage rec {
     pname = "linkleaner";
-    version = "1.8.0";
+    version = "1.8.1";
 
     src = fetchFromGitHub {
       owner = "msfjarvis";
       repo = "linkleaner";
       rev = "v${version}";
-      hash = "sha256-V047zHnvPm40KEYustRcbkSegFlUdcRucP/Hp2Niitw=";
+      hash = "sha256-iH5jUdlOlqcz07PHRWogKdtGTeTDgJXVfWLNkt2eoqs=";
     };
 
     buildInputs =
       lib.optionals stdenv.isDarwin
       [darwin.apple_sdk.frameworks.Security];
 
-    cargoHash = "sha256-o9ERriufop5PWrlZH9WQArG5I33O8MsSkWoKCf2CYn8=";
+    cargoHash = "sha256-D84QGXR0Tc7T+l68B3LtCtajbyeJa7/gZBG5NhdEcqw=";
 
     useNextest = true;
 
