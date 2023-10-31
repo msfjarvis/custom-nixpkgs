@@ -13,16 +13,16 @@
 }:
 rustPlatform.buildRustPackage rec {
   pname = "cargo-dist-unstable";
-  version = "0.4.0";
+  version = "0.4.1";
 
   src = fetchFromGitHub {
     owner = "axodotdev";
     repo = "cargo-dist";
     rev = "v${version}";
-    hash = "sha256-Y4dCkyOAOQRnaHWMuPTpjgIqlnzYw+sQbTyxp1pO7oo=";
+    hash = "sha256-P1wDsCMg0CfGZ9px1SiEDNT9plYlcrl9UrCLJ0pOra0=";
   };
 
-  cargoHash = "sha256-FFW1m3MPWSRdmCOKP/vorSnVQsexqpsxkrhH2Ev+vRo=";
+  cargoHash = "sha256-busseVpxIuZjYMnZhW5kqNyJNfwreXEkbE6okSIfznY=";
 
   nativeBuildInputs = [
     pkg-config
