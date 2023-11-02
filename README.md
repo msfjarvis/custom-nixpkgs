@@ -19,7 +19,6 @@ NixOS packages for personal use.
 - [katbin] : A CLI for [katb.in]
 - [linkleaner] : Telegram bot to fix social media link previews
 - [monocraft-nerdfonts] : A monospaced programming font inspired by the Minecraft typeface
-- [oranda] : Generate beautiful landing pages for your developer tools
 - [patreon-dl] : Download content from creators you're subscribed to on Patreon
 - [pidcat] : Fork of [JakeWharton's pidcat] with Python3 support and some other fixes
 - [samply] : A command line profiler for macOS and Linux
@@ -45,7 +44,6 @@ NixOS packages for personal use.
 [katb.in]: https://katb.in
 [linkleaner]: https://msfjarvis.dev/g/linkleaner
 [monocraft-nerdfonts]: https://github.com/IdreesInc/Monocraft
-[oranda]: https://github.com/axodotdev/oranda
 [patreon-dl]: https://github.com/PrivateGER/patreon-dl
 [pidcat]: https://msfjarvis.dev/g/pidcat
 [JakeWharton's pidcat]: https://github.com/JakeWharton/pidcat
