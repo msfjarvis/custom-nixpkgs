@@ -7,7 +7,6 @@ declare -a ALL_PACKAGES=(
   adbtuifm
   adx
   bundletool-bin
-  cargo-dist-unstable
   clipboard-substitutor
   diffuse-bin
   gdrive
@@ -18,7 +17,6 @@ declare -a ALL_PACKAGES=(
   katbin
   linkleaner
   monocraft-nerdfonts
-  # oranda
   patreon-dl
   pidcat
   rucksack
