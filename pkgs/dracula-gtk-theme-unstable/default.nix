@@ -45,7 +45,7 @@ in
       description = "Dracula variant of the Ant theme";
       homepage = "https://github.com/dracula/gtk";
       license = licenses.gpl3;
-      platforms = platforms.all;
+      platforms = platforms.linux;
       maintainers = with maintainers; [msfjarvis];
     };
   }
