@@ -15,13 +15,13 @@ in
   })
   .buildRustPackage rec {
     pname = "linkleaner";
-    version = "1.8.1";
+    version = "1.8.2";
 
     src = fetchFromGitHub {
       owner = "msfjarvis";
       repo = "linkleaner";
       rev = "v${version}";
-      hash = "sha256-iH5jUdlOlqcz07PHRWogKdtGTeTDgJXVfWLNkt2eoqs=";
+      hash = "sha256-v/GMWbs0lFnfYOIKzQlvNa2AH0gCZF6kV04pWbOOq3A=";
     };
 
     buildInputs = lib.optionals stdenv.isDarwin [
@@ -29,7 +29,7 @@ in
       darwin.apple_sdk.frameworks.SystemConfiguration
     ];
 
-    cargoHash = "sha256-D84QGXR0Tc7T+l68B3LtCtajbyeJa7/gZBG5NhdEcqw=";
+    cargoHash = "sha256-Indy+UUEMHDjCqs5fVproNWLf3oy/ikOS6L8TFaB3uM=";
 
     useNextest = true;
 
