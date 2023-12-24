@@ -6,17 +6,17 @@
 }:
 rustPlatform.buildRustPackage rec {
   pname = "rucksack";
-  version = "1.0.7";
+  version = "1.0.8";
 
   src = fetchFromGitHub {
     owner = "msfjarvis";
     repo = "rucksack";
     rev = "v${version}";
-    hash = "sha256-kBrCknMM+yKS7uijkQ+K4cl8+DqoUD2ZzbKI4PlNyJE=";
+    hash = "sha256-MpDfvNdD/tdOZ3sIoGRAC8hOFimylvWy/MuxZgZqU7M=";
   };
 
   buildFeatures = lib.optionals stdenv.isLinux ["journald"];
-  cargoHash = "sha256-ZIb8/JOLk66R9r6cwOAQJna0CQP1KbZFnJ0iFpsOfr0=";
+  cargoHash = "sha256-lv2KcEQqERa+brQXVWwjaeLdqPDTa4ZLVwQZo+jqv0Y=";
 
   useNextest = true;
 
