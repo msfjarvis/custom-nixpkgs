@@ -5,17 +5,17 @@
 }:
 buildGoModule rec {
   pname = "tea";
-  version = "dev-897dc50bfea08321a9af095d8051a03b2fa8c861";
+  version = "unstable-2023-12-26";
 
   src = fetchFromGitea {
     domain = "gitea.com";
     owner = "gitea";
     repo = "tea";
-    rev = "897dc50bfea08321a9af095d8051a03b2fa8c861";
-    hash = "sha256-0x37aPIWDBpqv0vHcKqnHagI+wYKFzv/pi+6WlH4lPA=";
+    rev = "fb4eb8be9cc2e2cd6081cb458d907742c5583c76";
+    hash = "sha256-QorZO6HR+gHWHe2tMlh9UB1MShoU+JzCh73ZZ5n4IXM=";
   };
 
-  vendorHash = "sha256-rQqx1i5bDT7EWMo0Ikapwx1vI0bifOSSyvZz7OTpVgo=";
+  vendorHash = "sha256-yZssgbQEuoHv5fRJCM0wsniguUxorJT0yFYUlsp+wqM=";
 
   ldflags = [
     "-s"
