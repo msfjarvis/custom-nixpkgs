@@ -12,7 +12,6 @@ in {
   bundletool-bin = callPackage ./bundletool-bin {};
   clipboard-substitutor = callPackage ./clipboard-substitutor {};
   diffuse-bin = callPackage ./diffuse-bin {};
-  dracula-gtk-theme-unstable = callPackage ./dracula-gtk-theme-unstable {};
   gdrive = callPackage ./gdrive {};
   gitice = callPackage ./gitice {
     inherit (fenix) fromManifestFile;
