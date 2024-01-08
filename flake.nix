@@ -8,6 +8,9 @@
   inputs.fenix.url = "github:nix-community/fenix";
   inputs.fenix.inputs.nixpkgs.follows = "nixpkgs";
 
+  inputs.nix-github-actions.url = "github:nix-community/nix-github-actions";
+  inputs.nix-github-actions.inputs.nixpkgs.follows = "nixpkgs";
+
   inputs.rust-manifest.url = "https://static.rust-lang.org/dist/2023-10-22/channel-rust-nightly.toml";
   inputs.rust-manifest.flake = false;
 
@@ -15,6 +18,7 @@
     self,
     nixpkgs,
     fenix,
+    nix-github-actions,
     systems,
     rust-manifest,
   }: let
@@ -29,5 +33,8 @@
   in {
     packages = eachSystem (system: packagesFn pkgs.${system});
     overlays.default = final: prev: packagesFn prev;
+    githubActions = nix-github-actions.lib.mkGithubMatrix {
+      checks = nixpkgs.lib.getAttrs [ "x86_64-linux" ] self.packages;
+    };
   };
 }
