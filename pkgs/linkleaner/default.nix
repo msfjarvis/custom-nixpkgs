@@ -24,8 +24,7 @@ in
       hash = "sha256-lxKMmSySY5EbnK7GccoFBcQGaqkuir95nVOJkd4L08s=";
     };
 
-  buildInputs =
-    lib.optionals stdenv.isDarwin [
+    buildInputs = lib.optionals stdenv.isDarwin [
       darwin.apple_sdk.frameworks.Security
       darwin.apple_sdk.frameworks.SystemConfiguration
     ];

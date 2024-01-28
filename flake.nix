@@ -34,7 +34,7 @@
     packages = eachSystem (system: packagesFn pkgs.${system});
     overlays.default = final: prev: packagesFn prev;
     githubActions = nix-github-actions.lib.mkGithubMatrix {
-      checks = nixpkgs.lib.getAttrs [ "x86_64-linux" ] self.packages;
+      checks = nixpkgs.lib.getAttrs ["x86_64-linux"] self.packages;
     };
   };
 }
