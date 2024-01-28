@@ -17,6 +17,7 @@ in {
     inherit (fenix) fromManifestFile;
     inherit rust-manifest;
   };
+  gphotos-cdp = callPackage ./gphotos-cdp {};
   hcctl = callPackage ./hcctl {};
   healthchecks-monitor = callPackage ./healthchecks-monitor {};
   hyperlink = callPackage ./hyperlink {};
