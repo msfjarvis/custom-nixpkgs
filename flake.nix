@@ -32,9 +32,27 @@
       };
   in {
     packages = eachSystem (system: packagesFn pkgs.${system});
-    overlays.default = final: prev: packagesFn prev;
+    overlays.default = _: packagesFn;
     githubActions = nix-github-actions.lib.mkGithubMatrix {
       checks = nixpkgs.lib.getAttrs ["x86_64-linux"] self.packages;
     };
+
+    formatter = eachSystem (system:
+      pkgs.${system}.writeShellApplication {
+        name = "format";
+        runtimeInputs = with pkgs.${system}; [
+          alejandra
+          deadnix
+          shfmt
+          statix
+        ];
+        text = ''
+          set -euo pipefail
+          shfmt --write --simplify --language-dialect bash --indent 2 --case-indent --space-redirects .;
+          deadnix --edit
+          statix check . || statix fix .
+          alejandra --quiet .
+        '';
+      });
   };
 }

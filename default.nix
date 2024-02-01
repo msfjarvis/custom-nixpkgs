@@ -56,7 +56,7 @@ let
     with (fromJSON (readFile ./flake.lock)).nodes.${name}.locked; {
       inherit rev;
       outPath = fetchurl {
-        url = url;
+        inherit url;
         sha256 = narHash;
       };
     };
