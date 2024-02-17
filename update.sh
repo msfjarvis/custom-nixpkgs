@@ -8,7 +8,6 @@ declare -a ALL_PACKAGES=(
   adx
   bundletool-bin
   clipboard-substitutor
-  diffuse-bin
   gdrive
   gitice
   hcctl
