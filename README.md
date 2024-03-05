@@ -1,5 +1,9 @@
 # custom-nixpkgs [![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/) [![Built with Garnix](https://img.shields.io/endpoint?url=https%3A%2F%2Fgarnix.io%2Fapi%2Fbadges%2Fmsfjarvis%2Fcustom-nixpkgs%3Fbranch%3Dmain)](https://garnix.io)
 
+> [!NOTE]
+> The packages from this repository have been moved over to my dotfiles: https://github.com/msfjarvis/dotfiles/tree/main/packages
+> This repository will not receive any updates going forward.
+
 NixOS packages for personal use.
 
 ## Included packages
